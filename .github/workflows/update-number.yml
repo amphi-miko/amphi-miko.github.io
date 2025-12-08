@@ -1,0 +1,51 @@
+name: Update Number Every Hour
+
+on:
+  schedule:
+    # Runs every hour at minute 0
+    - cron: '0 * * * *'
+  # Allows manual triggering
+  workflow_dispatch:
+  # Run on initial push to set things up
+  push:
+    branches: [ main ]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Read and increment number
+      id: increment
+      run: |
+        # Read current number from file
+        if [ -f "number.txt" ]; then
+          CURRENT_NUMBER=$(cat number.txt)
+        else
+          CURRENT_NUMBER=0
+        fi
+        
+        # Increment the number
+        NEW_NUMBER=$((CURRENT_NUMBER + 1))
+        
+        # Save to file
+        echo $NEW_NUMBER > number.txt
+        
+        # Output for logging
+        echo "Old number: $CURRENT_NUMBER"
+        echo "New number: $NEW_NUMBER"
+        echo "new_number=$NEW_NUMBER" >> $GITHUB_OUTPUT
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add number.txt
+        git commit -m "Auto-update number to ${{ steps.increment.outputs.new_number }}"
+        git push
