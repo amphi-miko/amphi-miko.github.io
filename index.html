@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>💵 Valentines Bear Head 2025 Price 💵</h2>
+    <p id="price">Loading...</p>
+    
+    <script>
+        fetch('/_data/prices.json')
+            .then(r => r.json())
+            .then(data => {
+                document.getElementById('price').textContent = 
+                    `Price: $${data.price} (Updated: ${data.updated})`;
+            });
+    </script>
+</body>
+</html>
