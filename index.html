@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="UTF-8">
+    <title>Auto-Updating Number</title>
+</head>
 <body>
-    <h2>💵 Valentines Bear Head 2025 Price 💵</h2>
-    <p id="price">Loading...</p>
-    
+    <h1>Current Number: <span id="number">0</span></h1>
     <script>
-        fetch('/_data/prices.json')
-            .then(r => r.json())
+        // Display the number from the data file
+        fetch('number.txt')
+            .then(response => response.text())
             .then(data => {
-                document.getElementById('price').textContent = 
-                    `Price: $${data.price} (Updated: ${data.updated})`;
+                document.getElementById('number').textContent = data.trim();
             });
     </script>
 </body>
