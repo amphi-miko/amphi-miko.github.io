@@ -43,23 +43,37 @@
 
   <div class="updated" id="updated"></div>
 
-  <script>
+<script>
   fetch("prices.json", { cache: "no-store" })
     .then(r => r.json())
     .then(data => {
+      const priceFormatter = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: data.currency
+      });
+
+      const mcapFormatter = new Intl.NumberFormat("en-US", {
+        notation: "compact",
+        maximumFractionDigits: 2
+      });
+
       const tbody = document.querySelector("#price-table tbody");
 
-      for (const [item, cents] of Object.entries(data.items)) {
-        const dollars = cents / 100;
+      for (const [item, values] of Object.entries(data.items)) {
+        const priceDollars = values.price / 100;
+        const marketCap = values.mcap;
 
         const row = document.createElement("tr");
         row.innerHTML = `
           <td>${item}</td>
-          <td>$${dollars.toFixed(2)}</td>
+          <td>${priceFormatter.format(priceDollars)}</td>
+          <td>${mcapFormatter.format(marketCap)}</td>
         `;
+
         tbody.appendChild(row);
       }
-    });
+    })
+    .catch(err => console.error(err));
 </script>
 
 </body>
