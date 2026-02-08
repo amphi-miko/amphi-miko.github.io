@@ -1,18 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Auto-Updating Number</title>
+  <meta charset="UTF-8" />
+  <title>Live Price</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    #price {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <h1>Current Number: <span id="number">0</span></h1>
-    <script>
-        // Display the number from the data file
-        fetch('number.txt')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('number').textContent = data.trim();
-            });
-    </script>
+
+  <h1>Current Price</h1>
+  <div id="price">Loading…</div>
+
+  <script>
+    fetch("number.txt")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Failed to load price");
+        }
+        return response.text();
+      })
+      .then(text => {
+        document.getElementById("price").textContent = text.trim();
+      })
+      .catch(err => {
+        document.getElementById("price").textContent = "Error";
+        console.error(err);
+      });
+  </script>
+
 </body>
 </html>
