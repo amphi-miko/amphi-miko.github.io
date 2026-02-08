@@ -14,6 +14,6 @@ data = response.json()
 price = data["highest_buy_order"]
 
 # Write price to file
-PRICE_FILE.write_text($str(price) + "\n")
+PRICE_FILE.write_text("$" + str(price/100))
 
 print(f"Updated price to {price}")
