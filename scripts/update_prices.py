@@ -5,8 +5,8 @@ from pathlib import Path
 from datetime import datetime, timezone
 
 item_names_ids = {
-    "Santa Hat":176482232
-    "Santa Jacket":176481264
+    "Santa Hat":176482232,
+    "Santa Jacket":176481264,
     "Santa Trousers":176482233
 }
 prices = {}
