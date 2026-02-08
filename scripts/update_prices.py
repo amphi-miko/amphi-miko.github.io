@@ -23,7 +23,7 @@ item_info = {
 }
 prices = {}
 
-for item in item_names_ids:
+for item in item_info:
     API_URL = f"https://steamcommunity.com/market/itemordershistogram?country=US&language=english&currency=1&item_nameid={item_info[item]['id']}"  # <-- your real API URL here
     # Fetch data from API
     response = requests.get(API_URL, timeout=10)
