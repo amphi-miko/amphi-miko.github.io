@@ -1,9 +1,66 @@
 {
-  "updated": "2026-02-08T22:25:58.103916+00:00",
+  "updated": "2026-02-08T22:37:47.526340+00:00",
   "currency": "USD",
   "items": {
-    "Santa Hat": 8161,
-    "Santa Jacket": 6506,
-    "Santa Trousers": 5094
+    "Face Tattoos": {
+      "price": 13083,
+      "mcap": 1
+    },
+    "Neck Tattoos": {
+      "price": 15000,
+      "mcap": 1
+    },
+    "Santa Hat": {
+      "price": 8161,
+      "mcap": 1
+    },
+    "Santa Jacket": {
+      "price": 6506,
+      "mcap": 1
+    },
+    "Santa Trousers": {
+      "price": 5094,
+      "mcap": 1
+    },
+    "Valentine Bear Head": {
+      "price": 3887,
+      "mcap": 1
+    },
+    "Valentines Bear Top": {
+      "price": 2658,
+      "mcap": 1
+    },
+    "Valentines Bear Trousers": {
+      "price": 3580,
+      "mcap": 1
+    },
+    "Easter Bonnet": {
+      "price": 2167,
+      "mcap": 1
+    },
+    "Easter Dungarees": {
+      "price": 3430,
+      "mcap": 1
+    },
+    "Easter Slippers": {
+      "price": 1676,
+      "mcap": 1
+    },
+    "Wizard Hat": {
+      "price": 2243,
+      "mcap": 1
+    },
+    "Wizard Beard": {
+      "price": 852,
+      "mcap": 1
+    },
+    "Wizard Gown": {
+      "price": 1948,
+      "mcap": 1
+    },
+    "Wizard Trousers": {
+      "price": 954,
+      "mcap": 1
+    }
   }
 }
