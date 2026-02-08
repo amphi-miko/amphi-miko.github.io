@@ -2,37 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Live Price</title>
+  <title>Item Prices</title>
   <style>
     body {
       font-family: system-ui, sans-serif;
-      text-align: center;
-      margin-top: 4rem;
+      max-width: 600px;
+      margin: 3rem auto;
     }
-    #price {
-      font-size: 3rem;
-      font-weight: bold;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 0.6rem;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      text-align: left;
+    }
+    .updated {
+      margin-top: 1rem;
+      color: #666;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
-  <h1>Current Price</h1>
-  <div id="price">Loading…</div>
+  <h1>Current Prices</h1>
+
+  <table id="price-table">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="updated" id="updated"></div>
 
   <script>
-    fetch("number.txt")
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("Failed to load price");
+    fetch("prices.json", { cache: "no-store" })
+      .then(response => response.json())
+      .then(data => {
+        const tbody = document.querySelector("#price-table tbody");
+
+        for (const [item, price] of Object.entries(data.items)) {
+          const row = document.createElement("tr");
+
+          row.innerHTML = `
+            <td>${item}</td>
+            <td>$${price.toFixed(2)}</td>
+          `;
+
+          tbody.appendChild(row);
         }
-        return response.text();
-      })
-      .then(text => {
-        document.getElementById("price").textContent = text.trim();
+
+        document.getElementById("updated").textContent =
+          `Last updated: ${new Date(data.updated).toLocaleString()}`;
       })
       .catch(err => {
-        document.getElementById("price").textContent = "Error";
         console.error(err);
       });
   </script>
