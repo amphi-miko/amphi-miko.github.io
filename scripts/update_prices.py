@@ -10,7 +10,7 @@ response.raise_for_status()
 
 data = response.json()
 # Extract price (adjust this key if needed)
-price = data["highest_buy_order"]
+price = int(data["highest_buy_order"])
 
 # Example prices (replace with API results)
 prices = {
