@@ -5,21 +5,21 @@ from pathlib import Path
 from datetime import datetime, timezone
 
 item_info = {
-    "Face Tattoos":{"id":176478961,"mcap":1},
-    "Neck Tattoos":{"id":176478409,"mcap":1},
-    "Santa Hat":{"id":176482232,"mcap":1},
-    "Santa Jacket":{"id":176481264,"mcap":1},
-    "Santa Trousers":{"id":176482233,"mcap":1},
-    "Valentine Bear Head":{"id":176492719,"mcap":1},
-    "Valentines Bear Top":{"id":176492722,"mcap":1},
-    "Valentines Bear Trousers":{"id":176492721,"mcap":1},
-    "Easter Bonnet":{"id":176508769,"mcap":1},
-    "Easter Dungarees":{"id":176508770,"mcap":1},
-    "Easter Slippers":{"id":176508771,"mcap":1},
-    "Wizard Hat":{"id":176542129,"mcap":1},
-    "Wizard Beard":{"id":176542131,"mcap":1},
-    "Wizard Gown":{"id":176542130,"mcap":1},
-    "Wizard Trousers":{"id":176542132,"mcap":1}
+    "Face Tattoos":{"id":176478961,"qty":146},
+    "Neck Tattoos":{"id":176478409,"qty":136},
+    "Santa Hat":{"id":176482232,"qty":3235},
+    "Santa Jacket":{"id":176481264,"qty":2075},
+    "Santa Trousers":{"id":176482233,"qty":1968},
+    "Valentine Bear Head":{"id":176492719,"qty":2906},
+    "Valentines Bear Top":{"id":176492722,"qty":2276},
+    "Valentines Bear Trousers":{"id":176492721,"qty":2173},
+    "Easter Bonnet":{"id":176508769,"qty":3514},
+    "Easter Dungarees":{"id":176508770,"qty":2184},
+    "Easter Slippers":{"id":176508771,"qty":3195},
+    "Wizard Hat":{"id":176542129,"qty":7316},
+    "Wizard Beard":{"id":176542131,"qty":7384},
+    "Wizard Gown":{"id":176542130,"qty":6189},
+    "Wizard Trousers":{"id":176542132,"qty":6035}
 }
 prices = {}
 
@@ -30,9 +30,10 @@ for item in item_info:
     response.raise_for_status()
     data = response.json()
     # Extract price (adjust this key if needed)
-    price = int(data["highest_buy_order"])
+    bid = int(data["highest_buy_order"])
+    ask = int(data["lowest_sell_order"])
     # Example prices (replace with API results)
-    prices[item] = {"price":price,"mcap":item_info[item]["mcap"]}
+    prices[item] = {"ask":ask,"bid":bid,"mcap":item_info[item]["qty"]*item_info[item]["price"]}
     time.sleep(3)
 
 data = {

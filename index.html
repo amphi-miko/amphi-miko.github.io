@@ -35,7 +35,9 @@
     <thead>
       <tr>
         <th>Item</th>
-        <th>Price</th>
+        <th>Bid</th>
+        <th>Ask</th>
+        <th>Market Cap</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -60,13 +62,15 @@
       const tbody = document.querySelector("#price-table tbody");
 
       for (const [item, values] of Object.entries(data.items)) {
-        const priceDollars = values.price / 100;
-        const marketCap = values.mcap;
+        const bidDollars = values.bid / 100;
+        const askDollars = values.ask / 100;
+        const marketCap = values.mcap / 100;
 
         const row = document.createElement("tr");
         row.innerHTML = `
           <td>${item}</td>
-          <td>${priceFormatter.format(priceDollars)}</td>
+          <td>${priceFormatter.format(bidDollars)}</td>
+          <td>${priceFormatter.format(askDollars)}</td>
           <td>${mcapFormatter.format(marketCap)}</td>
         `;
 
