@@ -1,5 +1,5 @@
 {
-  "updated": "2026-02-09T08:53:14.638245+00:00",
+  "updated": "2026-02-09T10:55:10.167569+00:00",
   "currency": "USD",
   "items": {
     "Face Tattoos": {
@@ -8,9 +8,9 @@
       "mcap": 1910118
     },
     "Neck Tattoos": {
-      "ask": 31000,
-      "bid": 15000,
-      "mcap": 2040000
+      "ask": 30965,
+      "bid": 13083,
+      "mcap": 1779288
     },
     "Santa Hat": {
       "ask": 10627,
@@ -49,16 +49,16 @@
     },
     "Easter Dungarees": {
       "ask": 4528,
-      "bid": 4526,
-      "mcap": 9884784
+      "bid": 3497,
+      "mcap": 7637448
     },
     "Easter Slippers": {
-      "ask": 5042,
+      "ask": 4721,
       "bid": 1683,
       "mcap": 5377185
     },
     "Wizard Hat": {
-      "ask": 2600,
+      "ask": 2488,
       "bid": 2095,
       "mcap": 15327020
     },
@@ -74,8 +74,8 @@
     },
     "Wizard Trousers": {
       "ask": 1100,
-      "bid": 751,
-      "mcap": 4532285
+      "bid": 775,
+      "mcap": 4677125
     }
   }
 }
