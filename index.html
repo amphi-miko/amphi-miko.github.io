@@ -8,22 +8,36 @@
       font-family: system-ui, sans-serif;
       max-width: 600px;
       margin: 3rem auto;
+      background: #111;
+      color: #e5e5e5;
+      font-size: 0.9rem;
     }
+
+    h1 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
     }
+
     th, td {
-      padding: 0.6rem;
-      border-bottom: 1px solid #ddd;
+      padding: 0.45rem 0.6rem;
+      border-bottom: 1px solid #333;
     }
+
     th {
       text-align: left;
+      color: #aaa;
+      font-weight: 600;
     }
+
     .updated {
       margin-top: 1rem;
-      color: #666;
-      font-size: 0.9rem;
+      color: #888;
+      font-size: 0.8rem;
     }
   </style>
 </head>
@@ -55,6 +69,8 @@
       });
 
       const mcapFormatter = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: data.currency,
         notation: "compact",
         maximumFractionDigits: 2
       });
