@@ -1,66 +1,81 @@
 {
-  "updated": "2026-02-09T05:27:45.186428+00:00",
+  "updated": "2026-02-09T07:04:33.401982+00:00",
   "currency": "USD",
   "items": {
     "Face Tattoos": {
-      "price": 13083,
-      "mcap": 1
+      "ask": 36590,
+      "bid": 13083,
+      "mcap": 1910118
     },
     "Neck Tattoos": {
-      "price": 15000,
-      "mcap": 1
+      "ask": 31000,
+      "bid": 15000,
+      "mcap": 2040000
     },
     "Santa Hat": {
-      "price": 8205,
-      "mcap": 1
+      "ask": 10627,
+      "bid": 8200,
+      "mcap": 26527000
     },
     "Santa Jacket": {
-      "price": 6506,
-      "mcap": 1
+      "ask": 10125,
+      "bid": 6506,
+      "mcap": 13499950
     },
     "Santa Trousers": {
-      "price": 5094,
-      "mcap": 1
+      "ask": 7909,
+      "bid": 5094,
+      "mcap": 10024992
     },
     "Valentine Bear Head": {
-      "price": 3887,
-      "mcap": 1
+      "ask": 4579,
+      "bid": 3888,
+      "mcap": 11298528
     },
     "Valentines Bear Top": {
-      "price": 2658,
-      "mcap": 1
+      "ask": 3341,
+      "bid": 2658,
+      "mcap": 6049608
     },
     "Valentines Bear Trousers": {
-      "price": 3580,
-      "mcap": 1
+      "ask": 4452,
+      "bid": 3580,
+      "mcap": 7779340
     },
     "Easter Bonnet": {
-      "price": 2167,
-      "mcap": 1
+      "ask": 2567,
+      "bid": 2167,
+      "mcap": 7614838
     },
     "Easter Dungarees": {
-      "price": 4526,
-      "mcap": 1
+      "ask": 4528,
+      "bid": 4526,
+      "mcap": 9884784
     },
     "Easter Slippers": {
-      "price": 1683,
-      "mcap": 1
+      "ask": 5042,
+      "bid": 1683,
+      "mcap": 5377185
     },
     "Wizard Hat": {
-      "price": 2095,
-      "mcap": 1
+      "ask": 2468,
+      "bid": 2095,
+      "mcap": 15327020
     },
     "Wizard Beard": {
-      "price": 852,
-      "mcap": 1
+      "ask": 1265,
+      "bid": 852,
+      "mcap": 6291168
     },
     "Wizard Gown": {
-      "price": 1948,
-      "mcap": 1
+      "ask": 2219,
+      "bid": 1948,
+      "mcap": 12056172
     },
     "Wizard Trousers": {
-      "price": 970,
-      "mcap": 1
+      "ask": 1234,
+      "bid": 970,
+      "mcap": 5853950
     }
   }
 }
