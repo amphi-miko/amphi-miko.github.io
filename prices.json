@@ -1,81 +1,81 @@
 {
-  "updated": "2026-02-09T20:37:41.498191+00:00",
+  "updated": "2026-02-09T22:36:01.947471+00:00",
   "currency": "USD",
   "items": {
     "Face Tattoos": {
-      "ask": 73182,
-      "bid": 13992,
-      "mcap": 2042832
+      "ask": 114717,
+      "bid": 14131,
+      "mcap": 2063126
     },
     "Neck Tattoos": {
-      "ask": 30965,
-      "bid": 13713,
-      "mcap": 1864968
+      "ask": 30845,
+      "bid": 13850,
+      "mcap": 1883600
     },
     "Santa Hat": {
-      "ask": 10627,
-      "bid": 8200,
-      "mcap": 26527000
+      "ask": 10721,
+      "bid": 7500,
+      "mcap": 24262500
     },
     "Santa Jacket": {
-      "ask": 10120,
-      "bid": 6299,
-      "mcap": 13070425
+      "ask": 10125,
+      "bid": 7000,
+      "mcap": 14525000
     },
     "Santa Trousers": {
-      "ask": 7909,
-      "bid": 5094,
-      "mcap": 10024992
+      "ask": 7966,
+      "bid": 5074,
+      "mcap": 9985632
     },
     "Valentine Bear Head": {
       "ask": 4579,
-      "bid": 3892,
-      "mcap": 11310152
+      "bid": 3929,
+      "mcap": 11417674
     },
     "Valentines Bear Top": {
-      "ask": 3340,
-      "bid": 2661,
-      "mcap": 6056436
+      "ask": 3349,
+      "bid": 2684,
+      "mcap": 6108784
     },
     "Valentines Bear Trousers": {
-      "ask": 4451,
-      "bid": 3582,
-      "mcap": 7783686
+      "ask": 4459,
+      "bid": 3579,
+      "mcap": 7777167
     },
     "Easter Bonnet": {
-      "ask": 2567,
-      "bid": 2167,
-      "mcap": 7614838
+      "ask": 2579,
+      "bid": 2189,
+      "mcap": 7692146
     },
     "Easter Dungarees": {
       "ask": 4528,
-      "bid": 3497,
-      "mcap": 7637448
+      "bid": 3484,
+      "mcap": 7609056
     },
     "Easter Slippers": {
-      "ask": 4594,
-      "bid": 1813,
-      "mcap": 5792535
+      "ask": 4600,
+      "bid": 1819,
+      "mcap": 5811705
     },
     "Wizard Hat": {
-      "ask": 2488,
-      "bid": 2135,
-      "mcap": 15619660
+      "ask": 2477,
+      "bid": 2128,
+      "mcap": 15568448
     },
     "Wizard Beard": {
-      "ask": 1262,
-      "bid": 784,
-      "mcap": 5789056
+      "ask": 1273,
+      "bid": 779,
+      "mcap": 5752136
     },
     "Wizard Gown": {
-      "ask": 2214,
-      "bid": 1753,
-      "mcap": 10849317
+      "ask": 2188,
+      "bid": 1757,
+      "mcap": 10874073
     },
     "Wizard Trousers": {
-      "ask": 1099,
-      "bid": 783,
-      "mcap": 4725405
+      "ask": 1096,
+      "bid": 779,
+      "mcap": 4701265
     }
   }
 }
