@@ -33,7 +33,7 @@ for item in item_info:
     bid = int(data["highest_buy_order"])
     ask = int(data["lowest_sell_order"])
     # Example prices (replace with API results)
-    prices[item] = {"ask":ask,"bid":bid,"mcap":item_info[item]["qty"]*item_info[item]["price"]}
+    prices[item] = {"ask":ask,"bid":bid,"mcap":item_info[item]["qty"]*item_info[item]["bid"]}
     time.sleep(3)
 
 data = {
