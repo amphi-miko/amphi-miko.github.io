@@ -1,5 +1,5 @@
 {
-  "updated": "2026-02-09T07:15:47.179804+00:00",
+  "updated": "2026-02-09T08:53:14.638245+00:00",
   "currency": "USD",
   "items": {
     "Face Tattoos": {
@@ -58,24 +58,24 @@
       "mcap": 5377185
     },
     "Wizard Hat": {
-      "ask": 2468,
+      "ask": 2600,
       "bid": 2095,
       "mcap": 15327020
     },
     "Wizard Beard": {
-      "ask": 1265,
-      "bid": 852,
-      "mcap": 6291168
+      "ask": 950,
+      "bid": 773,
+      "mcap": 5707832
     },
     "Wizard Gown": {
       "ask": 2219,
-      "bid": 1948,
-      "mcap": 12056172
+      "bid": 1721,
+      "mcap": 10651269
     },
     "Wizard Trousers": {
-      "ask": 1234,
-      "bid": 970,
-      "mcap": 5853950
+      "ask": 1100,
+      "bid": 751,
+      "mcap": 4532285
     }
   }
 }
