@@ -36,10 +36,13 @@ for item in item_info:
     # Extract price (adjust this key if needed)
     bid = int(orderbook_data["highest_buy_order"])
     ask = int(orderbook_data["lowest_sell_order"])
+    mcap = item_info[item]["qty"]*bid
     if item in data["items"]:
-        data["items"][item]["history"] = [data["items"][item]["history"] + [{"timestamp":current_time_str,"ask":ask,"bid":bid,"mcap":item_info[item]["qty"]*bid}]][-12:]
+        data["items"][item]["history"].append({"timestamp":current_time_str,"ask":ask,"bid":bid,"mcap":mcap})
+        if len(data["items"][item]["history"]) >= 13:
+            data["items"][item]["history"].pop(0)
     else:
-        data["items"][item] = {"history":[{"timestamp":current_time_str,"ask":ask,"bid":bid,"mcap":item_info[item]["qty"]*bid}]}
+        data["items"][item] = {"history":[{"timestamp":current_time_str,"ask":ask,"bid":bid,"mcap":mcap}]}
     time.sleep(3)
 
 output_file = Path("prices.json")

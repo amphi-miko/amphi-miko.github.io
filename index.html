@@ -84,14 +84,14 @@
       const tbody = document.querySelector("#price-table tbody");
 
       for (const [item, obj] of Object.entries(data.items)) {
-        const history = obj.history[0]; // unwrap the inner array
+        const history = obj.history; // unwrap the inner array
         if (!history || !history.length) continue;
       
-        const firstBid = history[0].bid;
-        const lastBid = history[history.length - 1].bid;
+        const firstBid = history[history.length - 1].bid;
+        const lastBid = history[0].bid;
         const bidDollars = firstBid / 100;
-        const askDollars = history[0].ask / 100;
-        const marketCap = history[0].mcap / 100;
+        const askDollars = history[history.length - 1].ask / 100;
+        const marketCap = history[history.length - 1].mcap / 100;
         const change = lastBid ? firstBid / lastBid - 1 : 0;
       
         const row = document.createElement("tr");
