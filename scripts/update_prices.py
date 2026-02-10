@@ -21,26 +21,26 @@ item_info = {
     "Wizard Gown":{"id":176542130,"qty":6189},
     "Wizard Trousers":{"id":176542132,"qty":6035}
 }
-prices = {}
+
+with open("prices.json", "r", encoding="utf-8") as f:
+    data = json.load(f)
+
+current_time_str = datetime.now(timezone.utc).isoformat()
 
 for item in item_info:
     API_URL = f"https://steamcommunity.com/market/itemordershistogram?country=US&language=english&currency=1&item_nameid={item_info[item]['id']}"  # <-- your real API URL here
     # Fetch data from API
     response = requests.get(API_URL, timeout=10)
     response.raise_for_status()
-    data = response.json()
+    orderbook_data = response.json()
     # Extract price (adjust this key if needed)
-    bid = int(data["highest_buy_order"])
-    ask = int(data["lowest_sell_order"])
-    # Example prices (replace with API results)
-    prices[item] = {"ask":ask,"bid":bid,"mcap":item_info[item]["qty"]*bid}
+    bid = int(orderbook_data["highest_buy_order"])
+    ask = int(orderbook_data["lowest_sell_order"])
+    if item in data["items"]:
+        data["items"][item]["history"] = [data["items"][item]["history"] + [{"timestamp":current_time_str,"ask":ask,"bid":bid,"mcap":item_info[item]["qty"]*bid}]][-12:]
+    else:
+        data["items"][item] = {"history":[{"timestamp":current_time_str,"ask":ask,"bid":bid,"mcap":item_info[item]["qty"]*bid}]}
     time.sleep(3)
-
-data = {
-    "updated": datetime.now(timezone.utc).isoformat(),
-    "currency": "USD",
-    "items": prices,
-}
 
 output_file = Path("prices.json")
 output_file.write_text(json.dumps(data, indent=2))

@@ -75,21 +75,47 @@
         maximumFractionDigits: 2
       });
 
+      const pFormatter = new Intl.NumberFormat("en-US", {
+        style: "percent",        // formats as percentage
+        maximumFractionDigits: 2 // up to 2 decimal places
+      });
+
       const tbody = document.querySelector("#price-table tbody");
 
-      for (const [item, values] of Object.entries(data.items)) {
-        const bidDollars = values.bid / 100;
-        const askDollars = values.ask / 100;
-        const marketCap = values.mcap / 100;
+      for (const [item, history] of Object.entries(data.items)) {
+        const bidDollars = history[0].bid / 100;
+        const askDollars = history[0].ask / 100;
+        const marketCap = history[0].mcap / 100;
+        const change = history[0].bid/history[history.length-1].bid-1;
 
         const row = document.createElement("tr");
-        row.innerHTML = `
-          <td>${item}</td>
-          <td>${priceFormatter.format(bidDollars)}</td>
-          <td>${priceFormatter.format(askDollars)}</td>
-          <td>${mcapFormatter.format(marketCap)}</td>
-        `;
 
+        // Create the cells manually to access the change cell
+        const itemCell = document.createElement("td");
+        itemCell.textContent = item;
+
+        const bidCell = document.createElement("td");
+        bidCell.textContent = priceFormatter.format(bidDollars);
+
+        const askCell = document.createElement("td");
+        askCell.textContent = priceFormatter.format(askDollars);
+
+        const mcapCell = document.createElement("td");
+        mcapCell.textContent = mcapFormatter.format(marketCap);
+
+        const changeCell = document.createElement("td");
+        changeCell.textContent = pFormatter.format(change);
+
+        // Set color: red if negative, green if positive
+        if (change < 0) {
+          changeCell.style.color = "red";
+        } else if (change > 0) {
+          changeCell.style.color = "green";
+        } else {
+          changeCell.style.color = "gray";
+        }
+
+        row.append(itemCell, bidCell, askCell, mcapCell, changeCell);
         tbody.appendChild(row);
       }
     })
