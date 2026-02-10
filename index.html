@@ -83,31 +83,34 @@
 
       const tbody = document.querySelector("#price-table tbody");
 
-      for (const [item, history] of Object.entries(data.items)) {
-        const bidDollars = history[0].bid / 100;
+      for (const [item, obj] of Object.entries(data.items)) {
+        const history = obj.history[0]; // unwrap the inner array
+        if (!history || !history.length) continue;
+      
+        const firstBid = history[0].bid;
+        const lastBid = history[history.length - 1].bid;
+        const bidDollars = firstBid / 100;
         const askDollars = history[0].ask / 100;
         const marketCap = history[0].mcap / 100;
-        const change = history[0].bid/history[history.length-1].bid-1;
-
+        const change = lastBid ? firstBid / lastBid - 1 : 0;
+      
         const row = document.createElement("tr");
-
-        // Create the cells manually to access the change cell
+      
         const itemCell = document.createElement("td");
         itemCell.textContent = item;
-
+      
         const bidCell = document.createElement("td");
         bidCell.textContent = priceFormatter.format(bidDollars);
-
+      
         const askCell = document.createElement("td");
         askCell.textContent = priceFormatter.format(askDollars);
-
+      
         const mcapCell = document.createElement("td");
         mcapCell.textContent = mcapFormatter.format(marketCap);
-
+      
         const changeCell = document.createElement("td");
         changeCell.textContent = pFormatter.format(change);
-
-        // Set color: red if negative, green if positive
+      
         if (change < 0) {
           changeCell.style.color = "red";
         } else if (change > 0) {
@@ -115,7 +118,7 @@
         } else {
           changeCell.style.color = "gray";
         }
-
+      
         row.append(itemCell, bidCell, askCell, mcapCell, changeCell);
         tbody.appendChild(row);
       }
