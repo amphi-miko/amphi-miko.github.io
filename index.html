@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <meta charset="UTF-8" />
   <title>Item Prices</title>
   <style>
@@ -52,7 +53,7 @@
         <th>Bid</th>
         <th>Ask</th>
         <th>Market Cap</th>
-        <th>Change</th>
+        <th>24h Change</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -61,7 +62,7 @@
   <div class="updated" id="updated"></div>
 
 <script>
-  fetch("prices.json", { cache: "no-store" })
+  fetch("item_info.json", { cache: "no-store" })
     .then(r => r.json())
     .then(data => {
       const priceFormatter = new Intl.NumberFormat("en-US", {
@@ -74,7 +75,7 @@
         currency: data.currency,
         notation: "compact",
         maximumFractionDigits: 2
-      });
+      });   
 
       const pFormatter = new Intl.NumberFormat("en-US", {
         style: "percent",        // formats as percentage
