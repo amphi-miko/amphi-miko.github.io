@@ -8,15 +8,15 @@
     body {
       font-family: system-ui, sans-serif;
       max-width: 600px;
-      margin: 3rem auto;
+      margin: 1rem auto;
       background: #111;
-      color: #e5e5e5;
-      font-size: 0.9rem;
+      color: #ffffff;
+      font-size: 0.8rem;
     }
 
     h1 {
       font-size: 1.2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.6rem;
     }
 
     table {
@@ -25,30 +25,31 @@
     }
 
     th, td {
-      padding: 0.45rem 0.6rem;
-      border-bottom: 1px solid #333;
+      padding: 0.2rem 0.2rem;
+      border-bottom: 1px solid #414141;
     }
 
     th {
       text-align: left;
-      color: #aaa;
+      color: #eeeeee;
       font-weight: 600;
     }
 
     .updated {
       margin-top: 1rem;
       color: #888;
-      font-size: 0.8rem;
+      font-size: 0.6rem;
     }
   </style>
 </head>
 <body>
 
-  <h1>Current Prices</h1>
+  <h1>s&box Market Summary - Discontinued Items</h1>
 
   <table id="price-table">
     <thead>
       <tr>
+        <th>Image</th>
         <th>Item</th>
         <th>Bid</th>
         <th>Ask</th>
@@ -65,14 +66,15 @@
   fetch("item_info.json", { cache: "no-store" })
     .then(r => r.json())
     .then(data => {
+
       const priceFormatter = new Intl.NumberFormat("en-US", {
         style: "currency",
-        currency: data.currency
+        currency: "usd"
       });
 
       const mcapFormatter = new Intl.NumberFormat("en-US", {
         style: "currency",
-        currency: data.currency,
+        currency: "usd",
         notation: "compact",
         maximumFractionDigits: 2
       });   
@@ -83,20 +85,34 @@
       });
 
       const tbody = document.querySelector("#price-table tbody");
-
-      for (const [item, obj] of Object.entries(data.items)) {
-        const history = obj.history; // unwrap the inner array
+      for (const [item, obj] of Object.entries(data)) {
+        const history = obj.history; 
         if (!history || !history.length) continue;
-      
+
         const firstBid = history[history.length - 1].bid;
         const lastBid = history[0].bid;
         const bidDollars = firstBid / 100;
         const askDollars = history[history.length - 1].ask / 100;
         const marketCap = history[history.length - 1].mcap / 100;
         const change = lastBid ? firstBid / lastBid - 1 : 0;
-      
+
         const row = document.createElement("tr");
       
+        const imgCell = document.createElement("td");
+        const img = document.createElement("img");
+
+        img.src = `assets/${obj.id}.png`;
+        img.alt = item;
+        img.width = 24;     // optional
+        img.height = 24;    // optional
+        img.loading = "lazy";
+
+        img.onerror = () => {
+          img.style.display = "none"; // or swap to a default image
+        };
+
+        imgCell.appendChild(img);
+
         const itemCell = document.createElement("td");
         itemCell.textContent = item;
       
@@ -120,7 +136,7 @@
           changeCell.style.color = "gray";
         }
       
-        row.append(itemCell, bidCell, askCell, mcapCell, changeCell);
+        row.append(imgCell, itemCell, bidCell, askCell, mcapCell, changeCell);
         tbody.appendChild(row);
       }
     })
