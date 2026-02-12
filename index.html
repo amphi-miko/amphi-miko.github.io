@@ -126,7 +126,8 @@
   const pFormatter = new Intl.NumberFormat("en-US", {
     style: "percent",
     maximumFractionDigits: 2,
-    minimumFractionDigits: 2
+    minimumFractionDigits: 2,
+    signDisplay: "always"
   });
 
   // Function to render the table
@@ -263,11 +264,12 @@
     let weekMarketCap = 0
     for (const rowData of data) {
       currentMarketCap += rowData.marketCap;
-      dayMarketCap += rowData.marketCap*(1+rowData.dayChange);
-      weekMarketCap += rowData.marketCap*(1+rowData.weekChange);
+      dayMarketCap += rowData.marketCap/(1+rowData.dayChange);
+      weekMarketCap += rowData.marketCap/(1+rowData.weekChange);
     }
     const dayMarketCapChange = (currentMarketCap - dayMarketCap) / dayMarketCap;
     const weekMarketCapChange = (currentMarketCap - weekMarketCap) / weekMarketCap;
+    const dayMarketCapDifference = currentMarketCap-dayMarketCap
 
     if (dayMarketCapChange < 0) {
         dayMarketCapChangeColor = "red";
@@ -281,7 +283,6 @@
     document.getElementById('market-cap-change').textContent = pFormatter.format(dayMarketCapChange) + " in the past 24 hours"
     document.getElementById('market-cap-change').style.color = dayMarketCapChangeColor
   }
-
 
   // Fetch and initialize the table
   fetch("site_info.json", { cache: "no-store" })
