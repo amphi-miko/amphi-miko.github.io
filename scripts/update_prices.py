@@ -9,9 +9,6 @@ with open("item_info.json", "r", encoding="utf-8") as f:
 
 current_time_str = datetime.now(timezone.utc).isoformat()
 
-overall_mcap = 0
-
-'''
 for item in data:
     API_URL = f"https://steamcommunity.com/market/itemordershistogram?country=US&language=english&currency=1&item_nameid={data[item]['id']}"  # <-- your real API URL here
     # Fetch data from API
@@ -34,7 +31,7 @@ for item in data:
 
 output_file = Path("item_info.json")
 output_file.write_text(json.dumps(data, indent=2))
-'''
+
 data_summary = {}
 
 for item in data:
