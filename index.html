@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="icon" type="image/png" href="assets/favicon.ico">
   <meta charset="UTF-8" />
   <title>Item Prices</title>
   <style>
     body {
       font-family: system-ui, sans-serif;
       max-width: 600px;
-      margin: 1rem auto;
+      margin: 0.5rem auto;
       background: #111;
       color: #ffffff;
       font-size: 0.8rem;
     }
 
     h1 {
-      font-size: 1.2rem;
-      margin-bottom: 0.6rem;
+      font-size: 1.0rem;
+      margin-bottom: 0.2rem;
     }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }    
+
+    #market-cap-change {
+      font-size: 0.8rem;
+    } 
 
     table {
       width: 100%;
@@ -29,10 +38,40 @@
       border-bottom: 1px solid #414141;
     }
 
-    th {
+    th[data-column] {
       text-align: left;
       color: #eeeeee;
       font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      padding-right: 18px;
+      border-right: 14px solid transparent;
+    }
+    
+    th[data-column]:hover {
+      background-color: #2a2a2a;
+    }
+    
+    th[data-column]::after {
+      content: ' ↕';
+      position: absolute;
+      right: 4px;
+      opacity: 0.5;
+    }
+
+    th[data-column].sorted-asc::after {
+      content: ' ↑';
+      opacity: 1;
+    }
+
+    th[data-column].sorted-desc::after {
+      content: ' ↓';
+      opacity: 1;
+    }
+
+    th:nth-child(6), td:nth-child(6), /* 24h Change */
+    th:nth-child(7), td:nth-child(7) { /* 7d Change */
+      width: 12%; 
     }
 
     .updated {
@@ -44,17 +83,20 @@
 </head>
 <body>
 
-  <h1>s&box Market Summary - Discontinued Items</h1>
+  <h1>s&box Market Capitalization - Discontinued Items</h1>
+  <h2 id="page-title"><span id="market-cap">$0.00</span> <span id="market-cap-change">0.00% in the past 24 hours</span></h2>
+
 
   <table id="price-table">
     <thead>
       <tr>
-        <th>Image</th>
-        <th>Item</th>
-        <th>Bid</th>
-        <th>Ask</th>
-        <th>Market Cap</th>
-        <th>24h Change</th>
+        <th></th>
+        <th data-column="item">Item</th>
+        <th data-column="marketCap">Market Cap</th>
+        <th data-column="bid">Bid</th>
+        <th data-column="ask">Ask</th>
+        <th data-column="dayChange">24h Δ</th>
+        <th data-column="weekChange">7d Δ</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -63,82 +105,223 @@
   <div class="updated" id="updated"></div>
 
 <script>
-  fetch("item_info.json", { cache: "no-store" })
+  // Store the data globally for sorting
+  let tableData = [];
+  let currentSortColumn = null;
+  let currentSortDirection = 'asc';
+
+  const priceFormatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "usd"
+  });
+
+  const mcapFormatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "usd",
+    notation: "compact",
+    maximumFractionDigits: 2,
+    minimumFractionDigits: 2
+  });   
+
+  const pFormatter = new Intl.NumberFormat("en-US", {
+    style: "percent",
+    maximumFractionDigits: 2,
+    minimumFractionDigits: 2
+  });
+
+  // Function to render the table
+  function renderTable(data) {
+    const tbody = document.querySelector("#price-table tbody");
+    tbody.innerHTML = ''; // Clear existing rows
+
+    for (const rowData of data) {
+      const row = document.createElement("tr");
+      
+      // Image cell
+      const imgCell = document.createElement("td");
+      const img = document.createElement("img");
+      img.src = `assets/${rowData.id}.png`;
+      img.alt = rowData.item;
+      img.width = 24;
+      img.height = 24;
+      img.loading = "lazy";
+      img.onerror = () => {
+        img.style.display = "none";
+      };
+      imgCell.appendChild(img);
+      
+      // Item cell
+      const itemCell = document.createElement("td");
+      itemCell.textContent = rowData.item;
+      
+      // Market Cap cell
+      const mcapCell = document.createElement("td");
+      mcapCell.textContent = mcapFormatter.format(rowData.marketCap);
+      
+      // Bid cell
+      const bidCell = document.createElement("td");
+      bidCell.textContent = priceFormatter.format(rowData.bid);
+      
+      // Ask cell
+      const askCell = document.createElement("td");
+      askCell.textContent = priceFormatter.format(rowData.ask);
+      
+      // 24h Change cell
+      const dayChangeCell = document.createElement("td");
+      dayChangeCell.textContent = pFormatter.format(rowData.dayChange);
+      if (rowData.dayChange < 0) {
+        dayChangeCell.style.color = "red";
+      } else if (rowData.dayChange > 0) {
+        dayChangeCell.style.color = "green";
+      } else {
+        dayChangeCell.style.color = "gray";
+      }
+      
+      // 7d Change cell
+      const weekChangeCell = document.createElement("td");
+      weekChangeCell.textContent = pFormatter.format(rowData.weekChange);
+      if (rowData.weekChange < 0) {
+        weekChangeCell.style.color = "red";
+      } else if (rowData.weekChange > 0) {
+        weekChangeCell.style.color = "green";
+      } else {
+        weekChangeCell.style.color = "gray";
+      }
+      
+      row.append(imgCell, itemCell, mcapCell, bidCell, askCell, dayChangeCell, weekChangeCell);
+      tbody.appendChild(row);
+    }
+  }
+
+  // Function to sort data
+  function sortData(column, direction) {
+    const sortedData = [...tableData];
+    
+    sortedData.sort((a, b) => {
+      let valA, valB;
+      
+      switch(column) {
+        case 'item':
+          valA = a.item;
+          valB = b.item;
+          break;
+        case 'marketCap':
+        case 'bid':
+        case 'ask':
+        case 'dayChange':
+        case 'weekChange':
+          valA = a[column];
+          valB = b[column];
+          break;
+        case 'image':
+          // Sort by image name/id
+          valA = a.id;
+          valB = b.id;
+          break;
+        default:
+          return 0;
+      }
+      
+      // Compare values
+      if (valA < valB) return direction === 'asc' ? -1 : 1;
+      if (valA > valB) return direction === 'asc' ? 1 : -1;
+      return 0;
+    });
+    
+    return sortedData;
+  }
+
+  // Function to handle header clicks
+  function handleHeaderClick(event) {
+    const header = event.currentTarget;
+    const column = header.dataset.column;
+    
+    // Determine sort direction
+    if (currentSortColumn === column) {
+      currentSortDirection = currentSortDirection === 'asc' ? 'desc' : 'asc';
+    } else {
+      currentSortColumn = column;
+      currentSortDirection = 'asc';
+    }
+    
+    // Update header styles
+    const headers = document.querySelectorAll('#price-table thead th');
+    headers.forEach(h => {
+      h.classList.remove('sorted-asc', 'sorted-desc');
+    });
+    header.classList.add(`sorted-${currentSortDirection}`);
+    
+    // Sort and render
+    const sortedData = sortData(column, currentSortDirection);
+    renderTable(sortedData);
+  }
+
+// Function to render the table
+  function renderMarketCap(data) {
+    let currentMarketCap = 0
+    let dayMarketCap = 0
+    let weekMarketCap = 0
+    for (const rowData of data) {
+      currentMarketCap += rowData.marketCap;
+      dayMarketCap += rowData.marketCap*(1+rowData.dayChange);
+      weekMarketCap += rowData.marketCap*(1+rowData.weekChange);
+    }
+    const dayMarketCapChange = (currentMarketCap - dayMarketCap) / dayMarketCap;
+    const weekMarketCapChange = (currentMarketCap - weekMarketCap) / weekMarketCap;
+
+    if (dayMarketCapChange < 0) {
+        dayMarketCapChangeColor = "red";
+      } else if (dayMarketCapChange > 0) {
+        dayMarketCapChangeColor = "green";
+      } else {
+        dayMarketCapChangeColor = "gray";
+      }
+
+    document.getElementById('market-cap').textContent = priceFormatter.format(currentMarketCap)
+    document.getElementById('market-cap-change').textContent = pFormatter.format(dayMarketCapChange) + " in the past 24 hours"
+    document.getElementById('market-cap-change').style.color = dayMarketCapChangeColor
+  }
+
+
+  // Fetch and initialize the table
+  fetch("site_info.json", { cache: "no-store" })
     .then(r => r.json())
     .then(data => {
+      // Convert the object data to array format for easier sorting
+      tableData = Object.entries(data).map(([item, obj]) => ({
+        item: item,
+        id: obj.id,
+        bid: obj.bid,
+        ask: obj.ask,
+        marketCap: obj.marketCap,
+        dayChange: obj.dayChange,
+        weekChange: obj.weekChange
+      }));
 
-      const priceFormatter = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "usd"
+      // Set default sort to Market Cap (descending - largest first)
+      currentSortColumn = 'marketCap';
+      currentSortDirection = 'desc';
+      
+      // Sort the data by Market Cap
+      const sortedData = sortData(currentSortColumn, currentSortDirection); 
+
+      // Initial render
+      renderTable(sortedData);
+
+      renderMarketCap(sortedData);
+      
+      // Add click handlers to headers
+      const headers = document.querySelectorAll('#price-table thead th[data-column]');
+      headers.forEach(header => {
+        header.addEventListener('click', handleHeaderClick);
       });
-
-      const mcapFormatter = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "usd",
-        notation: "compact",
-        maximumFractionDigits: 2
-      });   
-
-      const pFormatter = new Intl.NumberFormat("en-US", {
-        style: "percent",        // formats as percentage
-        maximumFractionDigits: 2 // up to 2 decimal places
-      });
-
-      const tbody = document.querySelector("#price-table tbody");
-      for (const [item, obj] of Object.entries(data)) {
-        const history = obj.history; 
-        if (!history || !history.length) continue;
-
-        const firstBid = history[history.length - 1].bid;
-        const lastBid = history[0].bid;
-        const bidDollars = firstBid / 100;
-        const askDollars = history[history.length - 1].ask / 100;
-        const marketCap = history[history.length - 1].mcap / 100;
-        const change = lastBid ? firstBid / lastBid - 1 : 0;
-
-        const row = document.createElement("tr");
       
-        const imgCell = document.createElement("td");
-        const img = document.createElement("img");
+      // Highlight the Market Cap header as sorted
+      const marketCapHeader = document.querySelector('th[data-column="marketCap"]');
+      marketCapHeader.classList.add(`sorted-${currentSortDirection}`);
 
-        img.src = `assets/${obj.id}.png`;
-        img.alt = item;
-        img.width = 24;     // optional
-        img.height = 24;    // optional
-        img.loading = "lazy";
-
-        img.onerror = () => {
-          img.style.display = "none"; // or swap to a default image
-        };
-
-        imgCell.appendChild(img);
-
-        const itemCell = document.createElement("td");
-        itemCell.textContent = item;
-      
-        const bidCell = document.createElement("td");
-        bidCell.textContent = priceFormatter.format(bidDollars);
-      
-        const askCell = document.createElement("td");
-        askCell.textContent = priceFormatter.format(askDollars);
-      
-        const mcapCell = document.createElement("td");
-        mcapCell.textContent = mcapFormatter.format(marketCap);
-      
-        const changeCell = document.createElement("td");
-        changeCell.textContent = pFormatter.format(change);
-      
-        if (change < 0) {
-          changeCell.style.color = "red";
-        } else if (change > 0) {
-          changeCell.style.color = "green";
-        } else {
-          changeCell.style.color = "gray";
-        }
-      
-        row.append(imgCell, itemCell, bidCell, askCell, mcapCell, changeCell);
-        tbody.appendChild(row);
-      }
+      // Set current date
+      document.getElementById('updated').textContent = `Updated: ${new Date().toLocaleString()}`;
     })
     .catch(err => console.error(err));
 </script>
