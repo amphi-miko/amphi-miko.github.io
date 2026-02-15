@@ -12,7 +12,7 @@
     "bid": 211.89,
     "ask": 309.0,
     "marketCap": 28817.04,
-    "dayChange": 0.24751251103915214,
+    "dayChange": 0.2906743010294207,
     "weekChange": 0.45508858673259156
   },
   "Santa Hat": {
@@ -28,7 +28,7 @@
     "bid": 65.24,
     "ask": 98.37,
     "marketCap": 135373.0,
-    "dayChange": 0.09776207302709061,
+    "dayChange": 0.08733333333333325,
     "weekChange": 0.11635865845311426
   },
   "Santa Trousers": {
@@ -113,11 +113,11 @@
   },
   "Wizard Trousers": {
     "id": 176542132,
-    "bid": 8.48,
+    "bid": 9.12,
     "ask": 10.63,
-    "marketCap": 51176.8,
-    "dayChange": 0.0,
-    "weekChange": 0.03288672350791712
+    "marketCap": 55039.2,
+    "dayChange": 0.0754716981132074,
+    "weekChange": 0.11084043848964656
   },
   "Shark Head": {
     "id": 176546366,
@@ -140,15 +140,15 @@
     "bid": 17.74,
     "ask": 24.67,
     "marketCap": 81728.18,
-    "dayChange": 0.010826210826210696,
+    "dayChange": 0.009675583380762558,
     "weekChange": -0.11033099297893695
   },
   "Varsity Jacket": {
     "id": 176555153,
     "bid": 8.3,
-    "ask": 9.97,
+    "ask": 10.18,
     "marketCap": 37300.2,
-    "dayChange": -0.125395152792413,
+    "dayChange": 0.09933774834437098,
     "weekChange": -0.13089005235602094
   },
   "Pumpkin Head": {
@@ -177,11 +177,11 @@
   },
   "Skull Helmet": {
     "id": 176558347,
-    "bid": 66.54,
+    "bid": 71.18,
     "ask": 89.25,
-    "marketCap": 217718.88,
-    "dayChange": -0.01597160603371781,
-    "weekChange": -0.18982101546328978
+    "marketCap": 232900.96,
+    "dayChange": 0.05124796928075637,
+    "weekChange": -0.133325216120784
   },
   "Banana Slippers": {
     "id": 176569324,
@@ -228,7 +228,7 @@
     "bid": 7.86,
     "ask": 9.63,
     "marketCap": 40754.1,
-    "dayChange": 0.020779220779220797,
+    "dayChange": 0.019455252918287983,
     "weekChange": 0.10860366713681248
   },
   "Reindeer Trousers": {
@@ -242,7 +242,7 @@
   "Plague Doctor Mask": {
     "id": 176586903,
     "bid": 3.56,
-    "ask": 4.14,
+    "ask": 4.09,
     "marketCap": 63040.48,
     "dayChange": 0.011363636363636374,
     "weekChange": -0.10999999999999999
