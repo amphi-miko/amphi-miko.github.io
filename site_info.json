@@ -20,29 +20,29 @@
     "bid": 85.0,
     "ask": 111.91,
     "marketCap": 274975.0,
-    "dayChange": 0.007467109162024362,
+    "dayChange": 0.0625,
     "weekChange": 0.3147718484145397
   },
   "Santa Jacket": {
     "id": 176481264,
-    "bid": 65.82,
+    "bid": 66.44,
     "ask": 98.47,
-    "marketCap": 136576.5,
-    "dayChange": 0.009044917982523213,
-    "weekChange": 0.1262833675564681
+    "marketCap": 137863.0,
+    "dayChange": 0.01839362354383818,
+    "weekChange": 0.13689253935660506
   },
   "Santa Trousers": {
     "id": 176482233,
-    "bid": 52.99,
+    "bid": 53.54,
     "ask": 74.69,
-    "marketCap": 104284.32,
-    "dayChange": 0.00933333333333337,
-    "weekChange": 0.024753432604912032
+    "marketCap": 105366.72,
+    "dayChange": 0.019809523809523794,
+    "weekChange": 0.0353896731773351
   },
   "Valentine Bear Head": {
     "id": 176492719,
     "bid": 39.75,
-    "ask": 42.0,
+    "ask": 41.7,
     "marketCap": 115513.5,
     "dayChange": 0.0007552870090634727,
     "weekChange": 0.04030358544883536
@@ -50,7 +50,7 @@
   "Valentines Bear Top": {
     "id": 176492722,
     "bid": 28.71,
-    "ask": 33.08,
+    "ask": 32.79,
     "marketCap": 65343.96,
     "dayChange": 0.0,
     "weekChange": 0.042862332001452945
@@ -58,7 +58,7 @@
   "Valentines Bear Trousers": {
     "id": 176492721,
     "bid": 39.41,
-    "ask": 43.09,
+    "ask": 42.79,
     "marketCap": 85637.93,
     "dayChange": 0.0012703252032519603,
     "weekChange": 0.0020340706839562244
@@ -132,7 +132,7 @@
     "bid": 2.96,
     "ask": 3.85,
     "marketCap": 25592.16,
-    "dayChange": 0.10861423220973784,
+    "dayChange": 0.09629629629629621,
     "weekChange": 0.027777777777777804
   },
   "Propane Helmet": {
@@ -140,7 +140,7 @@
     "bid": 17.91,
     "ask": 24.67,
     "marketCap": 82511.37,
-    "dayChange": 0.013582342954159502,
+    "dayChange": 0.009582863585118473,
     "weekChange": -0.10180541624874628
   },
   "Varsity Jacket": {
@@ -177,11 +177,11 @@
   },
   "Skull Helmet": {
     "id": 176558347,
-    "bid": 65.26,
+    "bid": 67.31,
     "ask": 83.43,
-    "marketCap": 213530.72,
-    "dayChange": 0.2406844106463879,
-    "weekChange": -0.20540606355777416
+    "marketCap": 220238.32,
+    "dayChange": 0.011571986774872197,
+    "weekChange": -0.18044563496895158
   },
   "Banana Slippers": {
     "id": 176569324,
@@ -212,7 +212,7 @@
     "bid": 15.13,
     "ask": 18.18,
     "marketCap": 72230.62,
-    "dayChange": -0.004605263157894639,
+    "dayChange": 0.0,
     "weekChange": -0.20242488139167097
   },
   "Reindeer Head": {
@@ -244,7 +244,7 @@
     "bid": 3.39,
     "ask": 3.92,
     "marketCap": 60030.12,
-    "dayChange": -0.050420168067226816,
+    "dayChange": -0.04775280898876402,
     "weekChange": -0.15249999999999997
   },
   "Faux hawk Hair": {
