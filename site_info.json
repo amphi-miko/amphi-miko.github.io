@@ -12,7 +12,7 @@
     "bid": 164.93,
     "ask": 1774.69,
     "marketCap": 22430.48,
-    "dayChange": 0.0024311675682246745,
+    "dayChange": 0.0012141079341954535,
     "weekChange": 0.13260541134459553
   },
   "Santa Hat": {
@@ -25,16 +25,16 @@
   },
   "Santa Jacket": {
     "id": 176481264,
-    "bid": 67.32,
+    "bid": 67.33,
     "ask": 93.98,
-    "marketCap": 139689.0,
-    "dayChange": 0.0227894257064722,
-    "weekChange": 0.15195071868583154
+    "marketCap": 139709.75,
+    "dayChange": 0.022941355211182093,
+    "weekChange": 0.15212183436002738
   },
   "Santa Trousers": {
     "id": 176482233,
     "bid": 55.0,
-    "ask": 74.68,
+    "ask": 70.91,
     "marketCap": 108240.0,
     "dayChange": 0.03793168522362706,
     "weekChange": 0.06362405724231288
@@ -68,7 +68,7 @@
     "bid": 24.77,
     "ask": 27.25,
     "marketCap": 87041.78,
-    "dayChange": 0.10284951024042736,
+    "dayChange": 0.04470687473639809,
     "weekChange": 0.0965028773793714
   },
   "Easter Dungarees": {
@@ -98,7 +98,7 @@
   "Wizard Beard": {
     "id": 176542131,
     "bid": 8.0,
-    "ask": 10.0,
+    "ask": 9.97,
     "marketCap": 59072.0,
     "dayChange": 0.006289308176100607,
     "weekChange": -0.06976744186046507
@@ -106,7 +106,7 @@
   "Wizard Gown": {
     "id": 176542130,
     "bid": 15.75,
-    "ask": 18.99,
+    "ask": 18.97,
     "marketCap": 97476.75,
     "dayChange": 0.016129032258064516,
     "weekChange": 0.06852103120759835
@@ -114,7 +114,7 @@
   "Wizard Trousers": {
     "id": 176542132,
     "bid": 8.17,
-    "ask": 10.66,
+    "ask": 10.63,
     "marketCap": 49305.95,
     "dayChange": -0.1041666666666666,
     "weekChange": -0.0048721071863582115
@@ -148,7 +148,7 @@
     "bid": 6.6,
     "ask": 11.24,
     "marketCap": 29660.4,
-    "dayChange": 0.03937007874015748,
+    "dayChange": 0.03773584905660367,
     "weekChange": -0.30890052356020953
   },
   "Pumpkin Head": {
@@ -185,11 +185,11 @@
   },
   "Banana Slippers": {
     "id": 176569324,
-    "bid": 5.38,
+    "bid": 5.4,
     "ask": 7.36,
-    "marketCap": 44546.4,
-    "dayChange": 0.015094339622641523,
-    "weekChange": 0.10020449897750516
+    "marketCap": 44712.0,
+    "dayChange": 0.018867924528301987,
+    "weekChange": 0.10429447852760751
   },
   "Fisherman Cap": {
     "id": 176569323,
@@ -242,9 +242,9 @@
   "Plague Doctor Mask": {
     "id": 176586903,
     "bid": 3.38,
-    "ask": 4.07,
+    "ask": 4.05,
     "marketCap": 59853.04,
-    "dayChange": 0.0,
+    "dayChange": -0.0029498525073746993,
     "weekChange": -0.15500000000000003
   },
   "Faux hawk Hair": {
