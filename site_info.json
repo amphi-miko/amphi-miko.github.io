@@ -12,7 +12,7 @@
     "bid": 164.93,
     "ask": 1774.69,
     "marketCap": 22430.48,
-    "dayChange": 0.0031628246457028786,
+    "dayChange": 0.0024311675682246745,
     "weekChange": 0.13260541134459553
   },
   "Santa Hat": {
@@ -42,7 +42,7 @@
   "Valentine Bear Head": {
     "id": 176492719,
     "bid": 39.75,
-    "ask": 43.9,
+    "ask": 44.46,
     "marketCap": 115513.5,
     "dayChange": 0.0,
     "weekChange": 0.04030358544883536
@@ -50,7 +50,7 @@
   "Valentines Bear Top": {
     "id": 176492722,
     "bid": 28.71,
-    "ask": 33.21,
+    "ask": 33.23,
     "marketCap": 65343.96,
     "dayChange": 0.0,
     "weekChange": 0.042862332001452945
@@ -58,7 +58,7 @@
   "Valentines Bear Trousers": {
     "id": 176492721,
     "bid": 39.36,
-    "ask": 42.79,
+    "ask": 43.09,
     "marketCap": 85529.28,
     "dayChange": -0.001268713524486099,
     "weekChange": 0.0007627765064836293
@@ -66,7 +66,7 @@
   "Easter Bonnet": {
     "id": 176508769,
     "bid": 24.77,
-    "ask": 26.11,
+    "ask": 27.25,
     "marketCap": 87041.78,
     "dayChange": 0.10284951024042736,
     "weekChange": 0.0965028773793714
@@ -153,11 +153,11 @@
   },
   "Pumpkin Head": {
     "id": 176556926,
-    "bid": 21.74,
+    "bid": 23.34,
     "ask": 27.17,
-    "marketCap": 114374.14,
-    "dayChange": -0.12725812926535535,
-    "weekChange": -0.010468821119708713
+    "marketCap": 122791.74,
+    "dayChange": -0.06302689682858291,
+    "weekChange": 0.0623577605826127
   },
   "Halloween Hoodie": {
     "id": 176556927,
@@ -202,7 +202,7 @@
   "Lifejacket": {
     "id": 176569325,
     "bid": 6.12,
-    "ask": 7.13,
+    "ask": 7.36,
     "marketCap": 28880.28,
     "dayChange": -0.014492753623188383,
     "weekChange": -0.003257328990227944
@@ -241,11 +241,11 @@
   },
   "Plague Doctor Mask": {
     "id": 176586903,
-    "bid": 3.36,
+    "bid": 3.38,
     "ask": 4.07,
-    "marketCap": 59498.88,
-    "dayChange": -0.0059171597633136145,
-    "weekChange": -0.16000000000000003
+    "marketCap": 59853.04,
+    "dayChange": 0.0,
+    "weekChange": -0.15500000000000003
   },
   "Faux hawk Hair": {
     "id": 176586904,
