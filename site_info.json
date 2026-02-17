@@ -18,7 +18,7 @@
   "Santa Hat": {
     "id": 176482232,
     "bid": 85.0,
-    "ask": 100.97,
+    "ask": 100.88,
     "marketCap": 274975.0,
     "dayChange": 0.0,
     "weekChange": 0.3147718484145397
@@ -50,7 +50,7 @@
   "Valentines Bear Top": {
     "id": 176492722,
     "bid": 28.71,
-    "ask": 33.21,
+    "ask": 33.09,
     "marketCap": 65343.96,
     "dayChange": 0.0,
     "weekChange": 0.042862332001452945
@@ -66,7 +66,7 @@
   "Easter Bonnet": {
     "id": 176508769,
     "bid": 24.77,
-    "ask": 26.99,
+    "ask": 26.11,
     "marketCap": 87041.78,
     "dayChange": 0.10235870048954165,
     "weekChange": 0.0965028773793714
@@ -97,16 +97,16 @@
   },
   "Wizard Beard": {
     "id": 176542131,
-    "bid": 8.0,
+    "bid": 8.01,
     "ask": 10.0,
-    "marketCap": 59072.0,
-    "dayChange": 0.006289308176100607,
-    "weekChange": -0.06976744186046507
+    "marketCap": 59145.84,
+    "dayChange": 0.007547169811320705,
+    "weekChange": -0.06860465116279069
   },
   "Wizard Gown": {
     "id": 176542130,
     "bid": 15.75,
-    "ask": 19.0,
+    "ask": 18.99,
     "marketCap": 97476.75,
     "dayChange": 0.016129032258064516,
     "weekChange": 0.06852103120759835
@@ -114,18 +114,18 @@
   "Wizard Trousers": {
     "id": 176542132,
     "bid": 8.48,
-    "ask": 10.67,
+    "ask": 10.66,
     "marketCap": 51176.8,
     "dayChange": -0.0701754385964911,
     "weekChange": 0.03288672350791712
   },
   "Shark Head": {
     "id": 176546366,
-    "bid": 10.2,
+    "bid": 10.17,
     "ask": 12.89,
-    "marketCap": 109221.6,
-    "dayChange": 0.010901883052527199,
-    "weekChange": -0.07019143117593449
+    "marketCap": 108900.36,
+    "dayChange": 0.007928642220019828,
+    "weekChange": -0.0729261622607111
   },
   "Safety Glasses": {
     "id": 176549976,
@@ -154,7 +154,7 @@
   "Pumpkin Head": {
     "id": 176556926,
     "bid": 21.74,
-    "ask": 27.15,
+    "ask": 27.17,
     "marketCap": 114374.14,
     "dayChange": -0.12725812926535535,
     "weekChange": -0.010468821119708713
@@ -185,16 +185,16 @@
   },
   "Banana Slippers": {
     "id": 176569324,
-    "bid": 5.37,
+    "bid": 5.38,
     "ask": 6.95,
-    "marketCap": 44463.6,
-    "dayChange": 0.013207547169811375,
-    "weekChange": 0.09815950920245409
+    "marketCap": 44546.4,
+    "dayChange": 0.015094339622641523,
+    "weekChange": 0.10020449897750516
   },
   "Fisherman Cap": {
     "id": 176569323,
     "bid": 6.14,
-    "ask": 7.83,
+    "ask": 7.71,
     "marketCap": 28348.38,
     "dayChange": 0.0,
     "weekChange": 0.008210180623973698
@@ -252,7 +252,7 @@
     "bid": 2.53,
     "ask": 3.08,
     "marketCap": 18744.77,
-    "dayChange": -0.0629629629629631,
+    "dayChange": -0.052434456928838996,
     "weekChange": -0.09642857142857145
   },
   "Tactical Backpack": {
