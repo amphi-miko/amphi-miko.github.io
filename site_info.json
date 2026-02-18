@@ -1,19 +1,19 @@
 {
   "Face Tattoos": {
     "id": 176478961,
-    "bid": 170.96,
+    "bid": 171.13,
     "ask": 659.42,
-    "marketCap": 24960.16,
-    "dayChange": 0.002697947214076293,
-    "weekChange": 0.11775089898659706
+    "marketCap": 24984.98,
+    "dayChange": 0.0036950146627565718,
+    "weekChange": 0.11886237332461594
   },
   "Neck Tattoos": {
     "id": 176478409,
-    "bid": 165.22,
+    "bid": 165.38,
     "ask": 520.75,
-    "marketCap": 22469.92,
-    "dayChange": 0.002183670993570212,
-    "weekChange": 0.13459689603076497
+    "marketCap": 22491.68,
+    "dayChange": 0.0031541914351569922,
+    "weekChange": 0.13569564620244465
   },
   "Santa Hat": {
     "id": 176482232,
@@ -25,11 +25,11 @@
   },
   "Santa Jacket": {
     "id": 176481264,
-    "bid": 67.94,
+    "bid": 67.98,
     "ask": 91.12,
-    "marketCap": 140975.5,
-    "dayChange": 0.00920974450386222,
-    "weekChange": 0.16255989048596853
+    "marketCap": 141058.5,
+    "dayChange": 0.009803921568627612,
+    "weekChange": 0.16324435318275166
   },
   "Santa Trousers": {
     "id": 176482233,
@@ -108,7 +108,7 @@
     "bid": 16.57,
     "ask": 18.92,
     "marketCap": 102551.73,
-    "dayChange": 0.05206349206349208,
+    "dayChange": 0.03562500000000002,
     "weekChange": 0.12415196743554953
   },
   "Wizard Trousers": {
@@ -124,7 +124,7 @@
     "bid": 9.0,
     "ask": 10.36,
     "marketCap": 96372.0,
-    "dayChange": -0.11504424778761062,
+    "dayChange": -0.11764705882352935,
     "weekChange": -0.17958067456700097
   },
   "Safety Glasses": {
@@ -132,7 +132,7 @@
     "bid": 3.02,
     "ask": 3.58,
     "marketCap": 26110.92,
-    "dayChange": 0.02027027027027029,
+    "dayChange": 0.0,
     "weekChange": 0.048611111111111154
   },
   "Propane Helmet": {
