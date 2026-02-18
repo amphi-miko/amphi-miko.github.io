@@ -1,19 +1,19 @@
 {
   "Face Tattoos": {
     "id": 176478961,
-    "bid": 171.41,
+    "bid": 184.18,
     "ask": 659.42,
-    "marketCap": 25025.86,
-    "dayChange": 0.004865752139758378,
-    "weekChange": 0.12069303694017659
+    "marketCap": 26890.28,
+    "dayChange": 0.07890574658778043,
+    "weekChange": 0.20418437397842445
   },
   "Neck Tattoos": {
     "id": 176478409,
-    "bid": 165.68,
+    "bid": 177.56,
     "ask": 1452.02,
-    "marketCap": 22532.48,
-    "dayChange": 0.004364694471386996,
-    "weekChange": 0.13775580277434418
+    "marketCap": 24148.16,
+    "dayChange": 0.07599078899527324,
+    "weekChange": 0.21933800302156295
   },
   "Santa Hat": {
     "id": 176482232,
@@ -21,15 +21,15 @@
     "ask": 111.59,
     "marketCap": 333140.3,
     "dayChange": 0.21152941176470594,
-    "weekChange": 0.5921459492888064
+    "weekChange": 0.5370149253731343
   },
   "Santa Jacket": {
     "id": 176481264,
-    "bid": 72.91,
+    "bid": 73.08,
     "ask": 91.11,
-    "marketCap": 151288.25,
-    "dayChange": 0.08287538987078566,
-    "weekChange": 0.25188873626373615
+    "marketCap": 151641.0,
+    "dayChange": 0.08540026733996733,
+    "weekChange": 0.25416166123219486
   },
   "Santa Trousers": {
     "id": 176482233,
@@ -73,19 +73,19 @@
   },
   "Easter Dungarees": {
     "id": 176508770,
-    "bid": 40.5,
+    "bid": 42.36,
     "ask": 46.2,
-    "marketCap": 88452.0,
-    "dayChange": 0.03474706182933059,
-    "weekChange": 0.14795918367346936
+    "marketCap": 92514.24,
+    "dayChange": 0.0822687787429739,
+    "weekChange": 0.20068027210884348
   },
   "Easter Slippers": {
     "id": 176508771,
-    "bid": 18.23,
+    "bid": 18.31,
     "ask": 22.11,
-    "marketCap": 58244.85,
-    "dayChange": 0.0241573033707865,
-    "weekChange": -0.17136363636363636
+    "marketCap": 58500.45,
+    "dayChange": 0.028651685393258314,
+    "weekChange": -0.16772727272727278
   },
   "Wizard Hat": {
     "id": 176542129,
@@ -106,15 +106,15 @@
   "Wizard Gown": {
     "id": 176542130,
     "bid": 15.5,
-    "ask": 18.92,
+    "ask": 18.93,
     "marketCap": 95929.5,
     "dayChange": -0.015873015873015872,
-    "weekChange": 0.05156037991858886
+    "weekChange": 0.04942450914014898
   },
   "Wizard Trousers": {
     "id": 176542132,
     "bid": 9.28,
-    "ask": 10.61,
+    "ask": 10.62,
     "marketCap": 56004.8,
     "dayChange": 0.13586291309669515,
     "weekChange": 0.13032886723507897
@@ -153,11 +153,11 @@
   },
   "Pumpkin Head": {
     "id": 176556926,
-    "bid": 19.79,
+    "bid": 20.15,
     "ask": 28.36,
-    "marketCap": 104115.19,
-    "dayChange": -0.15209940017137963,
-    "weekChange": -0.09922621756941283
+    "marketCap": 106009.15,
+    "dayChange": -0.13667523564695808,
+    "weekChange": -0.08284023668639055
   },
   "Halloween Hoodie": {
     "id": 176556927,
@@ -170,18 +170,18 @@
   "Halloween Jeans": {
     "id": 176556925,
     "bid": 5.52,
-    "ask": 8.35,
+    "ask": 8.34,
     "marketCap": 44546.4,
     "dayChange": -0.2803129074315516,
-    "weekChange": -0.08609271523178816
+    "weekChange": -0.08910891089108912
   },
   "Skull Helmet": {
     "id": 176558347,
-    "bid": 56.0,
+    "bid": 59.19,
     "ask": 90.0,
-    "marketCap": 183232.0,
-    "dayChange": -0.14189396261109416,
-    "weekChange": -0.31815414586630947
+    "marketCap": 193669.68,
+    "dayChange": -0.09301256512411901,
+    "weekChange": -0.27931328381833676
   },
   "Banana Slippers": {
     "id": 176569324,
@@ -249,11 +249,11 @@
   },
   "Faux hawk Hair": {
     "id": 176586904,
-    "bid": 2.59,
+    "bid": 2.64,
     "ask": 3.0,
-    "marketCap": 19189.31,
-    "dayChange": 0.015686274509803935,
-    "weekChange": -0.075
+    "marketCap": 19559.76,
+    "dayChange": 0.03529411764705894,
+    "weekChange": -0.05714285714285704
   },
   "Tactical Backpack": {
     "id": 176587087,
