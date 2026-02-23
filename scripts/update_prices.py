@@ -89,7 +89,7 @@ def write_data_summary(item_data):
                 day_change = (bid - day_bid) / day_bid
             else:
                 day_change = 0
-            if week_change > 0:
+            if week_bid > 0:
                 week_change = (bid - week_bid) / week_bid
             else:
                 week_change = 0
