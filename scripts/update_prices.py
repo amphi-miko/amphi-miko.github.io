@@ -17,22 +17,22 @@ def update_market_prices(item_info):
         API_URL = f"https://steamcommunity.com/market/itemordershistogram?country=US&language=english&currency=1&item_nameid={item_info[item]['id']}"  # <-- your real API URL here
         # Fetch data from API
         response = requests.get(API_URL, timeout=10)
-        time.sleep(8)
+        time.sleep(7)
         response.raise_for_status()
         orderbook_data = response.json()
         # Extract price (adjust this key if needed)
-        if "highest_buy_order" in orderbook_data:
+        if "highest_buy_order" in orderbook_data and orderbook_data["highest_buy_order"]:
             bid = int(orderbook_data["highest_buy_order"])
         else:
-            bid = None
-        if "lowest_sell_order" in orderbook_data:
+            bid = 0
+        if "lowest_sell_order" in orderbook_data and orderbook_data["lowest_sell_order"]:
             ask = int(orderbook_data["lowest_sell_order"])
         else:
-            ask = None     
-        if "sell_order_summary" in orderbook_data:
+            ask = None    
+        if "sell_order_summary" in orderbook_data and orderbook_data["lowest_sell_order"]:
             listed = int(orderbook_data["sell_order_summary"].split('</span>')[0].split(">")[1])
         else:
-            listed = 0            
+            listed = 0          
         mcap = item_info[item]["qty"]*bid
         if "history" in item_info[item]:
             item_info[item]["history"].append({"timestamp":current_time_str,"ask":ask,"bid":bid,"mcap":mcap,"qty":listed})
