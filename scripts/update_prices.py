@@ -85,8 +85,14 @@ def write_data_summary(item_data):
             bid = history[-1]["bid"]/100
             ask = history[-1]["ask"]/100
             marketCap = history[-1]["mcap"] / 100
-            day_change = (bid - day_bid) / day_bid
-            week_change = (bid - week_bid) / week_bid
+            if day_bid > 0:
+                day_change = (bid - day_bid) / day_bid
+            else:
+                day_change = 0
+            if week_change > 0:
+                week_change = (bid - week_bid) / week_bid
+            else:
+                week_change = 0
             data_summary[item] = {"bid" : bid,
                                   "ask" : ask,
                                   "marketCap" : marketCap,
