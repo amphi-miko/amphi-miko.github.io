@@ -75,35 +75,45 @@ def write_data_summary(item_data):
     data_summary = {}
 
     for item in item_data:
-        if "history" in item_data[item]:
-            history = item_data[item]["history"]
-            week_bid = history[0]["bid"]/100
-            try:
-                day_bid = history[-13]["bid"]/100  
-            except IndexError:
-                day_bid = history[0]["bid"]/100  
-            bid = history[-1]["bid"]/100
-            ask = history[-1]["ask"]/100
-            marketCap = history[-1]["mcap"] / 100
-            if day_bid > 0:
-                day_change = (bid - day_bid) / day_bid
+        try:
+            if "history" in item_data[item]:
+                history = item_data[item]["history"]
+                week_bid = history[0]["bid"]/100
+                try:
+                    day_bid = history[-13]["bid"]/100  
+                except IndexError:
+                    day_bid = history[0]["bid"]/100  
+                bid = history[-1]["bid"]/100 
+                if history[-1]["ask"]:              
+                    ask = history[-1]["ask"]/100
+                else:
+                    ask = 0
+                marketCap = history[-1]["mcap"] / 100
+                if day_bid > 0:
+                    day_change = (bid - day_bid) / day_bid
+                else:
+                    day_change = 0
+                if week_bid > 0:
+                    week_change = (bid - week_bid) / week_bid
+                else:
+                    week_change = 0
+                data_summary[item] = {"bid" : bid,
+                                    "ask" : ask,
+                                    "marketCap" : marketCap,
+                                    "dayChange" : day_change,
+                                    "weekChange" : week_change}
             else:
-                day_change = 0
-            if week_bid > 0:
-                week_change = (bid - week_bid) / week_bid
-            else:
-                week_change = 0
-            data_summary[item] = {"bid" : bid,
-                                  "ask" : ask,
-                                  "marketCap" : marketCap,
-                                  "dayChange" : day_change,
-                                  "weekChange" : week_change}
-        else:
-            data_summary[item] = {"bid" : 0,
-                                  "ask" : 0,
-                                  "marketCap" : 0,
-                                  "dayChange" : 0,
-                                  "weekChange" : 0}            
+                data_summary[item] = {"bid" : 0,
+                                    "ask" : 0,
+                                    "marketCap" : 0,
+                                    "dayChange" : 0,
+                                    "weekChange" : 0}     
+        except TypeError: 
+                data_summary[item] = {"bid" : 0,
+                                    "ask" : 0,
+                                    "marketCap" : 0,
+                                    "dayChange" : 0,
+                                    "weekChange" : 0}         
 
     output_file = Path("site_info.json")
     output_file.write_text(json.dumps(data_summary, indent=2))
