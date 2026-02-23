@@ -593,7 +593,7 @@
       }
     ]
   },
-  "Neck Tattoos": {
+  "Neck Tattoo": {
     "id": 176478409,
     "qty": 136,
     "history": [
@@ -1187,7 +1187,7 @@
       }
     ]
   },
-  "Santa Hat": {
+  "Santa 2024 Hat": {
     "id": 176482232,
     "qty": 3235,
     "history": [
@@ -1781,7 +1781,7 @@
       }
     ]
   },
-  "Santa Jacket": {
+  "Santa 2024 Jacket": {
     "id": 176481264,
     "qty": 2075,
     "history": [
@@ -2375,7 +2375,7 @@
       }
     ]
   },
-  "Santa Trousers": {
+  "Santa Trousers 2024": {
     "id": 176482233,
     "qty": 1968,
     "history": [
@@ -2969,7 +2969,7 @@
       }
     ]
   },
-  "Valentine Bear Head": {
+  "Valentines Bear Head 2025": {
     "id": 176492719,
     "qty": 2906,
     "history": [
@@ -3563,7 +3563,7 @@
       }
     ]
   },
-  "Valentines Bear Top": {
+  "Valentines Bear Top 2025": {
     "id": 176492722,
     "qty": 2276,
     "history": [
@@ -4157,7 +4157,7 @@
       }
     ]
   },
-  "Valentines Bear Trousers": {
+  "Valentines Bear Trousers 2025": {
     "id": 176492721,
     "qty": 2173,
     "history": [
@@ -4751,7 +4751,7 @@
       }
     ]
   },
-  "Easter Bonnet": {
+  "Easter Bonnet 2025": {
     "id": 176508769,
     "qty": 3514,
     "history": [
@@ -5345,7 +5345,7 @@
       }
     ]
   },
-  "Easter Dungarees": {
+  "Easter Dungarees 2025": {
     "id": 176508770,
     "qty": 2184,
     "history": [
@@ -5939,7 +5939,7 @@
       }
     ]
   },
-  "Easter Slippers": {
+  "Easter Slippers 2025": {
     "id": 176508771,
     "qty": 3195,
     "history": [
@@ -11285,7 +11285,7 @@
       }
     ]
   },
-  "Pumpkin Head": {
+  "Pumpkin Head 2025": {
     "id": 176556926,
     "qty": 5261,
     "history": [
@@ -11879,7 +11879,7 @@
       }
     ]
   },
-  "Halloween Hoodie": {
+  "Halloween Hoodie 2025": {
     "id": 176556927,
     "qty": 4129,
     "history": [
@@ -12473,7 +12473,7 @@
       }
     ]
   },
-  "Halloween Jeans": {
+  "Halloween Jeans 2025": {
     "id": 176556925,
     "qty": 8070,
     "history": [
@@ -16037,7 +16037,7 @@
       }
     ]
   },
-  "Reindeer Head": {
+  "Reindeer Head 2025": {
     "id": 176581926,
     "qty": 5003,
     "history": [
@@ -16631,7 +16631,7 @@
       }
     ]
   },
-  "Reindeer Top": {
+  "Reindeer Top 2025": {
     "id": 176581927,
     "qty": 5185,
     "history": [
@@ -17225,7 +17225,7 @@
       }
     ]
   },
-  "Reindeer Trousers": {
+  "Reindeer Trousers 2025": {
     "id": 176581928,
     "qty": 6157,
     "history": [
@@ -19600,5 +19600,140 @@
         "qty": 164
       }
     ]
+  },
+  "Lunar Shoes 2026": {
+    "id": 176606003,
+    "store_id": 465917,
+    "qty": 4857
+  },
+  "Lunar Trousers 2026": {
+    "id": 176606002,
+    "store_id": 685220,
+    "qty": 5675
+  },
+  "Lunar Jacket 2026": {
+    "id": 176606001,
+    "store_id": 332431,
+    "qty": 4564
+  },
+  "Lunar Mask 2026": {
+    "id": 176606000,
+    "store_id": 502790,
+    "qty": 5323
+  },
+  "Short Parted Hair": {
+    "id": 176604348,
+    "store_id": 756278,
+    "qty": 496
+  },
+  "OG Pants - Red": {
+    "id": 176604470,
+    "store_id": 920120,
+    "qty": 3809
+  },
+  "Crossbody Bag Shirt": {
+    "id": 176604472,
+    "store_id": 913814,
+    "qty": 3238
+  },
+  "Punk Helmet": {
+    "id": 176604471,
+    "store_id": 831783,
+    "qty": 10236
+  },
+  "Brainy BRN-101": {
+    "id": 176604469,
+    "store_id": 409746,
+    "qty": 7808
+  },
+  "Vintage Design Crop Top": {
+    "id": 176536799,
+    "store_id": 645009,
+    "qty": 586
+  },
+  "Leopard Print Heel Boots": {
+    "id": 176553844,
+    "store_id": 367011,
+    "qty": 538
+  },
+  "Frilly Bra": {
+    "id": 176516045,
+    "store_id": 9258,
+    "qty": 1913
+  },
+  "Black Modern Watch": {
+    "id": 176515412,
+    "store_id": 212908,
+    "qty": 1724
+  },
+  "Love Heart Boxers": {
+    "id": 176515250,
+    "store_id": 620659,
+    "qty": 2935
+  },
+  "WW1 Helmet": {
+    "id": 176475756,
+    "store_id": 385242,
+    "qty": 816
+  },
+  "Racer Helmet": {
+    "id": 176474736,
+    "store_id": 287919,
+    "qty": 840
+  },
+  "Grand Ball Gown": {
+    "store_id": 944417,
+    "qty": 435,
+    "id": 176474084
+  },
+  "Cowboy Hat": {
+    "store_id": 851874,
+    "qty": 849,
+    "id": 176473446
+  },
+  "Police Hat": {
+    "store_id": 423924,
+    "qty": 710,
+    "id": 176475758
+  },
+  "Pirate": {
+    "store_id": 939961,
+    "qty": 763,
+    "id": 176471632
+  },
+  "Fisherman": {
+    "store_id": 239503,
+    "qty": 571,
+    "id": 176471844
+  },
+  "Chef Shirt": {
+    "store_id": 125889,
+    "qty": 786,
+    "id": 176471845
+  },
+  "Chef Hat": {
+    "store_id": 65001,
+    "qty": 962,
+    "id": 176471842
+  },
+  "Bandana Mask": {
+    "store_id": 562324,
+    "qty": 1282,
+    "id": 176471702
+  },
+  "Labcoat": {
+    "store_id": 57125,
+    "qty": 854,
+    "id": 176471843
+  },
+  "Prison Jumpsuit": {
+    "store_id": 3686,
+    "qty": 1281,
+    "id": 176471750
+  },
+  "Hard Hat": {
+    "store_id": 345237,
+    "qty": 35,
+    "id": 176468965
   }
 }
