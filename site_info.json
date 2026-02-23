@@ -17,12 +17,12 @@
     "bid": 95.16,
     "ask": 109.28,
     "marketCap": 307842.6,
-    "dayChange": 0.07331378299120235,
+    "dayChange": 0.0730717185385655,
     "weekChange": 0.11952941176470584
   },
   "Santa 2024 Jacket": {
     "bid": 83.42,
-    "ask": 91.13,
+    "ask": 96.77,
     "marketCap": 173096.5,
     "dayChange": 0.19701535370928402,
     "weekChange": 0.2689382415576515
@@ -35,11 +35,11 @@
     "weekChange": 0.17493866767314578
   },
   "Valentines Bear Head 2025": {
-    "bid": 38.96,
+    "bid": 38.66,
     "ask": 44.27,
-    "marketCap": 113217.76,
-    "dayChange": 0.02123197903014423,
-    "weekChange": -0.019874213836477965
+    "marketCap": 112345.96,
+    "dayChange": 0.013368283093053684,
+    "weekChange": -0.02742138364779883
   },
   "Valentines Bear Top 2025": {
     "bid": 32.43,
@@ -56,11 +56,11 @@
     "weekChange": -0.08373509261608722
   },
   "Easter Bonnet 2025": {
-    "bid": 23.4,
+    "bid": 22.03,
     "ask": 25.54,
-    "marketCap": 82227.6,
-    "dayChange": -0.001280409731114005,
-    "weekChange": 0.04138851802403203
+    "marketCap": 77413.42,
+    "dayChange": -0.059752454118651245,
+    "weekChange": -0.019581664441477426
   },
   "Easter Dungarees 2025": {
     "bid": 46.23,
@@ -105,11 +105,11 @@
     "weekChange": -0.0361842105263158
   },
   "Shark Head": {
-    "bid": 7.82,
+    "bid": 8.0,
     "ask": 10.85,
-    "marketCap": 83736.56,
-    "dayChange": -0.16719914802981897,
-    "weekChange": -0.2249752229930624
+    "marketCap": 85664.0,
+    "dayChange": -0.14802981895633657,
+    "weekChange": -0.20713577799801783
   },
   "Safety Glasses": {
     "bid": 3.05,
@@ -157,14 +157,14 @@
     "bid": 77.11,
     "ask": 98.55,
     "marketCap": 252303.92,
-    "dayChange": 0.17295406145421366,
+    "dayChange": 0.17206262349901189,
     "weekChange": 0.08330991851643708
   },
   "Banana Slippers": {
     "bid": 5.33,
-    "ask": 6.91,
+    "ask": 6.86,
     "marketCap": 44132.4,
-    "dayChange": 0.0,
+    "dayChange": 0.005660377358490613,
     "weekChange": 0.005660377358490613
   },
   "Fisherman Cap": {
@@ -190,7 +190,7 @@
   },
   "Reindeer Head 2025": {
     "bid": 17.21,
-    "ask": 20.3,
+    "ask": 20.37,
     "marketCap": 86101.63,
     "dayChange": 0.07832080200501253,
     "weekChange": -0.10411244143675169
@@ -213,48 +213,48 @@
     "bid": 3.31,
     "ask": 3.82,
     "marketCap": 58613.48,
-    "dayChange": -0.13123359580052493,
+    "dayChange": 0.12969283276450508,
     "weekChange": -0.020710059171597586
   },
   "Faux hawk Hair": {
     "bid": 2.73,
-    "ask": 3.07,
+    "ask": 3.06,
     "marketCap": 20226.57,
     "dayChange": 0.06640624999999997,
-    "weekChange": 0.011111111111111039
+    "weekChange": 0.02247191011235957
   },
   "Tactical Backpack": {
     "bid": 4.69,
-    "ask": 4.97,
+    "ask": 4.96,
     "marketCap": 36033.27,
-    "dayChange": 0.10352941176470598,
+    "dayChange": 0.16666666666666688,
     "weekChange": 0.015151515151515213
   },
   "Lunar Shoes 2026": {
     "bid": 2.94,
     "ask": 3.68,
-    "marketCap": 15255.66,
+    "marketCap": 15335.04,
     "dayChange": 0.0,
     "weekChange": 0.0
   },
   "Lunar Trousers 2026": {
     "bid": 3.23,
     "ask": 4.44,
-    "marketCap": 19635.17,
+    "marketCap": 19770.83,
     "dayChange": 0.0,
     "weekChange": 0.0
   },
   "Lunar Jacket 2026": {
     "bid": 5.01,
     "ask": 6.49,
-    "marketCap": 24408.72,
+    "marketCap": 24533.97,
     "dayChange": 0.0,
     "weekChange": 0.0
   },
   "Lunar Mask 2026": {
     "bid": 10.98,
     "ask": 12.12,
-    "marketCap": 61850.34,
+    "marketCap": 62102.88,
     "dayChange": 0.011049723756906169,
     "weekChange": 0.011049723756906169
   },
@@ -268,28 +268,28 @@
   "OG Pants - Red": {
     "bid": 1.97,
     "ask": 2.27,
-    "marketCap": 7547.07,
+    "marketCap": 7560.86,
     "dayChange": 0.0,
     "weekChange": 0.0
   },
   "Crossbody Bag Shirt": {
     "bid": 2.6,
     "ask": 2.8,
-    "marketCap": 8551.4,
+    "marketCap": 8564.4,
     "dayChange": 0.0,
     "weekChange": 0.0
   },
   "Punk Helmet": {
     "bid": 1.55,
     "ask": 1.65,
-    "marketCap": 16014.6,
+    "marketCap": 16031.65,
     "dayChange": 0.0,
     "weekChange": 0.0
   },
   "Brainy BRN-101": {
     "bid": 4.62,
     "ask": 5.22,
-    "marketCap": 36613.5,
+    "marketCap": 36655.08,
     "dayChange": 0.0,
     "weekChange": 0.0
   },
@@ -379,7 +379,7 @@
   },
   "Chef Shirt": {
     "bid": 2.01,
-    "ask": 2.53,
+    "ask": 2.5,
     "marketCap": 1579.86,
     "dayChange": 0.0,
     "weekChange": 0.0
@@ -401,7 +401,7 @@
   "Labcoat": {
     "bid": 2.82,
     "ask": 5.06,
-    "marketCap": 2411.1,
+    "marketCap": 2413.92,
     "dayChange": 0.01075268817204294,
     "weekChange": 0.01075268817204294
   },
