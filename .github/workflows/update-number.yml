@@ -31,6 +31,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install requests
+          pip install selenium
 
       - name: Fetch prices and update JSON
         run: python scripts/update_prices.py
