@@ -21,9 +21,18 @@ def update_market_prices(item_info):
         response.raise_for_status()
         orderbook_data = response.json()
         # Extract price (adjust this key if needed)
-        bid = int(orderbook_data["highest_buy_order"])
-        ask = int(orderbook_data["lowest_sell_order"])
-        listed = int(orderbook_data["sell_order_summary"].split('</span>')[0].split(">")[1])
+        if "highest_buy_order" in orderbook_data:
+            bid = int(orderbook_data["highest_buy_order"])
+        else:
+            bid = None
+        if "lowest_sell_order" in orderbook_data:
+            ask = int(orderbook_data["lowest_sell_order"])
+        else:
+            ask = None     
+        if "sell_order_summary" in orderbook_data:
+            listed = int(orderbook_data["sell_order_summary"].split('</span>')[0].split(">")[1])
+        else:
+            listed = 0            
         mcap = item_info[item]["qty"]*bid
         if "history" in item_info[item]:
             item_info[item]["history"].append({"timestamp":current_time_str,"ask":ask,"bid":bid,"mcap":mcap,"qty":listed})
@@ -59,7 +68,7 @@ def populate_nameids(item_data):
             item_data[item]["id"] = nameid
             print(f"Saved {item} nameid {nameid}")
         else:
-            print(f"{item} already saved as {nameid}")
+            print(f"nameid already saved for {item}")
     return item_data
 
 def write_data_summary(item_data):
