@@ -76,6 +76,10 @@ def write_data_summary(item_data):
 
     for item in item_data:
         try:
+            if "in_store" in item_data[item]:
+                in_store = item_data[item]["in_store"]
+            else:
+                in_store = False
             if "history" in item_data[item]:
                 history = item_data[item]["history"]
                 week_bid = history[0]["bid"]/100
@@ -97,19 +101,22 @@ def write_data_summary(item_data):
                     week_change = (bid - week_bid) / week_bid
                 else:
                     week_change = 0
-                data_summary[item] = {"bid" : bid,
+                data_summary[item] = {"in_store":in_store,
+                                    "bid" : bid,
                                     "ask" : ask,
                                     "marketCap" : marketCap,
                                     "dayChange" : day_change,
                                     "weekChange" : week_change}
             else:
-                data_summary[item] = {"bid" : 0,
+                data_summary[item] = {"in_store":in_store,
+                                    "bid" : 0,
                                     "ask" : 0,
                                     "marketCap" : 0,
                                     "dayChange" : 0,
                                     "weekChange" : 0}     
         except TypeError: 
-                data_summary[item] = {"bid" : 0,
+                data_summary[item] = {"in_store":False,
+                                    "bid" : 0,
                                     "ask" : 0,
                                     "marketCap" : 0,
                                     "dayChange" : 0,
@@ -215,27 +222,38 @@ def main():
     driver = webdriver.Chrome(options=options)
 
     try:
+
+        with open("item_info.json", "r", encoding="utf-8") as f:
+            item_data = json.load(f)
+
         print("Fetching store items...")
         store_items = get_store_items(driver)
 
         print(f"Found {len(store_items)} items on sale")
 
-        with open("item_info.json", "r", encoding="utf-8") as f:
-            item_data = json.load(f)
-        
         for item_name, store_id in store_items.items():
             if item_name not in item_data:
-                item_data[item_name] = {"store_id":store_id}
+                item_data[item_name] = {"store_id":store_id,"in_store":True}
             total_sales = get_total_sales(driver, store_id)
             print(f"Collected all current sales for {item_name} (Store ID: {store_id})")
             item_data[item_name]["qty"]=total_sales
+            item_data[item_name]["in_store"]=True
+        
+        for item_name in item_data:
+            if item_name not in store_items:
+                if "in_store" not in item_data[item_name] or item_data[item_name]["in_store"]:
+                    store_id = item_data[item_name]["store_id"]
+                    total_sales = get_total_sales(driver, store_id)
+                    item_data[item_name]["qty"]=total_sales
+                    item_data[item_name]["in_store"]=False
+                    print(f"{item_name} no longer in store, finalized sales numbers")
         
         item_data = populate_nameids(item_data)
         item_data = update_market_prices(item_data)
 
         output_file = Path("item_info.json")
         output_file.write_text(json.dumps(item_data, indent=2))
-        
+
         write_data_summary(item_data)
 
     finally:

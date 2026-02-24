@@ -1,7 +1,8 @@
 {
   "Face Tattoos": {
     "id": 176478961,
-    "qty": 146,
+    "store_id": 445303,
+    "qty": 147,
     "history": [
       {
         "timestamp": "2026-02-16T07:01:46.698137+00:00",
@@ -591,10 +592,12 @@
         "mcap": 2582886,
         "qty": 3
       }
-    ]
+    ],
+    "in_store": false
   },
   "Neck Tattoo": {
     "id": 176478409,
+    "store_id": 696280,
     "qty": 136,
     "history": [
       {
@@ -1185,10 +1188,12 @@
         "mcap": 2219656,
         "qty": 3
       }
-    ]
+    ],
+    "in_store": false
   },
   "Santa 2024 Hat": {
     "id": 176482232,
+    "store_id": 328701,
     "qty": 3235,
     "history": [
       {
@@ -1779,10 +1784,12 @@
         "mcap": 27047835,
         "qty": 18
       }
-    ]
+    ],
+    "in_store": false
   },
   "Santa 2024 Jacket": {
     "id": 176481264,
+    "store_id": 849814,
     "qty": 2075,
     "history": [
       {
@@ -2373,10 +2380,12 @@
         "mcap": 17349075,
         "qty": 12
       }
-    ]
+    ],
+    "in_store": false
   },
   "Santa Trousers 2024": {
     "id": 176482233,
+    "store_id": 335294,
     "qty": 1968,
     "history": [
       {
@@ -2967,10 +2976,12 @@
         "mcap": 12280320,
         "qty": 18
       }
-    ]
+    ],
+    "in_store": false
   },
   "Valentines Bear Head 2025": {
     "id": 176492719,
+    "store_id": 427599,
     "qty": 2906,
     "history": [
       {
@@ -3561,10 +3572,12 @@
         "mcap": 11237502,
         "qty": 21
       }
-    ]
+    ],
+    "in_store": false
   },
   "Valentines Bear Top 2025": {
     "id": 176492722,
+    "store_id": 19196,
     "qty": 2276,
     "history": [
       {
@@ -4155,10 +4168,12 @@
         "mcap": 7381068,
         "qty": 14
       }
-    ]
+    ],
+    "in_store": false
   },
   "Valentines Bear Trousers 2025": {
     "id": 176492721,
+    "store_id": 606024,
     "qty": 2173,
     "history": [
       {
@@ -4749,10 +4764,12 @@
         "mcap": 7846703,
         "qty": 14
       }
-    ]
+    ],
+    "in_store": false
   },
   "Easter Bonnet 2025": {
     "id": 176508769,
+    "store_id": 433164,
     "qty": 3514,
     "history": [
       {
@@ -5343,10 +5360,12 @@
         "mcap": 7706202,
         "qty": 28
       }
-    ]
+    ],
+    "in_store": false
   },
   "Easter Dungarees 2025": {
     "id": 176508770,
+    "store_id": 41243,
     "qty": 2184,
     "history": [
       {
@@ -5937,10 +5956,12 @@
         "mcap": 10096632,
         "qty": 12
       }
-    ]
+    ],
+    "in_store": false
   },
   "Easter Slippers 2025": {
     "id": 176508771,
+    "store_id": 508962,
     "qty": 3195,
     "history": [
       {
@@ -6531,10 +6552,12 @@
         "mcap": 5754195,
         "qty": 22
       }
-    ]
+    ],
+    "in_store": false
   },
   "Wizard Hat": {
     "id": 176542129,
+    "store_id": 532424,
     "qty": 7316,
     "history": [
       {
@@ -7125,10 +7148,12 @@
         "mcap": 14449100,
         "qty": 70
       }
-    ]
+    ],
+    "in_store": false
   },
   "Wizard Beard": {
     "id": 176542131,
+    "store_id": 845847,
     "qty": 7384,
     "history": [
       {
@@ -7719,10 +7744,12 @@
         "mcap": 5907200,
         "qty": 79
       }
-    ]
+    ],
+    "in_store": false
   },
   "Wizard Gown": {
     "id": 176542130,
+    "store_id": 349443,
     "qty": 6189,
     "history": [
       {
@@ -8313,10 +8340,12 @@
         "mcap": 10577001,
         "qty": 36
       }
-    ]
+    ],
+    "in_store": false
   },
   "Wizard Trousers": {
     "id": 176542132,
+    "store_id": 665623,
     "qty": 6035,
     "history": [
       {
@@ -8907,11 +8936,13 @@
         "mcap": 5304765,
         "qty": 47
       }
-    ]
+    ],
+    "in_store": false
   },
   "Shark Head": {
     "id": 176546366,
-    "qty": 10708,
+    "store_id": 206269,
+    "qty": 10878,
     "history": [
       {
         "timestamp": "2026-02-16T07:01:46.698137+00:00",
@@ -9501,11 +9532,13 @@
         "mcap": 9080384,
         "qty": 90
       }
-    ]
+    ],
+    "in_store": false
   },
   "Safety Glasses": {
     "id": 176549976,
-    "qty": 8646,
+    "store_id": 893480,
+    "qty": 8788,
     "history": [
       {
         "timestamp": "2026-02-16T07:01:46.698137+00:00",
@@ -10095,11 +10128,13 @@
         "mcap": 2637030,
         "qty": 160
       }
-    ]
+    ],
+    "in_store": false
   },
   "Propane Helmet": {
     "id": 176553066,
-    "qty": 4607,
+    "store_id": 32928,
+    "qty": 4611,
     "history": [
       {
         "timestamp": "2026-02-16T07:01:46.698137+00:00",
@@ -10689,10 +10724,12 @@
         "mcap": 8744086,
         "qty": 60
       }
-    ]
+    ],
+    "in_store": false
   },
   "Varsity Jacket": {
     "id": 176555153,
+    "store_id": 973188,
     "qty": 4494,
     "history": [
       {
@@ -11283,11 +11320,13 @@
         "mcap": 3527790,
         "qty": 68
       }
-    ]
+    ],
+    "in_store": false
   },
   "Pumpkin Head 2025": {
     "id": 176556926,
-    "qty": 5261,
+    "store_id": 170833,
+    "qty": 5326,
     "history": [
       {
         "timestamp": "2026-02-16T07:01:46.698137+00:00",
@@ -11877,11 +11916,13 @@
         "mcap": 13320852,
         "qty": 26
       }
-    ]
+    ],
+    "in_store": false
   },
   "Halloween Hoodie 2025": {
     "id": 176556927,
-    "qty": 4129,
+    "store_id": 107467,
+    "qty": 4161,
     "history": [
       {
         "timestamp": "2026-02-16T07:01:46.698137+00:00",
@@ -12471,11 +12512,13 @@
         "mcap": 5301636,
         "qty": 20
       }
-    ]
+    ],
+    "in_store": false
   },
   "Halloween Jeans 2025": {
     "id": 176556925,
-    "qty": 8070,
+    "store_id": 852862,
+    "qty": 8117,
     "history": [
       {
         "timestamp": "2026-02-16T07:01:46.698137+00:00",
@@ -13065,11 +13108,13 @@
         "mcap": 4938840,
         "qty": 112
       }
-    ]
+    ],
+    "in_store": false
   },
   "Skull Helmet": {
     "id": 176558347,
-    "qty": 3272,
+    "store_id": 739954,
+    "qty": 3372,
     "history": [
       {
         "timestamp": "2026-02-16T07:01:46.698137+00:00",
@@ -13659,11 +13704,13 @@
         "mcap": 25230392,
         "qty": 12
       }
-    ]
+    ],
+    "in_store": false
   },
   "Banana Slippers": {
     "id": 176569324,
-    "qty": 8280,
+    "store_id": 850794,
+    "qty": 8281,
     "history": [
       {
         "timestamp": "2026-02-16T07:01:46.698137+00:00",
@@ -14253,11 +14300,13 @@
         "mcap": 4968000,
         "qty": 154
       }
-    ]
+    ],
+    "in_store": false
   },
   "Fisherman Cap": {
     "id": 176569323,
-    "qty": 4617,
+    "store_id": 453903,
+    "qty": 4637,
     "history": [
       {
         "timestamp": "2026-02-16T07:01:46.698137+00:00",
@@ -14847,10 +14896,12 @@
         "mcap": 2945646,
         "qty": 59
       }
-    ]
+    ],
+    "in_store": false
   },
   "Lifejacket": {
     "id": 176569325,
+    "store_id": 525025,
     "qty": 4719,
     "history": [
       {
@@ -15441,10 +15492,12 @@
         "mcap": 2944656,
         "qty": 41
       }
-    ]
+    ],
+    "in_store": false
   },
   "Telecom Conspiracist Helmet": {
     "id": 176569322,
+    "store_id": 744145,
     "qty": 4774,
     "history": [
       {
@@ -16035,11 +16088,13 @@
         "mcap": 7409248,
         "qty": 56
       }
-    ]
+    ],
+    "in_store": false
   },
   "Reindeer Head 2025": {
     "id": 176581926,
-    "qty": 5003,
+    "store_id": 370156,
+    "qty": 5004,
     "history": [
       {
         "timestamp": "2026-02-16T07:01:46.698137+00:00",
@@ -16629,11 +16684,13 @@
         "mcap": 8610163,
         "qty": 30
       }
-    ]
+    ],
+    "in_store": false
   },
   "Reindeer Top 2025": {
     "id": 176581927,
-    "qty": 5185,
+    "store_id": 138885,
+    "qty": 5187,
     "history": [
       {
         "timestamp": "2026-02-16T07:01:46.698137+00:00",
@@ -17223,11 +17280,13 @@
         "mcap": 4173925,
         "qty": 36
       }
-    ]
+    ],
+    "in_store": false
   },
   "Reindeer Trousers 2025": {
     "id": 176581928,
-    "qty": 6157,
+    "store_id": 991651,
+    "qty": 6158,
     "history": [
       {
         "timestamp": "2026-02-16T07:01:46.698137+00:00",
@@ -17817,11 +17876,13 @@
         "mcap": 4482296,
         "qty": 59
       }
-    ]
+    ],
+    "in_store": false
   },
   "Plague Doctor Mask": {
     "id": 176586903,
-    "qty": 17708,
+    "store_id": 705168,
+    "qty": 17227,
     "history": [
       {
         "timestamp": "2026-02-16T07:01:46.698137+00:00",
@@ -18411,11 +18472,13 @@
         "mcap": 6233216,
         "qty": 619
       }
-    ]
+    ],
+    "in_store": false
   },
   "Faux hawk Hair": {
     "id": 176586904,
-    "qty": 7409,
+    "store_id": 903504,
+    "qty": 7040,
     "history": [
       {
         "timestamp": "2026-02-16T07:01:46.698137+00:00",
@@ -19005,11 +19068,13 @@
         "mcap": 2059702,
         "qty": 222
       }
-    ]
+    ],
+    "in_store": false
   },
   "Tactical Backpack": {
     "id": 176587087,
-    "qty": 7683,
+    "store_id": 114916,
+    "qty": 7370,
     "history": [
       {
         "timestamp": "2026-02-16T07:01:46.698137+00:00",
@@ -19599,12 +19664,13 @@
         "mcap": 3664791,
         "qty": 165
       }
-    ]
+    ],
+    "in_store": false
   },
   "Lunar Shoes 2026": {
     "id": 176606003,
     "store_id": 465917,
-    "qty": 5275,
+    "qty": 5302,
     "history": [
       {
         "timestamp": "2026-02-23T09:29:26.357534+00:00",
@@ -19662,12 +19728,13 @@
         "mcap": 1556125,
         "qty": 68
       }
-    ]
+    ],
+    "in_store": true
   },
   "Lunar Trousers 2026": {
     "id": 176606002,
     "store_id": 685220,
-    "qty": 6226,
+    "qty": 6260,
     "history": [
       {
         "timestamp": "2026-02-23T09:29:26.357534+00:00",
@@ -19725,12 +19792,13 @@
         "mcap": 2010998,
         "qty": 40
       }
-    ]
+    ],
+    "in_store": true
   },
   "Lunar Jacket 2026": {
     "id": 176606001,
     "store_id": 332431,
-    "qty": 5044,
+    "qty": 5075,
     "history": [
       {
         "timestamp": "2026-02-23T09:29:26.357534+00:00",
@@ -19788,12 +19856,13 @@
         "mcap": 2527044,
         "qty": 18
       }
-    ]
+    ],
+    "in_store": true
   },
   "Lunar Mask 2026": {
     "id": 176606000,
     "store_id": 502790,
-    "qty": 5759,
+    "qty": 5794,
     "history": [
       {
         "timestamp": "2026-02-23T09:29:26.357534+00:00",
@@ -19851,7 +19920,8 @@
         "mcap": 6271551,
         "qty": 40
       }
-    ]
+    ],
+    "in_store": true
   },
   "Short Parted Hair": {
     "id": 176604348,
@@ -19914,12 +19984,13 @@
         "mcap": 60756,
         "qty": 26
       }
-    ]
+    ],
+    "in_store": true
   },
   "OG Pants - Red": {
     "id": 176604470,
     "store_id": 920120,
-    "qty": 3850,
+    "qty": 3853,
     "history": [
       {
         "timestamp": "2026-02-23T09:29:26.357534+00:00",
@@ -19977,12 +20048,13 @@
         "mcap": 766150,
         "qty": 89
       }
-    ]
+    ],
+    "in_store": true
   },
   "Crossbody Bag Shirt": {
     "id": 176604472,
     "store_id": 913814,
-    "qty": 3302,
+    "qty": 3305,
     "history": [
       {
         "timestamp": "2026-02-23T09:29:26.357534+00:00",
@@ -20040,12 +20112,13 @@
         "mcap": 861822,
         "qty": 68
       }
-    ]
+    ],
+    "in_store": true
   },
   "Punk Helmet": {
     "id": 176604471,
     "store_id": 831783,
-    "qty": 10381,
+    "qty": 10388,
     "history": [
       {
         "timestamp": "2026-02-23T09:29:26.357534+00:00",
@@ -20103,12 +20176,13 @@
         "mcap": 1609055,
         "qty": 272
       }
-    ]
+    ],
+    "in_store": true
   },
   "Brainy BRN-101": {
     "id": 176604469,
     "store_id": 409746,
-    "qty": 7956,
+    "qty": 7962,
     "history": [
       {
         "timestamp": "2026-02-23T09:29:26.357534+00:00",
@@ -20166,7 +20240,8 @@
         "mcap": 3675672,
         "qty": 107
       }
-    ]
+    ],
+    "in_store": true
   },
   "Vintage Design Crop Top": {
     "id": 176536799,
@@ -20229,12 +20304,13 @@
         "mcap": 82626,
         "qty": 27
       }
-    ]
+    ],
+    "in_store": true
   },
   "Leopard Print Heel Boots": {
     "id": 176553844,
     "store_id": 367011,
-    "qty": 550,
+    "qty": 584,
     "history": [
       {
         "timestamp": "2026-02-23T09:29:26.357534+00:00",
@@ -20292,12 +20368,13 @@
         "mcap": 105600,
         "qty": 35
       }
-    ]
+    ],
+    "in_store": true
   },
   "Frilly Bra": {
     "id": 176516045,
     "store_id": 9258,
-    "qty": 1918,
+    "qty": 1928,
     "history": [
       {
         "timestamp": "2026-02-23T09:29:26.357534+00:00",
@@ -20355,12 +20432,13 @@
         "mcap": 228242,
         "qty": 71
       }
-    ]
+    ],
+    "in_store": true
   },
   "Black Modern Watch": {
     "id": 176515412,
     "store_id": 212908,
-    "qty": 1725,
+    "qty": 1727,
     "history": [
       {
         "timestamp": "2026-02-23T09:29:26.357534+00:00",
@@ -20418,7 +20496,8 @@
         "mcap": 172500,
         "qty": 55
       }
-    ]
+    ],
+    "in_store": true
   },
   "Love Heart Boxers": {
     "id": 176515250,
@@ -20481,7 +20560,8 @@
         "mcap": 293800,
         "qty": 51
       }
-    ]
+    ],
+    "in_store": true
   },
   "WW1 Helmet": {
     "id": 176475756,
@@ -20544,7 +20624,8 @@
         "mcap": 296934,
         "qty": 29
       }
-    ]
+    ],
+    "in_store": true
   },
   "Racer Helmet": {
     "id": 176474736,
@@ -20607,7 +20688,8 @@
         "mcap": 415454,
         "qty": 39
       }
-    ]
+    ],
+    "in_store": true
   },
   "Grand Ball Gown": {
     "store_id": 944417,
@@ -20670,7 +20752,8 @@
         "mcap": 118320,
         "qty": 14
       }
-    ]
+    ],
+    "in_store": true
   },
   "Cowboy Hat": {
     "store_id": 851874,
@@ -20733,7 +20816,8 @@
         "mcap": 254449,
         "qty": 22
       }
-    ]
+    ],
+    "in_store": true
   },
   "Police Hat": {
     "store_id": 423924,
@@ -20796,7 +20880,8 @@
         "mcap": 210160,
         "qty": 29
       }
-    ]
+    ],
+    "in_store": true
   },
   "Pirate": {
     "store_id": 939961,
@@ -20859,7 +20944,8 @@
         "mcap": 277695,
         "qty": 26
       }
-    ]
+    ],
+    "in_store": true
   },
   "Fisherman": {
     "store_id": 239503,
@@ -20922,11 +21008,12 @@
         "mcap": 221548,
         "qty": 12
       }
-    ]
+    ],
+    "in_store": true
   },
   "Chef Shirt": {
     "store_id": 125889,
-    "qty": 786,
+    "qty": 791,
     "id": 176471845,
     "history": [
       {
@@ -20985,7 +21072,8 @@
         "mcap": 163488,
         "qty": 26
       }
-    ]
+    ],
+    "in_store": true
   },
   "Chef Hat": {
     "store_id": 65001,
@@ -21048,11 +21136,12 @@
         "mcap": 244348,
         "qty": 33
       }
-    ]
+    ],
+    "in_store": true
   },
   "Bandana Mask": {
     "store_id": 562324,
-    "qty": 1283,
+    "qty": 1287,
     "id": 176471702,
     "history": [
       {
@@ -21111,7 +21200,8 @@
         "mcap": 275845,
         "qty": 20
       }
-    ]
+    ],
+    "in_store": true
   },
   "Labcoat": {
     "store_id": 57125,
@@ -21174,11 +21264,12 @@
         "mcap": 256800,
         "qty": 11
       }
-    ]
+    ],
+    "in_store": true
   },
   "Prison Jumpsuit": {
     "store_id": 3686,
-    "qty": 1281,
+    "qty": 1283,
     "id": 176471750,
     "history": [
       {
@@ -21237,7 +21328,8 @@
         "mcap": 534177,
         "qty": 11
       }
-    ]
+    ],
+    "in_store": true
   },
   "Hard Hat": {
     "store_id": 345237,
@@ -21300,6 +21392,7 @@
         "mcap": 7328370,
         "qty": 0
       }
-    ]
+    ],
+    "in_store": false
   }
 }

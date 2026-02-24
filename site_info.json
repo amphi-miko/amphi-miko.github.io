@@ -1,5 +1,6 @@
 {
   "Face Tattoos": {
+    "in_store": false,
     "bid": 176.91,
     "ask": 750.0,
     "marketCap": 25828.86,
@@ -7,6 +8,7 @@
     "weekChange": -0.16508565765255553
   },
   "Neck Tattoo": {
+    "in_store": false,
     "bid": 163.21,
     "ask": 944.0,
     "marketCap": 22196.56,
@@ -14,6 +16,7 @@
     "weekChange": -0.00802285297514127
   },
   "Santa 2024 Hat": {
+    "in_store": false,
     "bid": 83.61,
     "ask": 109.53,
     "marketCap": 270478.35,
@@ -21,6 +24,7 @@
     "weekChange": -0.016352941176470594
   },
   "Santa 2024 Jacket": {
+    "in_store": false,
     "bid": 83.61,
     "ask": 96.79,
     "marketCap": 173490.75,
@@ -28,6 +32,7 @@
     "weekChange": 0.2702825888787604
   },
   "Santa Trousers 2024": {
+    "in_store": false,
     "bid": 62.4,
     "ask": 69.0,
     "marketCap": 122803.2,
@@ -35,6 +40,7 @@
     "weekChange": 0.1775806755991696
   },
   "Valentines Bear Head 2025": {
+    "in_store": false,
     "bid": 38.67,
     "ask": 44.35,
     "marketCap": 112375.02,
@@ -42,6 +48,7 @@
     "weekChange": -0.027169811320754675
   },
   "Valentines Bear Top 2025": {
+    "in_store": false,
     "bid": 32.43,
     "ask": 43.49,
     "marketCap": 73810.68,
@@ -49,6 +56,7 @@
     "weekChange": 0.12957157784743986
   },
   "Valentines Bear Trousers 2025": {
+    "in_store": false,
     "bid": 36.11,
     "ask": 40.2,
     "marketCap": 78467.03,
@@ -56,6 +64,7 @@
     "weekChange": -0.08373509261608722
   },
   "Easter Bonnet 2025": {
+    "in_store": false,
     "bid": 21.93,
     "ask": 25.61,
     "marketCap": 77062.02,
@@ -63,6 +72,7 @@
     "weekChange": -0.023597506678539677
   },
   "Easter Dungarees 2025": {
+    "in_store": false,
     "bid": 46.23,
     "ask": 62.37,
     "marketCap": 100966.32,
@@ -70,6 +80,7 @@
     "weekChange": 0.24341043571812795
   },
   "Easter Slippers 2025": {
+    "in_store": false,
     "bid": 18.01,
     "ask": 21.88,
     "marketCap": 57541.95,
@@ -77,6 +88,7 @@
     "weekChange": 0.012935883014623195
   },
   "Wizard Hat": {
+    "in_store": false,
     "bid": 19.75,
     "ask": 23.41,
     "marketCap": 144491.0,
@@ -84,6 +96,7 @@
     "weekChange": -0.020337301587301595
   },
   "Wizard Beard": {
+    "in_store": false,
     "bid": 8.0,
     "ask": 8.9,
     "marketCap": 59072.0,
@@ -91,6 +104,7 @@
     "weekChange": 0.006289308176100607
   },
   "Wizard Gown": {
+    "in_store": false,
     "bid": 17.09,
     "ask": 18.25,
     "marketCap": 105770.01,
@@ -98,6 +112,7 @@
     "weekChange": 0.10258064516129031
   },
   "Wizard Trousers": {
+    "in_store": false,
     "bid": 8.79,
     "ask": 10.49,
     "marketCap": 53047.65,
@@ -105,6 +120,7 @@
     "weekChange": -0.0361842105263158
   },
   "Shark Head": {
+    "in_store": false,
     "bid": 8.48,
     "ask": 10.99,
     "marketCap": 90803.84,
@@ -112,6 +128,7 @@
     "weekChange": -0.15956392467789884
   },
   "Safety Glasses": {
+    "in_store": false,
     "bid": 3.05,
     "ask": 3.57,
     "marketCap": 26370.3,
@@ -119,6 +136,7 @@
     "weekChange": 0.03040540540540536
   },
   "Propane Helmet": {
+    "in_store": false,
     "bid": 18.98,
     "ask": 22.1,
     "marketCap": 87440.86,
@@ -126,6 +144,7 @@
     "weekChange": 0.059743160245672826
   },
   "Varsity Jacket": {
+    "in_store": false,
     "bid": 7.85,
     "ask": 11.07,
     "marketCap": 35277.9,
@@ -133,6 +152,7 @@
     "weekChange": 0.2362204724409449
   },
   "Pumpkin Head 2025": {
+    "in_store": false,
     "bid": 25.32,
     "ask": 27.31,
     "marketCap": 133208.52,
@@ -140,6 +160,7 @@
     "weekChange": 0.01645925331192293
   },
   "Halloween Hoodie 2025": {
+    "in_store": false,
     "bid": 12.84,
     "ask": 17.54,
     "marketCap": 53016.36,
@@ -147,6 +168,7 @@
     "weekChange": 0.1243432574430823
   },
   "Halloween Jeans 2025": {
+    "in_store": false,
     "bid": 6.12,
     "ask": 8.09,
     "marketCap": 49388.4,
@@ -154,6 +176,7 @@
     "weekChange": -0.20208604954367665
   },
   "Skull Helmet": {
+    "in_store": false,
     "bid": 77.11,
     "ask": 97.66,
     "marketCap": 252303.92,
@@ -161,6 +184,7 @@
     "weekChange": 0.18158136684033088
   },
   "Banana Slippers": {
+    "in_store": false,
     "bid": 6.0,
     "ask": 6.92,
     "marketCap": 49680.0,
@@ -168,6 +192,7 @@
     "weekChange": 0.13207547169811323
   },
   "Fisherman Cap": {
+    "in_store": false,
     "bid": 6.38,
     "ask": 9.44,
     "marketCap": 29456.46,
@@ -175,6 +200,7 @@
     "weekChange": 0.039087947882736195
   },
   "Lifejacket": {
+    "in_store": false,
     "bid": 6.24,
     "ask": 7.82,
     "marketCap": 29446.56,
@@ -182,6 +208,7 @@
     "weekChange": 0.004830917874396175
   },
   "Telecom Conspiracist Helmet": {
+    "in_store": false,
     "bid": 15.52,
     "ask": 17.08,
     "marketCap": 74092.48,
@@ -189,6 +216,7 @@
     "weekChange": 0.025776602775941758
   },
   "Reindeer Head 2025": {
+    "in_store": false,
     "bid": 17.21,
     "ask": 20.49,
     "marketCap": 86101.63,
@@ -196,6 +224,7 @@
     "weekChange": -0.10411244143675169
   },
   "Reindeer Top 2025": {
+    "in_store": false,
     "bid": 8.05,
     "ask": 10.44,
     "marketCap": 41739.25,
@@ -203,6 +232,7 @@
     "weekChange": 0.018987341772151944
   },
   "Reindeer Trousers 2025": {
+    "in_store": false,
     "bid": 7.28,
     "ask": 9.44,
     "marketCap": 44822.96,
@@ -210,6 +240,7 @@
     "weekChange": 0.13043478260869562
   },
   "Plague Doctor Mask": {
+    "in_store": false,
     "bid": 3.52,
     "ask": 3.82,
     "marketCap": 62332.16,
@@ -217,6 +248,7 @@
     "weekChange": 0.041420118343195304
   },
   "Faux hawk Hair": {
+    "in_store": false,
     "bid": 2.78,
     "ask": 3.05,
     "marketCap": 20597.02,
@@ -224,6 +256,7 @@
     "weekChange": 0.04119850187265913
   },
   "Tactical Backpack": {
+    "in_store": false,
     "bid": 4.77,
     "ask": 4.94,
     "marketCap": 36647.91,
@@ -231,6 +264,7 @@
     "weekChange": 0.03246753246753235
   },
   "Lunar Shoes 2026": {
+    "in_store": true,
     "bid": 2.95,
     "ask": 3.68,
     "marketCap": 15561.25,
@@ -238,6 +272,7 @@
     "weekChange": 0.003401360544217766
   },
   "Lunar Trousers 2026": {
+    "in_store": true,
     "bid": 3.23,
     "ask": 4.43,
     "marketCap": 20109.98,
@@ -245,6 +280,7 @@
     "weekChange": 0.0
   },
   "Lunar Jacket 2026": {
+    "in_store": true,
     "bid": 5.01,
     "ask": 6.5,
     "marketCap": 25270.44,
@@ -252,6 +288,7 @@
     "weekChange": 0.0
   },
   "Lunar Mask 2026": {
+    "in_store": true,
     "bid": 10.89,
     "ask": 12.12,
     "marketCap": 62715.51,
@@ -259,6 +296,7 @@
     "weekChange": 0.002762430939226624
   },
   "Short Parted Hair": {
+    "in_store": true,
     "bid": 1.22,
     "ask": 1.86,
     "marketCap": 607.56,
@@ -266,6 +304,7 @@
     "weekChange": 0.008264462809917363
   },
   "OG Pants - Red": {
+    "in_store": true,
     "bid": 1.99,
     "ask": 2.31,
     "marketCap": 7661.5,
@@ -273,6 +312,7 @@
     "weekChange": 0.0101522842639594
   },
   "Crossbody Bag Shirt": {
+    "in_store": true,
     "bid": 2.61,
     "ask": 2.8,
     "marketCap": 8618.22,
@@ -280,6 +320,7 @@
     "weekChange": 0.003846153846153764
   },
   "Punk Helmet": {
+    "in_store": true,
     "bid": 1.55,
     "ask": 1.65,
     "marketCap": 16090.55,
@@ -287,6 +328,7 @@
     "weekChange": 0.0
   },
   "Brainy BRN-101": {
+    "in_store": true,
     "bid": 4.62,
     "ask": 4.83,
     "marketCap": 36756.72,
@@ -294,6 +336,7 @@
     "weekChange": 0.0
   },
   "Vintage Design Crop Top": {
+    "in_store": true,
     "bid": 1.41,
     "ask": 2.57,
     "marketCap": 826.26,
@@ -301,6 +344,7 @@
     "weekChange": 0.00714285714285715
   },
   "Leopard Print Heel Boots": {
+    "in_store": true,
     "bid": 1.92,
     "ask": 2.39,
     "marketCap": 1056.0,
@@ -308,6 +352,7 @@
     "weekChange": 0.0
   },
   "Frilly Bra": {
+    "in_store": true,
     "bid": 1.19,
     "ask": 1.33,
     "marketCap": 2282.42,
@@ -315,6 +360,7 @@
     "weekChange": 0.00847457627118645
   },
   "Black Modern Watch": {
+    "in_store": true,
     "bid": 1.0,
     "ask": 1.19,
     "marketCap": 1725.0,
@@ -322,6 +368,7 @@
     "weekChange": 0.12359550561797751
   },
   "Love Heart Boxers": {
+    "in_store": true,
     "bid": 1.0,
     "ask": 1.15,
     "marketCap": 2938.0,
@@ -329,6 +376,7 @@
     "weekChange": 0.06382978723404262
   },
   "WW1 Helmet": {
+    "in_store": true,
     "bid": 3.63,
     "ask": 5.07,
     "marketCap": 2969.34,
@@ -336,6 +384,7 @@
     "weekChange": 0.043103448275862044
   },
   "Racer Helmet": {
+    "in_store": true,
     "bid": 4.94,
     "ask": 6.55,
     "marketCap": 4154.54,
@@ -343,6 +392,7 @@
     "weekChange": 0.0
   },
   "Grand Ball Gown": {
+    "in_store": true,
     "bid": 2.72,
     "ask": 3.46,
     "marketCap": 1183.2,
@@ -350,6 +400,7 @@
     "weekChange": 0.0
   },
   "Cowboy Hat": {
+    "in_store": true,
     "bid": 2.99,
     "ask": 4.02,
     "marketCap": 2544.49,
@@ -357,6 +408,7 @@
     "weekChange": 0.023972602739726127
   },
   "Police Hat": {
+    "in_store": true,
     "bid": 2.96,
     "ask": 5.59,
     "marketCap": 2101.6,
@@ -364,6 +416,7 @@
     "weekChange": 0.0
   },
   "Pirate": {
+    "in_store": true,
     "bid": 3.63,
     "ask": 4.69,
     "marketCap": 2776.95,
@@ -371,6 +424,7 @@
     "weekChange": 0.07079646017699108
   },
   "Fisherman": {
+    "in_store": true,
     "bid": 3.88,
     "ask": 5.34,
     "marketCap": 2215.48,
@@ -378,6 +432,7 @@
     "weekChange": 0.3472222222222222
   },
   "Chef Shirt": {
+    "in_store": true,
     "bid": 2.08,
     "ask": 2.5,
     "marketCap": 1634.88,
@@ -385,6 +440,7 @@
     "weekChange": 0.034825870646766316
   },
   "Chef Hat": {
+    "in_store": true,
     "bid": 2.54,
     "ask": 3.29,
     "marketCap": 2443.48,
@@ -392,6 +448,7 @@
     "weekChange": 0.024193548387096794
   },
   "Bandana Mask": {
+    "in_store": true,
     "bid": 2.15,
     "ask": 2.61,
     "marketCap": 2758.45,
@@ -399,6 +456,7 @@
     "weekChange": 0.004672897196261582
   },
   "Labcoat": {
+    "in_store": true,
     "bid": 3.0,
     "ask": 5.07,
     "marketCap": 2568.0,
@@ -406,6 +464,7 @@
     "weekChange": 0.07526881720430106
   },
   "Prison Jumpsuit": {
+    "in_store": true,
     "bid": 4.17,
     "ask": 6.5,
     "marketCap": 5341.77,
@@ -413,6 +472,7 @@
     "weekChange": 0.014598540145985306
   },
   "Hard Hat": {
+    "in_store": false,
     "bid": 2093.82,
     "ask": 0,
     "marketCap": 73283.7,
