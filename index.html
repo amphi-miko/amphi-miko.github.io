@@ -7,9 +7,9 @@
   <style>
     body {
       font-family: system-ui, sans-serif;
-      max-width: 600px;
+      max-width: 700px;
       margin: 0.5rem auto;
-      background: #111;
+      background: #111111;
       color: #ffffff;
       font-size: 0.8rem;
     }
@@ -68,11 +68,15 @@
       content: ' ↓';
       opacity: 1;
     }
-
+    
     th:nth-child(6), td:nth-child(6), /* 24h Change */
     th:nth-child(7), td:nth-child(7) { /* 7d Change */
-      width: 12%; 
+      width: 10%; 
     }
+
+    th:nth-child(3), td:nth-child(3){ /* Market Cap */
+      width: 15%; 
+    }    
 
     .updated {
       margin-top: 1rem;
@@ -83,7 +87,7 @@
 </head>
 <body>
 
-  <h1>s&box Market Capitalization - Discontinued Items</h1>
+  <h1>s&box Market Capitalization</h1>
   <h2 id="page-title"><span id="market-cap">$0.00</span> <span id="market-cap-change">0.00% in the past 24 hours</span></h2>
 
 
@@ -97,6 +101,8 @@
         <th data-column="ask">Ask</th>
         <th data-column="dayChange">24h Δ</th>
         <th data-column="weekChange">7d Δ</th>
+        <th data-column="supply">Supply</th>
+        <th>Buy</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -121,7 +127,11 @@
     notation: "compact",
     maximumFractionDigits: 2,
     minimumFractionDigits: 2
-  });   
+  });    
+  
+  const supplyFormatter = new Intl.NumberFormat("en-US", {
+    maximumFractionDigits: 2
+  });    
 
   const pFormatter = new Intl.NumberFormat("en-US", {
     style: "percent",
@@ -153,12 +163,17 @@
       
       // Item cell
       const itemCell = document.createElement("td");
-      itemCell.textContent = rowData.item;
-      
+      const itemLink = document.createElement("a");
+      itemLink.href = `https://steamcommunity.com/market/listings/590830/${rowData.item}`; 
+      itemLink.target = "_blank";
+      itemLink.textContent = rowData.item;
+      itemLink.style.color = "white";
+      itemCell.appendChild(itemLink);
+
       // Market Cap cell
       const mcapCell = document.createElement("td");
       mcapCell.textContent = mcapFormatter.format(rowData.marketCap);
-      
+
       // Bid cell
       const bidCell = document.createElement("td");
       bidCell.textContent = priceFormatter.format(rowData.bid);
@@ -171,9 +186,9 @@
       const dayChangeCell = document.createElement("td");
       dayChangeCell.textContent = pFormatter.format(rowData.dayChange);
       if (rowData.dayChange < 0) {
-        dayChangeCell.style.color = "red";
+        dayChangeCell.style.color = "#ff0000";
       } else if (rowData.dayChange > 0) {
-        dayChangeCell.style.color = "green";
+        dayChangeCell.style.color = "#00ff00";
       } else {
         dayChangeCell.style.color = "gray";
       }
@@ -182,14 +197,41 @@
       const weekChangeCell = document.createElement("td");
       weekChangeCell.textContent = pFormatter.format(rowData.weekChange);
       if (rowData.weekChange < 0) {
-        weekChangeCell.style.color = "red";
+        weekChangeCell.style.color = "#ff0000";
       } else if (rowData.weekChange > 0) {
-        weekChangeCell.style.color = "green";
+        weekChangeCell.style.color = "#00ff00";
       } else {
         weekChangeCell.style.color = "gray";
       }
+
+      // Supply cell
+      const supplyCell = document.createElement("td");
+      supplyCell.textContent = supplyFormatter.format(rowData.supply);
+
+      // Store cell
+      const storeCell = document.createElement("td");
+      storeCell.style.textAlign = "center";
+      const storeImg = document.createElement("img");
+      const storeLink = document.createElement("a")
+      if (rowData.in_store) {
+        storeImg.src = `assets/s&box Blue.jpg`;
+        storeLink.href = `${rowData.store_url}/1`; 
+        storeLink.target = "_blank";
+        storeImg.alt = "Available";
+      } else {
+        storeImg.src = `assets/s&box Grey.jpg`;
+        storeImg.alt = "Unavailable";
+      }
+      storeImg.width = 24;
+      storeImg.height = 24;
+      storeImg.loading = "lazy";
+      storeImg.onerror = () => {
+        storeImg.style.display = "none";
+      };
+      storeLink.appendChild(storeImg);
+      storeCell.appendChild(storeLink);   
       
-      row.append(imgCell, itemCell, mcapCell, bidCell, askCell, dayChangeCell, weekChangeCell);
+      row.append(imgCell, itemCell, mcapCell, bidCell, askCell, dayChangeCell, weekChangeCell,supplyCell,storeCell);
       tbody.appendChild(row);
     }
   }
@@ -211,6 +253,7 @@
         case 'ask':
         case 'dayChange':
         case 'weekChange':
+        case 'supply':
           valA = a[column];
           valB = b[column];
           break;
@@ -272,11 +315,14 @@
     const dayMarketCapDifference = currentMarketCap-dayMarketCap
 
     if (dayMarketCapChange < 0) {
-        dayMarketCapChangeColor = "red";
+        dayMarketCapChangeColor = "#ff0000";
+        document.body.style.background = "linear-gradient(to bottom, #1b1111, #111111)";
       } else if (dayMarketCapChange > 0) {
-        dayMarketCapChangeColor = "green";
+        dayMarketCapChangeColor = "#00ff00";
+        document.body.style.background = "linear-gradient(to bottom, #111b11, #111111)";
       } else {
         dayMarketCapChangeColor = "gray";
+        document.body.style.background = "linear-gradient(to bottom, #111111, #111111)";
       }
 
     document.getElementById('market-cap').textContent = priceFormatter.format(currentMarketCap)
@@ -291,7 +337,9 @@
       // Convert the object data to array format for easier sorting
       tableData = Object.entries(data).map(([item, obj]) => ({
         item: item,
-        id: obj.id,
+        in_store: obj.in_store,
+        store_url: obj.store_url,
+        supply:obj.supply,
         bid: obj.bid,
         ask: obj.ask,
         marketCap: obj.marketCap,

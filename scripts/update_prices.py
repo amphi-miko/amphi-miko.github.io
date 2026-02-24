@@ -80,6 +80,14 @@ def write_data_summary(item_data):
                 in_store = item_data[item]["in_store"]
             else:
                 in_store = False
+            if "store_id" in item_data[item]:
+                store_url = f"https://store.steampowered.com/buyitem/590830/{item_data[item]['store_id']}"
+            else:
+                store_url = False     
+            if "qty" in item_data[item]:
+                supply = item_data[item]["qty"]
+            else:
+                supply = 0                
             if "history" in item_data[item]:
                 history = item_data[item]["history"]
                 week_bid = history[0]["bid"]/100
@@ -101,21 +109,27 @@ def write_data_summary(item_data):
                     week_change = (bid - week_bid) / week_bid
                 else:
                     week_change = 0
-                data_summary[item] = {"in_store":in_store,
+                data_summary[item] = {"supply":supply,
+                                    "store_url":store_url,
+                                    "in_store":in_store,
                                     "bid" : bid,
                                     "ask" : ask,
                                     "marketCap" : marketCap,
                                     "dayChange" : day_change,
                                     "weekChange" : week_change}
             else:
-                data_summary[item] = {"in_store":in_store,
+                data_summary[item] = {"supply":supply,
+                                    "store_url":store_url,
+                                    "in_store":in_store,
                                     "bid" : 0,
                                     "ask" : 0,
                                     "marketCap" : 0,
                                     "dayChange" : 0,
                                     "weekChange" : 0}     
         except TypeError: 
-                data_summary[item] = {"in_store":False,
+                data_summary[item] = {"supply":supply,
+                                    "store_url":store_url,
+                                    "in_store":False,
                                     "bid" : 0,
                                     "ask" : 0,
                                     "marketCap" : 0,
