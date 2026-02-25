@@ -1,378 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="assets/favicon.ico">
   <meta charset="UTF-8" />
-  <title>Item Prices</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Live s&box item market capitalization, bids, asks, and supply data." />
+  <title>s&box Market Capitalization</title>
+  <link rel="icon" type="image/png" href="assets/favicon.ico">
+
   <style>
+    :root {
+      --bg: #111;
+      --bg-soft: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --positive: #22c55e;
+      --negative: #ef4444;
+      --neutral: #9ca3af;
+    }
+
     body {
-      font-family: system-ui, sans-serif;
-      max-width: 700px;
-      margin: 0.5rem auto;
-      background: #111111;
-      color: #ffffff;
-      font-size: 0.8rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      max-width: 900px;
+      margin: 1rem auto;
+      padding: 0 1rem;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 0.9rem;
     }
 
-    h1 {
-      font-size: 1.0rem;
-      margin-bottom: 0.2rem;
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1rem;
     }
 
-    h2 {
+    .card {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      padding: 0.7rem;
+      border-radius: 8px;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .card-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .card-value {
       font-size: 1.4rem;
-      margin-bottom: 0.8rem;
-    }    
+      font-weight: 600;
+    }
 
-    #market-cap-change {
-      font-size: 0.8rem;
-    } 
+    .card-change {
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+    }
+
+    .card-positive { background-color: #1a2f1d; border-color: #22c55e; }
+    .card-negative { background-color: #2f1a1a; border-color: #ef4444; }
+    .card-neutral  { background-color: var(--bg-soft); border-color: var(--border); }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
 
     table {
       width: 100%;
       border-collapse: collapse;
     }
 
+    thead th {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 2;
+    }
+
     th, td {
-      padding: 0.2rem 0.2rem;
-      border-bottom: 1px solid #414141;
+      padding: 0.2rem;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
     }
 
     th[data-column] {
-      text-align: left;
-      color: #eeeeee;
-      font-weight: 600;
       cursor: pointer;
+      text-align: left;
+      font-weight: 600;
       position: relative;
       padding-right: 18px;
-      border-right: 14px solid transparent;
     }
-    
-    th[data-column]:hover {
-      background-color: #2a2a2a;
-    }
-    
+
     th[data-column]::after {
-      content: ' ↕';
+      content: "↕";
       position: absolute;
       right: 4px;
-      opacity: 0.5;
+      opacity: 0.4;
     }
 
-    th[data-column].sorted-asc::after {
-      content: ' ↑';
+    th.sorted-asc::after {
+      content: "↑";
       opacity: 1;
     }
 
-    th[data-column].sorted-desc::after {
-      content: ' ↓';
+    th.sorted-desc::after {
+      content: "↓";
       opacity: 1;
     }
-    
-    th:nth-child(6), td:nth-child(6), /* 24h Change */
-    th:nth-child(7), td:nth-child(7) { /* 7d Change */
-      width: 10%; 
+
+    tbody tr:hover {
+      background: var(--bg-soft);
     }
 
-    th:nth-child(3), td:nth-child(3){ /* Market Cap */
-      width: 15%; 
-    }    
+    .positive { color: var(--positive); }
+    .negative { color: var(--negative); }
+    .neutral  { color: var(--neutral); }
 
-    .updated {
-      margin-top: 1rem;
-      color: #888;
-      font-size: 0.6rem;
+    @media (max-width: 640px) {
+      th:nth-child(7),
+      td:nth-child(7),
+      th:nth-child(8),
+      td:nth-child(8) {
+        display: none;
+      }
+    }
+
+    #search-input {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 0.9rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      background: var(--bg-soft);
+      color: var(--text);
+      margin-bottom: 1rem;
     }
   </style>
 </head>
+
 <body>
+<div class="cards">
+  <div class="card" id="total-card">
+    <div class="card-label">s&box Total Market Cap</div>
+    <div class="card-value" id="market-cap">$0.00</div>
+    <div class="card-change neutral" id="market-cap-change">
+      0.00% in the past 24 hours
+    </div>
+  </div>
 
-  <h1>s&box Market Capitalization</h1>
-  <h2 id="page-title"><span id="market-cap">$0.00</span> <span id="market-cap-change">0.00% in the past 24 hours</span></h2>
+  <div class="card" id="filtered-card" style="display:none;">
+    <div class="card-label">Filtered Market Cap</div>
+    <div class="card-value" id="filtered-market-cap">$0.00</div>
+    <div class="card-change neutral" id="filtered-market-cap-change">
+      0.00% in the past 24 hours
+    </div>
+  </div>
+</div>
 
+<input type="text" id="search-input" placeholder="Search..." />
 
+<div class="table-wrapper">
   <table id="price-table">
     <thead>
       <tr>
-        <th></th>
-        <th data-column="item">Item</th>
-        <th data-column="marketCap">Market Cap</th>
-        <th data-column="bid">Bid</th>
-        <th data-column="ask">Ask</th>
-        <th data-column="dayChange">24h Δ</th>
-        <th data-column="weekChange">7d Δ</th>
-        <th data-column="supply">Supply</th>
-        <th>Buy</th>
+        <th scope="col"></th>
+        <th scope="col" data-column="item">Item</th>
+        <th scope="col" data-column="marketCap">Market Cap</th>
+        <th scope="col" data-column="bid">Bid</th>
+        <th scope="col" data-column="ask">Ask</th>
+        <th scope="col" data-column="dayChange">24h Δ</th>
+        <th scope="col" data-column="weekChange">7d Δ</th>
+        <th scope="col" data-column="supply">Supply</th>
+        <th>Store</th>
       </tr>
     </thead>
     <tbody></tbody>
   </table>
-
-  <div class="updated" id="updated"></div>
+</div>
 
 <script>
-  // Store the data globally for sorting
+(() => {
+  "use strict";
+
+  const tbody = document.querySelector("#price-table tbody");
+  const headers = document.querySelectorAll("#price-table thead th[data-column]");
+
+  const marketCapEl = document.getElementById("market-cap");
+  const marketChangeEl = document.getElementById("market-cap-change");
+  const totalCardEl = document.getElementById("total-card");
+
+  const filteredCardEl = document.getElementById("filtered-card");
+  const filteredMarketCapEl = document.getElementById("filtered-market-cap");
+  const filteredMarketChangeEl = document.getElementById("filtered-market-cap-change");
+
+  const searchInput = document.getElementById("search-input");
+
   let tableData = [];
-  let currentSortColumn = null;
-  let currentSortDirection = 'asc';
+  let currentSortColumn = "marketCap";
+  let currentSortDirection = "desc";
+  let currentSearchQuery = "";
 
-  const priceFormatter = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "usd"
-  });
+  const priceFormatter = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
+  const compactCurrencyFormatter = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", notation: "compact", maximumFractionDigits: 2 });
+  const percentFormatter = new Intl.NumberFormat("en-US", { style: "percent", maximumFractionDigits: 2, minimumFractionDigits: 2, signDisplay: "always" });
+  const numberFormatter = new Intl.NumberFormat("en-US", { maximumFractionDigits: 2 });
 
-  const mcapFormatter = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "usd",
-    notation: "compact",
-    maximumFractionDigits: 2,
-    minimumFractionDigits: 2
-  });    
-  
-  const supplyFormatter = new Intl.NumberFormat("en-US", {
-    maximumFractionDigits: 2
-  });    
+  function getChangeClass(value) {
+    if (value > 0) return "positive";
+    if (value < 0) return "negative";
+    return "neutral";
+  }
 
-  const pFormatter = new Intl.NumberFormat("en-US", {
-    style: "percent",
-    maximumFractionDigits: 2,
-    minimumFractionDigits: 2,
-    signDisplay: "always"
-  });
-
-  // Function to render the table
-  function renderTable(data) {
-    const tbody = document.querySelector("#price-table tbody");
-    tbody.innerHTML = ''; // Clear existing rows
-
-    for (const rowData of data) {
-      const row = document.createElement("tr");
-      
-      // Image cell
-      const imgCell = document.createElement("td");
-      const img = document.createElement("img");
-      img.src = `assets/${rowData.item}.png`;
-      img.alt = rowData.item;
-      img.width = 24;
-      img.height = 24;
-      img.loading = "lazy";
-      img.onerror = () => {
-        img.style.display = "none";
-      };
-      imgCell.appendChild(img);
-      
-      // Item cell
-      const itemCell = document.createElement("td");
-      const itemLink = document.createElement("a");
-      itemLink.href = `https://steamcommunity.com/market/listings/590830/${rowData.item}`; 
-      itemLink.target = "_blank";
-      itemLink.textContent = rowData.item;
-      itemLink.style.color = "white";
-      itemCell.appendChild(itemLink);
-
-      // Market Cap cell
-      const mcapCell = document.createElement("td");
-      mcapCell.textContent = mcapFormatter.format(rowData.marketCap);
-
-      // Bid cell
-      const bidCell = document.createElement("td");
-      bidCell.textContent = priceFormatter.format(rowData.bid);
-      
-      // Ask cell
-      const askCell = document.createElement("td");
-      askCell.textContent = priceFormatter.format(rowData.ask);
-      
-      // 24h Change cell
-      const dayChangeCell = document.createElement("td");
-      dayChangeCell.textContent = pFormatter.format(rowData.dayChange);
-      if (rowData.dayChange < 0) {
-        dayChangeCell.style.color = "#ff0000";
-      } else if (rowData.dayChange > 0) {
-        dayChangeCell.style.color = "#00ff00";
-      } else {
-        dayChangeCell.style.color = "gray";
-      }
-      
-      // 7d Change cell
-      const weekChangeCell = document.createElement("td");
-      weekChangeCell.textContent = pFormatter.format(rowData.weekChange);
-      if (rowData.weekChange < 0) {
-        weekChangeCell.style.color = "#ff0000";
-      } else if (rowData.weekChange > 0) {
-        weekChangeCell.style.color = "#00ff00";
-      } else {
-        weekChangeCell.style.color = "gray";
-      }
-
-      // Supply cell
-      const supplyCell = document.createElement("td");
-      supplyCell.textContent = supplyFormatter.format(rowData.supply);
-
-      // Store cell
-      const storeCell = document.createElement("td");
-      storeCell.style.textAlign = "center";
-      const storeImg = document.createElement("img");
-      const storeLink = document.createElement("a")
-      if (rowData.in_store) {
-        storeImg.src = `assets/s&box Blue.jpg`;
-        storeLink.href = `${rowData.store_url}/1`; 
-        storeLink.target = "_blank";
-        storeImg.alt = "Available";
-      } else {
-        storeImg.src = `assets/s&box Grey.jpg`;
-        storeImg.alt = "Unavailable";
-      }
-      storeImg.width = 24;
-      storeImg.height = 24;
-      storeImg.loading = "lazy";
-      storeImg.onerror = () => {
-        storeImg.style.display = "none";
-      };
-      storeLink.appendChild(storeImg);
-      storeCell.appendChild(storeLink);   
-      
-      row.append(imgCell, itemCell, mcapCell, bidCell, askCell, dayChangeCell, weekChangeCell,supplyCell,storeCell);
-      tbody.appendChild(row);
+  function updateSortIndicators(activeHeader) {
+    headers.forEach(h => {
+      h.classList.remove("sorted-asc", "sorted-desc");
+      h.removeAttribute("aria-sort");
+    });
+    if (activeHeader) {
+      activeHeader.classList.add(`sorted-${currentSortDirection}`);
+      activeHeader.setAttribute("aria-sort",
+        currentSortDirection === "asc" ? "ascending" : "descending"
+      );
     }
   }
 
-  // Function to sort data
-  function sortData(column, direction) {
-    const sortedData = [...tableData];
-    
-    sortedData.sort((a, b) => {
-      let valA, valB;
-      
-      switch(column) {
-        case 'item':
-          valA = a.item;
-          valB = b.item;
-          break;
-        case 'marketCap':
-        case 'bid':
-        case 'ask':
-        case 'dayChange':
-        case 'weekChange':
-        case 'supply':
-          valA = a[column];
-          valB = b[column];
-          break;
-        case 'image':
-          // Sort by image name/id
-          valA = a.id;
-          valB = b.id;
-          break;
-        default:
-          return 0;
+  function getProcessedData() {
+    let processed = tableData.filter(item =>
+      item.item.toLowerCase().includes(currentSearchQuery)
+    );
+
+    processed.sort((a, b) => {
+      let valA = a[currentSortColumn];
+      let valB = b[currentSortColumn];
+
+      if (currentSortColumn === "item") {
+        return currentSortDirection === "asc"
+          ? valA.localeCompare(valB)
+          : valB.localeCompare(valA);
       }
-      
-      // Compare values
-      if (valA < valB) return direction === 'asc' ? -1 : 1;
-      if (valA > valB) return direction === 'asc' ? 1 : -1;
-      return 0;
+      return currentSortDirection === "asc" ? valA - valB : valB - valA;
     });
-    
-    return sortedData;
+
+    return processed;
   }
 
-  // Function to handle header clicks
-  function handleHeaderClick(event) {
-    const header = event.currentTarget;
-    const column = header.dataset.column;
-    
-    // Determine sort direction
+  function renderTable(data) {
+    tbody.innerHTML = "";
+    const fragment = document.createDocumentFragment();
+
+    data.forEach(item => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td><img src="assets/${item.item}.png" width="30" height="30" loading="lazy" alt="${item.item}" /></td>
+        <td>
+          <a href="https://steamcommunity.com/market/listings/590830/${item.item}"
+             target="_blank"
+             rel="noopener noreferrer"
+             style="color:white">
+            ${item.item}
+          </a>
+        </td>
+        <td>${compactCurrencyFormatter.format(item.marketCap)}</td>
+        <td>${priceFormatter.format(item.bid)}</td>
+        <td>${priceFormatter.format(item.ask)}</td>
+        <td class="${getChangeClass(item.dayChange)}">${percentFormatter.format(item.dayChange)}</td>
+        <td class="${getChangeClass(item.weekChange)}">${percentFormatter.format(item.weekChange)}</td>
+        <td>${numberFormatter.format(item.supply)}</td>
+        <td style="text-align:center; font-size: 1.2rem;">
+          ${item.in_store
+            ? `<a href="${item.store_url}/1" target="_blank" rel="noopener noreferrer" style="color:var(--text); text-decoration:none; cursor:pointer;">✔</a>`
+            : `<span style="color:var(--border); cursor:not-allowed;">✖</span>`}
+        </td>
+      `;
+      fragment.appendChild(row);
+    });
+
+    tbody.appendChild(fragment);
+  }
+
+  function calculateMarketCap(data) {
+    let current = 0;
+    let previous = 0;
+    data.forEach(item => {
+      current += item.marketCap;
+      if (item.dayChange > -1) {
+        previous += item.marketCap / (1 + item.dayChange);
+      }
+    });
+    const change = previous > 0 ? (current - previous) / previous : 0;
+    return { current, change };
+  }
+
+  function updateView() {
+    const processed = getProcessedData();
+
+    renderTable(processed);
+
+    // Total market cap
+    const totalStats = calculateMarketCap(tableData);
+    marketCapEl.textContent = priceFormatter.format(totalStats.current);
+    marketChangeEl.textContent = percentFormatter.format(totalStats.change) + " in the past 24 hours";
+    marketChangeEl.className = "card-change " + getChangeClass(totalStats.change);
+
+    totalCardEl.classList.remove("card-positive","card-negative","card-neutral");
+    totalCardEl.classList.add("card-" + getChangeClass(totalStats.change));
+
+    // Filtered market cap
+    if (currentSearchQuery.trim() !== "") {
+      const filteredStats = calculateMarketCap(processed);
+      filteredMarketCapEl.textContent = priceFormatter.format(filteredStats.current);
+      filteredMarketChangeEl.textContent = percentFormatter.format(filteredStats.change) + " in the past 24 hours";
+      filteredMarketChangeEl.className = "card-change " + getChangeClass(filteredStats.change);
+
+      filteredCardEl.classList.remove("card-positive","card-negative","card-neutral");
+      filteredCardEl.classList.add("card-" + getChangeClass(filteredStats.change));
+      filteredCardEl.style.display = "block";
+    } else {
+      filteredCardEl.style.display = "none";
+    }
+  }
+
+  function handleHeaderClick(e) {
+    const column = e.currentTarget.dataset.column;
     if (currentSortColumn === column) {
-      currentSortDirection = currentSortDirection === 'asc' ? 'desc' : 'asc';
+      currentSortDirection = currentSortDirection === "asc" ? "desc" : "asc";
     } else {
       currentSortColumn = column;
-      currentSortDirection = 'asc';
+      currentSortDirection = "asc";
     }
-    
-    // Update header styles
-    const headers = document.querySelectorAll('#price-table thead th');
-    headers.forEach(h => {
-      h.classList.remove('sorted-asc', 'sorted-desc');
-    });
-    header.classList.add(`sorted-${currentSortDirection}`);
-    
-    // Sort and render
-    const sortedData = sortData(column, currentSortDirection);
-    renderTable(sortedData);
+    updateSortIndicators(e.currentTarget);
+    updateView();
   }
 
-// Function to render the table
-  function renderMarketCap(data) {
-    let currentMarketCap = 0
-    let dayMarketCap = 0
-    let weekMarketCap = 0
-    for (const rowData of data) {
-      currentMarketCap += rowData.marketCap;
-      dayMarketCap += rowData.marketCap/(1+rowData.dayChange);
-      weekMarketCap += rowData.marketCap/(1+rowData.weekChange);
+  headers.forEach(header => header.addEventListener("click", handleHeaderClick));
+  searchInput.addEventListener("input", e => {
+    currentSearchQuery = e.target.value.toLowerCase();
+    updateView();
+  });
+
+  async function init() {
+    try {
+      const response = await fetch("site_info.json", { cache: "no-store" });
+      const rawData = await response.json();
+      tableData = Object.entries(rawData).map(([item, obj]) => ({ item, ...obj }));
+      updateSortIndicators(document.querySelector(`th[data-column="${currentSortColumn}"]`));
+      updateView();
+    } catch (error) {
+      console.error("Failed to load data:", error);
     }
-    const dayMarketCapChange = (currentMarketCap - dayMarketCap) / dayMarketCap;
-    const weekMarketCapChange = (currentMarketCap - weekMarketCap) / weekMarketCap;
-    const dayMarketCapDifference = currentMarketCap-dayMarketCap
-
-    if (dayMarketCapChange < 0) {
-        dayMarketCapChangeColor = "#ff0000";
-        document.body.style.background = "linear-gradient(to bottom, #1b1111, #111111)";
-      } else if (dayMarketCapChange > 0) {
-        dayMarketCapChangeColor = "#00ff00";
-        document.body.style.background = "linear-gradient(to bottom, #111b11, #111111)";
-      } else {
-        dayMarketCapChangeColor = "gray";
-        document.body.style.background = "linear-gradient(to bottom, #111111, #111111)";
-      }
-
-    document.getElementById('market-cap').textContent = priceFormatter.format(currentMarketCap)
-    document.getElementById('market-cap-change').textContent = pFormatter.format(dayMarketCapChange) + " in the past 24 hours"
-    document.getElementById('market-cap-change').style.color = dayMarketCapChangeColor
   }
 
-  // Fetch and initialize the table
-  fetch("site_info.json", { cache: "no-store" })
-    .then(r => r.json())
-    .then(data => {
-      // Convert the object data to array format for easier sorting
-      tableData = Object.entries(data).map(([item, obj]) => ({
-        item: item,
-        in_store: obj.in_store,
-        store_url: obj.store_url,
-        supply:obj.supply,
-        bid: obj.bid,
-        ask: obj.ask,
-        marketCap: obj.marketCap,
-        dayChange: obj.dayChange,
-        weekChange: obj.weekChange
-      }));
-
-      // Set default sort to Market Cap (descending - largest first)
-      currentSortColumn = 'marketCap';
-      currentSortDirection = 'desc';
-      
-      // Sort the data by Market Cap
-      const sortedData = sortData(currentSortColumn, currentSortDirection); 
-
-      // Initial render
-      renderTable(sortedData);
-
-      renderMarketCap(sortedData);
-      
-      // Add click handlers to headers
-      const headers = document.querySelectorAll('#price-table thead th[data-column]');
-      headers.forEach(header => {
-        header.addEventListener('click', handleHeaderClick);
-      });
-      
-      // Highlight the Market Cap header as sorted
-      const marketCapHeader = document.querySelector('th[data-column="marketCap"]');
-      marketCapHeader.classList.add(`sorted-${currentSortDirection}`);
-
-      // Set current date
-      document.getElementById('updated').textContent = `Updated: ${new Date().toLocaleString()}`;
-    })
-    .catch(err => console.error(err));
+  init();
+})();
 </script>
 
 </body>
