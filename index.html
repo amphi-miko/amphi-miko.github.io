@@ -165,18 +165,23 @@
 
 <input type="text" id="search-input" placeholder="Search..." />
 
+<div id="last-updated" style="color: var(--muted); margin-bottom: 0.75rem; font-size: 0.8rem;">
+  Last updated: —
+</div>
+
 <div class="table-wrapper">
   <table id="price-table">
     <thead>
       <tr>
         <th scope="col"></th>
         <th scope="col" data-column="item">Item</th>
-        <th scope="col" data-column="marketCap">Market Cap</th>
+        <th scope="col" data-column="bidMarketCap">Market Cap</th>
         <th scope="col" data-column="bid">Bid</th>
         <th scope="col" data-column="ask">Ask</th>
-        <th scope="col" data-column="dayChange">24h Δ</th>
-        <th scope="col" data-column="weekChange">7d Δ</th>
+        <th scope="col" data-column="dayBidChange">24h Bid Δ</th>
+        <th scope="col" data-column="weekBidChange">7d Bid Δ</th>
         <th scope="col" data-column="supply">Supply</th>
+        <th scope="col" data-column="supplyDelta">24h Supply Δ</th>
         <th>Store</th>
       </tr>
     </thead>
@@ -209,7 +214,17 @@
   const priceFormatter = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
   const compactCurrencyFormatter = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", notation: "compact", maximumFractionDigits: 2 });
   const percentFormatter = new Intl.NumberFormat("en-US", { style: "percent", maximumFractionDigits: 2, minimumFractionDigits: 2, signDisplay: "always" });
+  const signedNumberFormatter = new Intl.NumberFormat("en-US", {maximumFractionDigits: 0, signDisplay: "exceptZero" });
   const numberFormatter = new Intl.NumberFormat("en-US", { maximumFractionDigits: 2 });
+  const dateFormatter = new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    timeZoneName: "short"
+  }); 
 
   function getChangeClass(value) {
     if (value > 0) return "positive";
@@ -266,15 +281,16 @@
             ${item.item}
           </a>
         </td>
-        <td>${compactCurrencyFormatter.format(item.marketCap)}</td>
+        <td>${compactCurrencyFormatter.format(item.bidMarketCap)}</td>
         <td>${priceFormatter.format(item.bid)}</td>
         <td>${priceFormatter.format(item.ask)}</td>
-        <td class="${getChangeClass(item.dayChange)}">${percentFormatter.format(item.dayChange)}</td>
-        <td class="${getChangeClass(item.weekChange)}">${percentFormatter.format(item.weekChange)}</td>
+        <td class="${getChangeClass(item.dayBidChange)}">${percentFormatter.format(item.dayBidChange)}</td>
+        <td class="${getChangeClass(item.weekBidChange)}">${percentFormatter.format(item.weekBidChange)}</td>
         <td>${numberFormatter.format(item.supply)}</td>
+        <td>${signedNumberFormatter.format(item.supplyDelta)}</td>
         <td style="text-align:center; font-size: 1.2rem;">
-          ${item.in_store
-            ? `<a href="${item.store_url}/1" target="_blank" rel="noopener noreferrer" style="color:var(--text); text-decoration:none; cursor:pointer;">✔</a>`
+          ${item.inStore
+            ? `<a href="${item.storeUrl}/1" target="_blank" rel="noopener noreferrer" style="color:var(--text); text-decoration:none; cursor:pointer;">✔</a>`
             : `<span style="color:var(--border); cursor:not-allowed;">✖</span>`}
         </td>
       `;
@@ -288,9 +304,9 @@
     let current = 0;
     let previous = 0;
     data.forEach(item => {
-      current += item.marketCap;
-      if (item.dayChange > -1) {
-        previous += item.marketCap / (1 + item.dayChange);
+      current += item.bidMarketCap;
+      if (item.dayBidChange > -1 && item.daySupplyChange > -1) {
+        previous += ((item.bidMarketCap) / (1 + item.dayBidChange))/(1 + item.daySupplyChange);
       }
     });
     const change = previous > 0 ? (current - previous) / previous : 0;
@@ -344,17 +360,43 @@
     updateView();
   });
 
-  async function init() {
-    try {
-      const response = await fetch("site_info.json", { cache: "no-store" });
-      const rawData = await response.json();
-      tableData = Object.entries(rawData).map(([item, obj]) => ({ item, ...obj }));
-      updateSortIndicators(document.querySelector(`th[data-column="${currentSortColumn}"]`));
-      updateView();
-    } catch (error) {
-      console.error("Failed to load data:", error);
+async function init() {
+  try {
+    const response = await fetch("site_info.json", { cache: "no-store" });
+    const rawData = await response.json();
+
+    tableData = Object.entries(rawData).map(([item, obj]) => ({
+      item,
+      ...obj,
+      bidMarketCap: (Number(obj.bid) || 0) * (Number(obj.supply) || 0),
+      supplyDelta:
+        (Number(obj.supply) || 0) -
+        ((Number(obj.supply) || 0) / (1 + (Number(obj.daySupplyChange) || 0)))
+    }));
+
+    // 🔹 NEW: Find most recent lastUpdated
+    const latestTimestamp = Math.max(
+      ...tableData
+        .filter(i => i.lastUpdated)
+        .map(i => new Date(i.lastUpdated).getTime())
+    );
+
+    if (latestTimestamp) {
+      document.getElementById("last-updated").textContent =
+        "Last updated: " +
+        dateFormatter.format(new Date(latestTimestamp));
     }
+
+    updateSortIndicators(
+      document.querySelector(`th[data-column="${currentSortColumn}"]`)
+    );
+
+    updateView();
+
+  } catch (error) {
+    console.error("Failed to load data:", error);
   }
+}
 
   init();
 })();
