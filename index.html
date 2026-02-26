@@ -155,7 +155,7 @@
   </div>
 
   <div class="card" id="filtered-card" style="display:none;">
-    <div class="card-label">Filtered Market Cap</div>
+    <div class="card-label">Market Cap of Filtered Items</div>
     <div class="card-value" id="filtered-market-cap">$0.00</div>
     <div class="card-change neutral" id="filtered-market-cap-change">
       0.00% in the past 24 hours
@@ -174,15 +174,15 @@
     <thead>
       <tr>
         <th scope="col"></th>
-        <th scope="col" data-column="item">Item</th>
-        <th scope="col" data-column="bidMarketCap">Market Cap</th>
-        <th scope="col" data-column="bid">Bid</th>
-        <th scope="col" data-column="ask">Ask</th>
-        <th scope="col" data-column="dayBidChange">24h Bid Δ</th>
-        <th scope="col" data-column="weekBidChange">7d Bid Δ</th>
-        <th scope="col" data-column="supply">Supply</th>
-        <th scope="col" data-column="supplyDelta">24h Supply Δ</th>
-        <th>Store</th>
+        <th scope="col" data-column="item" title="Item name">Item</th>
+        <th scope="col" data-column="bidMarketCap" title="Market cap based on bid price">Market Cap</th>
+        <th scope="col" data-column="bid" title="Current bid price on Steam market">Bid</th>
+        <th scope="col" data-column="ask" title="Current ask price on Steam market">Ask</th>
+        <th scope="col" data-column="dayBidChange" title="Change in Steam market bid price over the last 24 hours">24h Bid Δ</th>
+        <th scope="col" data-column="weekBidChange" title="Change in Steam market bid price over the last 7 days">7d Bid Δ</th>
+        <th scope="col" data-column="supply" title="Current supply of the item">Supply</th>
+        <th scope="col" data-column="supplyDelta" title="Change in item supply over the last 24 hours">24h Supply Δ</th>
+        <th title="Store link if on sale">Store</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -207,7 +207,7 @@
   const searchInput = document.getElementById("search-input");
 
   let tableData = [];
-  let currentSortColumn = "marketCap";
+  let currentSortColumn = "bidMarketCap";
   let currentSortDirection = "desc";
   let currentSearchQuery = "";
 
