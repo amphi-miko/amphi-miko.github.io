@@ -365,7 +365,7 @@ async function init() {
     const response = await fetch("site_info.json", { cache: "no-store" });
     const rawData = await response.json();
 
-    tableData = Object.entries(rawData).map(([item, obj]) => ({
+    tableData = Object.entries(rawData.items).map(([item, obj]) => ({
       item,
       ...obj,
       bidMarketCap: (Number(obj.bid) || 0) * (Number(obj.supply) || 0),
