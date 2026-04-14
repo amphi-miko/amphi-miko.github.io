@@ -16,7 +16,10 @@
       --muted: #9ca3af;
       --positive: #22c55e;
       --negative: #ef4444;
+      --positivemuted: #1a2f1d;
+      --negativemuted: #2f1a1a;
       --neutral: #9ca3af;
+      --selected: #3b82f6;
     }
 
     body {
@@ -63,17 +66,77 @@
       margin-top: 0.25rem;
     }
 
-    .card-positive { background-color: #1a2f1d; border-color: #22c55e; }
-    .card-negative { background-color: #2f1a1a; border-color: #ef4444; }
+    .card-positive { background-color: var(--positivemuted); border-color: var(--positive); }
+    .card-negative { background-color: var(--negativemuted); border-color: var(--negative); }
     .card-neutral  { background-color: var(--bg-soft); border-color: var(--border); }
 
     .table-wrapper {
       overflow-x: auto;
     }
 
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.75rem;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.5rem 0.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-shrink: 0;
+    }
+
+    #search-input {
+      flex: 1;
+      padding: 0.45rem 0.5rem;
+      font-size: 0.85rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      outline: none;
+      transition: border 0.2s, background 0.2s;
+    }
+
+    #search-input:focus {
+      border-color: var(--selected);
+    }
+
+    #search-input:hover {
+      border-color: var(--selected);
+    }
+
+    #last-updated {
+      font-size: 0.75rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    #currency-select {
+      padding: 0.45rem 0.5rem;
+      font-size: 1.0rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--bg-soft);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    #currency-select:hover {
+      border-color: var(--selected);
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
+      table-layout: fixed;
     }
 
     thead th {
@@ -87,6 +150,8 @@
       padding: 0.2rem;
       border-bottom: 1px solid var(--border);
       white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     th[data-column] {
@@ -131,6 +196,32 @@
       }
     }
 
+    @media (max-width: 640px) {
+      .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .toolbar-right {
+        justify-content: space-between;
+      }
+
+      #search-input {
+        width: 100%;
+      }
+    }
+
+    th:nth-child(1), td:nth-child(1) { width: 35px; }   /* icon */
+    th:nth-child(2), td:nth-child(2) { width: 180px; }  /* item name */
+    th:nth-child(3), td:nth-child(3) { width: 70px; }  /* market cap */
+    th:nth-child(4), td:nth-child(4) { width: 60px; }   /* bid */
+    th:nth-child(5), td:nth-child(5) { width: 60px; }   /* ask */
+    th:nth-child(6), td:nth-child(6) { width: 60px; }   /* 24h */
+    th:nth-child(7), td:nth-child(7) { width: 60px; }   /* 7d */
+    th:nth-child(8), td:nth-child(8) { width: 40px; }   /* supply */
+    th:nth-child(9), td:nth-child(9) { width: 35px; }   /* supply delta */
+    th:nth-child(10), td:nth-child(10) { width: 35px; } /* store */
+
     #search-input {
       width: 100%;
       padding: 0.5rem;
@@ -139,7 +230,6 @@
       border: 1px solid var(--border);
       background: var(--bg-soft);
       color: var(--text);
-      margin-bottom: 1rem;
     }
   </style>
 </head>
@@ -163,10 +253,16 @@
   </div>
 </div>
 
-<input type="text" id="search-input" placeholder="Search..." />
+<div class="toolbar">
+  <input type="text" id="search-input" placeholder="Search items..." />
 
-<div id="last-updated" style="color: var(--muted); margin-bottom: 0.75rem; font-size: 0.8rem;">
-  Last updated: —
+  <div class="toolbar-right">
+    <select id="currency-select">
+      <option value="USD">USD</option>
+    </select>
+
+    <div id="last-updated">Last updated: —</div>
+  </div>
 </div>
 
 <div class="table-wrapper">
@@ -181,7 +277,7 @@
         <th scope="col" data-column="dayBidChange" title="Change in Steam market bid price over the last 24 hours">24h Bid Δ</th>
         <th scope="col" data-column="weekBidChange" title="Change in Steam market bid price over the last 7 days">7d Bid Δ</th>
         <th scope="col" data-column="supply" title="Current supply of the item">Supply</th>
-        <th scope="col" data-column="supplyDelta" title="Change in item supply over the last 24 hours">24h Supply Δ</th>
+        <th scope="col" data-column="supplyDelta" title="Change in item supply over the last 24 hours">24h Δ</th>
         <th title="Store link if on sale">Store</th>
       </tr>
     </thead>
@@ -210,6 +306,8 @@
   let currentSortColumn = "bidMarketCap";
   let currentSortDirection = "desc";
   let currentSearchQuery = "";
+  let currentCurrency = "USD";
+  let currencyRates = { USD: { rate: 1 } }; // default
 
   const priceFormatter = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
   const compactCurrencyFormatter = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", notation: "compact", maximumFractionDigits: 2 });
@@ -225,6 +323,17 @@
     second: "2-digit",
     timeZoneName: "short"
   }); 
+
+  function convert(value) {
+    const rate = currencyRates[currentCurrency]?.rate || 1;
+    return value / rate;
+  }
+
+  function adjustForFX(itemChange, fxChange) {
+    if (itemChange == null) return 0;
+    if (!fxChange) return itemChange; // USD fallback
+    return (1 + itemChange) / (1 + fxChange) - 1;
+  }
 
   function getChangeClass(value) {
     if (value > 0) return "positive";
@@ -268,9 +377,15 @@
   function renderTable(data) {
     tbody.innerHTML = "";
     const fragment = document.createDocumentFragment();
+    const { price, compact } = getFormatters();
 
     data.forEach(item => {
       const row = document.createElement("tr");
+      const fx = currencyRates[currentCurrency] || { dayRateChange: 0, weekRateChange: 0 };
+
+      const dayChangeFX = adjustForFX(item.dayBidChange, fx.dayRateChange);
+      const weekChangeFX = adjustForFX(item.weekBidChange, fx.weekRateChange);
+
       row.innerHTML = `
         <td><img src="assets/${item.item}.png" width="30" height="30" loading="lazy" alt="${item.item}" /></td>
         <td>
@@ -281,11 +396,11 @@
             ${item.item}
           </a>
         </td>
-        <td>${compactCurrencyFormatter.format(item.bidMarketCap)}</td>
-        <td>${priceFormatter.format(item.bid)}</td>
-        <td>${priceFormatter.format(item.ask)}</td>
-        <td class="${getChangeClass(item.dayBidChange)}">${percentFormatter.format(item.dayBidChange)}</td>
-        <td class="${getChangeClass(item.weekBidChange)}">${percentFormatter.format(item.weekBidChange)}</td>
+        <td>${compact.format(convert(item.bidMarketCap))}</td>
+        <td>${price.format(convert(item.bid))}</td>
+        <td>${price.format(convert(item.ask))}</td>
+        <td class="${getChangeClass(dayChangeFX)}">${percentFormatter.format(dayChangeFX)}</td>
+        <td class="${getChangeClass(weekChangeFX)}">${percentFormatter.format(weekChangeFX)}</td>
         <td>${numberFormatter.format(item.supply)}</td>
         <td>${signedNumberFormatter.format(item.supplyDelta)}</td>
         <td style="text-align:center; font-size: 1.2rem;">
@@ -303,14 +418,37 @@
   function calculateMarketCap(data) {
     let current = 0;
     let previous = 0;
+
+    const fx = currencyRates[currentCurrency] || { dayRateChange: 0 };
+
     data.forEach(item => {
       current += item.bidMarketCap;
+
       if (item.dayBidChange > -1 && item.daySupplyChange > -1) {
-        previous += ((item.bidMarketCap) / (1 + item.dayBidChange))/(1 + item.daySupplyChange);
+        const adjustedDayChange = adjustForFX(item.dayBidChange, fx.dayRateChange);
+
+        previous += (item.bidMarketCap / (1 + adjustedDayChange)) /
+                    (1 + item.daySupplyChange);
       }
     });
+
     const change = previous > 0 ? (current - previous) / previous : 0;
     return { current, change };
+  }
+
+  function getFormatters() {
+    return {
+      price: new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: currentCurrency
+      }),
+      compact: new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: currentCurrency,
+        notation: "compact",
+        maximumFractionDigits: 2
+      })
+    };
   }
 
   function updateView() {
@@ -319,8 +457,9 @@
     renderTable(processed);
 
     // Total market cap
+    const { price } = getFormatters();
     const totalStats = calculateMarketCap(tableData);
-    marketCapEl.textContent = priceFormatter.format(totalStats.current);
+    marketCapEl.textContent = price.format(convert(totalStats.current));
     marketChangeEl.textContent = percentFormatter.format(totalStats.change) + " in the past 24 hours";
     marketChangeEl.className = "card-change " + getChangeClass(totalStats.change);
 
@@ -330,7 +469,7 @@
     // Filtered market cap
     if (currentSearchQuery.trim() !== "") {
       const filteredStats = calculateMarketCap(processed);
-      filteredMarketCapEl.textContent = priceFormatter.format(filteredStats.current);
+      filteredMarketCapEl.textContent = price.format(convert(filteredStats.current));
       filteredMarketChangeEl.textContent = percentFormatter.format(filteredStats.change) + " in the past 24 hours";
       filteredMarketChangeEl.className = "card-change " + getChangeClass(filteredStats.change);
 
@@ -355,8 +494,27 @@
   }
 
   headers.forEach(header => header.addEventListener("click", handleHeaderClick));
+  let searchSaveTimeout;
+
   searchInput.addEventListener("input", e => {
     currentSearchQuery = e.target.value.toLowerCase();
+
+    clearTimeout(searchSaveTimeout);
+    searchSaveTimeout = setTimeout(() => {
+      localStorage.setItem("searchQuery", currentSearchQuery);
+    }, 1000);
+
+    updateView();
+  });
+
+  const currencySelect = document.getElementById("currency-select");
+
+  currencySelect.addEventListener("change", (e) => {
+    currentCurrency = e.target.value;
+
+    // Save selection
+    localStorage.setItem("selectedCurrency", currentCurrency);
+
     updateView();
   });
 
@@ -364,6 +522,31 @@ async function init() {
   try {
     const response = await fetch("site_info.json", { cache: "no-store" });
     const rawData = await response.json();
+
+    currencyRates = { USD: { rate: 1 }, ...rawData.currencies };
+
+    const currencySelect = document.getElementById("currency-select");
+
+    Object.keys(currencyRates).forEach(code => {
+      if (code === "USD") return;
+
+      const option = document.createElement("option");
+      option.value = code;
+      option.textContent = code;
+      currencySelect.appendChild(option);
+    });
+
+    const savedCurrency = localStorage.getItem("selectedCurrency");
+    if (savedCurrency && currencyRates[savedCurrency]) {
+      currentCurrency = savedCurrency;
+      currencySelect.value = savedCurrency;
+    }
+
+    const savedSearch = localStorage.getItem("searchQuery");
+    if (savedSearch) {
+      currentSearchQuery = savedSearch;
+      searchInput.value = savedSearch;
+    }
 
     tableData = Object.entries(rawData.items).map(([item, obj]) => ({
       item,
