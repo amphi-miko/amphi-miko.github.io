@@ -187,36 +187,40 @@
     .negative { color: var(--negative); }
     .neutral  { color: var(--neutral); }
 
-    @media (max-width: 640px) {
+    @media (max-width: 580px) {
+      th:nth-child(5),
+      td:nth-child(5),
       th:nth-child(7),
-      td:nth-child(7),
+      td:nth-child(7),      
       th:nth-child(8),
-      td:nth-child(8) {
+      td:nth-child(8),    
+      th:nth-child(9),
+      td:nth-child(9),
+      th:nth-child(10),
+      td:nth-child(10) {
         display: none;
       }
-    }
 
-    @media (max-width: 640px) {
-      .toolbar {
-        flex-direction: column;
-        align-items: stretch;
+      th:nth-child(2), 
+      td:nth-child(2) { 
+        width: 80px !important;
       }
 
       .toolbar-right {
         justify-content: space-between;
       }
-
-      #search-input {
-        width: 100%;
-      }
+      
+        #last-updated {
+        display: none;
+      }    
     }
 
-    th:nth-child(1), td:nth-child(1) { width: 35px; }   /* icon */
+    th:nth-child(1), td:nth-child(1) { width: 30px; }   /* icon */
     th:nth-child(2), td:nth-child(2) { width: 180px; }  /* item name */
     th:nth-child(3), td:nth-child(3) { width: 70px; }  /* market cap */
     th:nth-child(4), td:nth-child(4) { width: 60px; }   /* bid */
     th:nth-child(5), td:nth-child(5) { width: 60px; }   /* ask */
-    th:nth-child(6), td:nth-child(6) { width: 60px; }   /* 24h */
+    th:nth-child(6), td:nth-child(6) { width: 50px; }   /* 24h */
     th:nth-child(7), td:nth-child(7) { width: 60px; }   /* 7d */
     th:nth-child(8), td:nth-child(8) { width: 40px; }   /* supply */
     th:nth-child(9), td:nth-child(9) { width: 35px; }   /* supply delta */
@@ -261,7 +265,7 @@
       <option value="USD">USD</option>
     </select>
 
-    <div id="last-updated">Last updated: —</div>
+    <div id="last-updated">Updated: —</div>
   </div>
 </div>
 
@@ -274,8 +278,8 @@
         <th scope="col" data-column="bidMarketCap" title="Market cap based on bid price">Market Cap</th>
         <th scope="col" data-column="bid" title="Current bid price on Steam market">Bid</th>
         <th scope="col" data-column="ask" title="Current ask price on Steam market">Ask</th>
-        <th scope="col" data-column="dayBidChange" title="Change in Steam market bid price over the last 24 hours">24h Bid Δ</th>
-        <th scope="col" data-column="weekBidChange" title="Change in Steam market bid price over the last 7 days">7d Bid Δ</th>
+        <th scope="col" data-column="dayBidChange" title="Change in Steam market bid price over the last 24 hours">24h %</th>
+        <th scope="col" data-column="weekBidChange" title="Change in Steam market bid price over the last 7 days">7d %</th>
         <th scope="col" data-column="supply" title="Current supply of the item">Supply</th>
         <th scope="col" data-column="supplyDelta" title="Change in item supply over the last 24 hours">24h Δ</th>
         <th title="Store link if on sale">Store</th>
@@ -382,8 +386,8 @@
           </a>
         </td>
         <td>${compact(convert(item.bidMarketCap))}</td>
-        <td>${price(convert(item.bid))}</td>
-        <td>${price(convert(item.ask))}</td>
+        <td>${compact(convert(item.bid))}</td>
+        <td>${compact(convert(item.ask))}</td>
         <td class="${getChangeClass(dayChangeFX)}">${percent(dayChangeFX)}</td>
         <td class="${getChangeClass(weekChangeFX)}">${percent(weekChangeFX)}</td>
         <td>${number(item.supply)}</td>
@@ -431,7 +435,8 @@
       style: "currency",
       currency: currentCurrency,
       notation: "compact",
-      maximumFractionDigits: 2
+      maximumFractionDigits: 2,
+      minimumFractionDigits: 2
     });
     const percentFormatter = new Intl.NumberFormat("en-US", { style: "percent", maximumFractionDigits: 2, minimumFractionDigits: 2, signDisplay: "always" });
     const signedNumberFormatter = new Intl.NumberFormat("en-US", {maximumFractionDigits: 0, signDisplay: "exceptZero" });
@@ -572,7 +577,7 @@ async function init() {
     if (latestTimestamp) {
       const { date } = getFormatters()
       document.getElementById("last-updated").textContent =
-        "Last updated: " +
+        "Updated: " +
         date(new Date(latestTimestamp));
     }
 
