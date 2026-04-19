@@ -475,7 +475,7 @@
     if (currentSearchQuery.trim() !== "") {
       const filteredStats = calculateMarketCap(processed);
       filteredMarketCapEl.textContent = price(convert(filteredStats.current));
-      filteredMarketChangeEl.textContent = percentFormatter.format(filteredStats.change) + " in the past 24 hours";
+      filteredMarketChangeEl.textContent = percent(filteredStats.change) + " in the past 24 hours";
       filteredMarketChangeEl.className = "card-change " + getChangeClass(filteredStats.change);
 
       filteredCardEl.classList.remove("card-positive","card-negative","card-neutral");
