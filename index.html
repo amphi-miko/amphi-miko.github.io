@@ -309,21 +309,6 @@
   let currentCurrency = "USD";
   let currencyRates = { USD: { rate: 1 } }; // default
 
-  const priceFormatter = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
-  const compactCurrencyFormatter = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", notation: "compact", maximumFractionDigits: 2 });
-  const percentFormatter = new Intl.NumberFormat("en-US", { style: "percent", maximumFractionDigits: 2, minimumFractionDigits: 2, signDisplay: "always" });
-  const signedNumberFormatter = new Intl.NumberFormat("en-US", {maximumFractionDigits: 0, signDisplay: "exceptZero" });
-  const numberFormatter = new Intl.NumberFormat("en-US", { maximumFractionDigits: 2 });
-  const dateFormatter = new Intl.DateTimeFormat("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    timeZoneName: "short"
-  }); 
-
   function convert(value) {
     const rate = currencyRates[currentCurrency]?.rate || 1;
     return value / rate;
@@ -377,7 +362,7 @@
   function renderTable(data) {
     tbody.innerHTML = "";
     const fragment = document.createDocumentFragment();
-    const { price, compact } = getFormatters();
+    const { price, compact, percent ,signedNumber,number} = getFormatters();
 
     data.forEach(item => {
       const row = document.createElement("tr");
@@ -396,13 +381,13 @@
             ${item.item}
           </a>
         </td>
-        <td>${compact.format(convert(item.bidMarketCap))}</td>
-        <td>${price.format(convert(item.bid))}</td>
-        <td>${price.format(convert(item.ask))}</td>
-        <td class="${getChangeClass(dayChangeFX)}">${percentFormatter.format(dayChangeFX)}</td>
-        <td class="${getChangeClass(weekChangeFX)}">${percentFormatter.format(weekChangeFX)}</td>
-        <td>${numberFormatter.format(item.supply)}</td>
-        <td>${signedNumberFormatter.format(item.supplyDelta)}</td>
+        <td>${compact(convert(item.bidMarketCap))}</td>
+        <td>${price(convert(item.bid))}</td>
+        <td>${price(convert(item.ask))}</td>
+        <td class="${getChangeClass(dayChangeFX)}">${percent(dayChangeFX)}</td>
+        <td class="${getChangeClass(weekChangeFX)}">${percent(weekChangeFX)}</td>
+        <td>${number(item.supply)}</td>
+        <td>${signedNumber(item.supplyDelta)}</td>
         <td style="text-align:center; font-size: 1.2rem;">
           ${item.inStore
             ? `<a href="${item.storeUrl}/1" target="_blank" rel="noopener noreferrer" style="color:var(--text); text-decoration:none; cursor:pointer;">✔</a>`
@@ -437,17 +422,37 @@
   }
 
   function getFormatters() {
+    const priceFormatter = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: currentCurrency
+    });
+
+    const compactFormatter = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: currentCurrency,
+      notation: "compact",
+      maximumFractionDigits: 2
+    });
+    const percentFormatter = new Intl.NumberFormat("en-US", { style: "percent", maximumFractionDigits: 2, minimumFractionDigits: 2, signDisplay: "always" });
+    const signedNumberFormatter = new Intl.NumberFormat("en-US", {maximumFractionDigits: 0, signDisplay: "exceptZero" });
+    const numberFormatter = new Intl.NumberFormat("en-US", { maximumFractionDigits: 2 });
+    const dateFormatter = new Intl.DateTimeFormat("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      timeZoneName: "short"
+    });
+
     return {
-      price: new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: currentCurrency
-      }),
-      compact: new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: currentCurrency,
-        notation: "compact",
-        maximumFractionDigits: 2
-      })
+      price: (cents) => priceFormatter.format(cents / 100),
+      compact: (cents) => compactFormatter.format(cents / 100),
+      percent: (value) => percentFormatter.format(value),
+      signedNumber: (value) => signedNumberFormatter.format(value),
+      number: (value) => numberFormatter.format(value),
+      date: (value) => dateFormatter.format(value),
     };
   }
 
@@ -457,10 +462,10 @@
     renderTable(processed);
 
     // Total market cap
-    const { price } = getFormatters();
+    const { price, percent } = getFormatters();
     const totalStats = calculateMarketCap(tableData);
-    marketCapEl.textContent = price.format(convert(totalStats.current));
-    marketChangeEl.textContent = percentFormatter.format(totalStats.change) + " in the past 24 hours";
+    marketCapEl.textContent = price(convert(totalStats.current));
+    marketChangeEl.textContent = percent(totalStats.change) + " in the past 24 hours";
     marketChangeEl.className = "card-change " + getChangeClass(totalStats.change);
 
     totalCardEl.classList.remove("card-positive","card-negative","card-neutral");
@@ -469,7 +474,7 @@
     // Filtered market cap
     if (currentSearchQuery.trim() !== "") {
       const filteredStats = calculateMarketCap(processed);
-      filteredMarketCapEl.textContent = price.format(convert(filteredStats.current));
+      filteredMarketCapEl.textContent = price(convert(filteredStats.current));
       filteredMarketChangeEl.textContent = percentFormatter.format(filteredStats.change) + " in the past 24 hours";
       filteredMarketChangeEl.className = "card-change " + getChangeClass(filteredStats.change);
 
@@ -565,9 +570,10 @@ async function init() {
     );
 
     if (latestTimestamp) {
+      const { date } = getFormatters()
       document.getElementById("last-updated").textContent =
         "Last updated: " +
-        dateFormatter.format(new Date(latestTimestamp));
+        date(new Date(latestTimestamp));
     }
 
     updateSortIndicators(
