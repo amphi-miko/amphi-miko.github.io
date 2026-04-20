@@ -555,7 +555,7 @@
     const inventoryValue = item.inventoryValue || 0;
 
     row.innerHTML = `
-      <td><img src="assets/${item.item}.png" width="30" height="30" loading="lazy" decoding="async" alt="${item.item}" /></td>
+      <td><img src="assets/${item.item}.png" width="30" height="30" loading="lazy" alt="${item.item}" /></td>
       <td>
         <a href="https://steamcommunity.com/market/listings/590830/${item.item}"
            target="_blank"
@@ -760,14 +760,22 @@ function updateView() {
     updateView();
   });
 
-    // Handle inventory input changes
+    // Handle inventory input changes (save data only, don't re-render)
     tbody.addEventListener("input", (e) => {
       if (e.target.classList.contains("inventory-input")) {
         const itemName = e.target.dataset.item;
         const value = parseInt(e.target.value) || 0;
         inventoryData[itemName] = Math.max(0, value);
         saveInventory();
-        updateView(); // Refresh to update the value column
+        // Note: Table is NOT sorted automatically. User must press Enter or click header to update.
+      }
+    });
+
+    // Handle Enter key on inventory inputs to update the table
+    tbody.addEventListener("keydown", (e) => {
+      if (e.target.classList.contains("inventory-input") && e.key === "Enter") {
+        e.preventDefault(); // Prevent any default form submission
+        updateView(); // Refresh the table with current sort order
       }
     });
 
