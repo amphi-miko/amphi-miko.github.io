@@ -102,7 +102,6 @@
       background: var(--bg);
       color: var(--text);
       outline: none;
-      transition: border 0.2s, background 0.2s;
     }
 
     #search-input:focus {
@@ -188,16 +187,20 @@
     .neutral  { color: var(--neutral); }
 
     @media (max-width: 580px) {
-      th:nth-child(5),
-      td:nth-child(5),
-      th:nth-child(7),
-      td:nth-child(7),      
+      th:nth-child(4),
+      td:nth-child(4),
+      th:nth-child(6),
+      td:nth-child(6),      
       th:nth-child(8),
       td:nth-child(8),    
       th:nth-child(9),
       td:nth-child(9),
       th:nth-child(10),
-      td:nth-child(10) {
+      td:nth-child(10),
+      th:nth-child(11),
+      td:nth-child(11),
+      th:nth-child(12),
+      td:nth-child(12) {
         display: none;
       }
 
@@ -212,19 +215,25 @@
       
         #last-updated {
         display: none;
-      }    
+      }   
+      
+        #toggle-columns-btn {
+        display: none;
+      }        
     }
 
     th:nth-child(1), td:nth-child(1) { width: 30px; }   /* icon */
     th:nth-child(2), td:nth-child(2) { width: 180px; }  /* item name */
     th:nth-child(3), td:nth-child(3) { width: 70px; }  /* market cap */
-    th:nth-child(4), td:nth-child(4) { width: 60px; }   /* bid */
-    th:nth-child(5), td:nth-child(5) { width: 60px; }   /* ask */
-    th:nth-child(6), td:nth-child(6) { width: 50px; }   /* 24h */
-    th:nth-child(7), td:nth-child(7) { width: 60px; }   /* 7d */
-    th:nth-child(8), td:nth-child(8) { width: 40px; }   /* supply */
-    th:nth-child(9), td:nth-child(9) { width: 35px; }   /* supply delta */
-    th:nth-child(10), td:nth-child(10) { width: 35px; } /* store */
+    th:nth-child(4), td:nth-child(4) { width: 55px; }  /* Inv Value */
+    th:nth-child(5), td:nth-child(5) { width: 60px; }   /* bid */
+    th:nth-child(6), td:nth-child(6) { width: 60px; }   /* ask */
+    th:nth-child(7), td:nth-child(7) { width: 50px; }   /* 24h */
+    th:nth-child(8), td:nth-child(8) { width: 60px; }   /* 7d */
+    th:nth-child(9), td:nth-child(9) { width: 40px; }   /* supply */
+    th:nth-child(10), td:nth-child(10) { width: 35px; }   /* supply delta */
+    th:nth-child(11), td:nth-child(11) { width: 70px; }  /* Inv Qty */
+    th:nth-child(12), td:nth-child(12) { width: 35px; } /* store */
 
     #search-input {
       width: 100%;
@@ -235,6 +244,44 @@
       background: var(--bg-soft);
       color: var(--text);
     }
+
+    #toggle-columns-btn {
+      padding: 0.45rem 0.5rem;
+      font-size: 1.0rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--bg-soft);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    #toggle-columns-btn:hover {
+      border-color: var(--selected);
+    }    
+
+    .inventory-input {
+      width: 60px;
+      padding: 0.25rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 4px;
+      text-align: left;
+    }
+
+    .inventory-input:focus {
+      border-color: var(--selected);
+      outline: none;
+    }
+
+    .inventory-value {
+      text-align: left;
+      font-weight: 500;
+    }   
+    
+    .hidden-col {
+      display: none;
+    }    
   </style>
 </head>
 
@@ -261,6 +308,9 @@
   <input type="text" id="search-input" placeholder="Search items..." />
 
   <div class="toolbar-right">
+    <button id="toggle-columns-btn" class="toggle-btn">
+      INVENTORY
+    </button> 
     <select id="currency-select">
       <option value="USD">USD</option>
     </select>
@@ -276,12 +326,14 @@
         <th scope="col"></th>
         <th scope="col" data-column="item" title="Item name">Item</th>
         <th scope="col" data-column="bidMarketCap" title="Market cap based on bid price">Market Cap</th>
+        <th scope="col" data-column="inventoryValue" title="Value of your inventory">Value</th>         
         <th scope="col" data-column="bid" title="Current bid price on Steam market">Bid</th>
         <th scope="col" data-column="ask" title="Current ask price on Steam market">Ask</th>
         <th scope="col" data-column="dayBidChange" title="Change in Steam market bid price over the last 24 hours">24h %</th>
         <th scope="col" data-column="weekBidChange" title="Change in Steam market bid price over the last 7 days">7d %</th>
         <th scope="col" data-column="supply" title="Current supply of the item">Supply</th>
-        <th scope="col" data-column="supplyDelta" title="Change in item supply over the last 24 hours">24h Δ</th>
+        <th scope="col" data-column="supplyDelta" title="Change in item supply over the last 24 hours">24h Δ</th>    
+        <th scope="col" data-column="inventoryQty" title="Your inventory quantity">Holdings</th>   
         <th title="Store link if on sale">Store</th>
       </tr>
     </thead>
@@ -312,10 +364,120 @@
   let currentSearchQuery = "";
   let currentCurrency = "USD";
   let currencyRates = { USD: { rate: 1 } }; // default
+  let inventoryData = {};
+  // Column visibility state
+  let showValueHoldings = false; // false = show Market Cap, Supply, 24h Δ (default)
+
+  // Column indices (0-based)
+  const colMarketCap = 2;   // Market Cap
+  const colSupply = 8;      // Supply
+  const colSupplyDelta = 9; // 24h Δ
+  const colValue = 3;       // Value
+  const colHoldings = 10;   // Holdings
+
+  // Load inventory from localStorage
+  function loadInventory() {
+    try {
+      const saved = localStorage.getItem("inventoryData");
+      if (saved) {
+        inventoryData = JSON.parse(saved);
+      }
+    } catch (e) {
+      console.error("Failed to load inventory:", e);
+    }
+  }
+
+  // Save inventory to localStorage
+  function saveInventory() {
+    try {
+      localStorage.setItem("inventoryData", JSON.stringify(inventoryData));
+    } catch (e) {
+      console.error("Failed to save inventory:", e);
+    }
+  }
+
+  // Add this function after calculateTotalInventoryValue()
+  function calculateTotalInventoryMarketCap() {
+    let total = 0;
+    tableData.forEach(item => {
+      const qty = inventoryData[item.item] || 0;
+      if (qty > 0) {
+        total += (item.bid || 0) * qty;
+      }
+    });
+    return total;
+  }
+
+  // Add function to calculate filtered inventory value
+  function calculateFilteredInventoryMarketCap(filteredData) {
+    let total = 0;
+    filteredData.forEach(item => {
+      const qty = inventoryData[item.item] || 0;
+      if (qty > 0) {
+        total += (item.bid || 0) * qty;
+      }
+    });
+    return total;
+  }
+
+  // Add function to calculate previous inventory value for percentage change
+  function calculatePreviousInventoryValue(data, isFiltered = false) {
+    let previous = 0;
+    const fx = currencyRates[currentCurrency] || { dayRateChange: 0 };
+    
+    const itemsToProcess = isFiltered ? data : tableData;
+    
+    itemsToProcess.forEach(item => {
+      const qty = inventoryData[item.item] || 0;
+      if (qty > 0 && item.dayBidChange > -1) {
+        const adjustedDayChange = adjustForFX(item.dayBidChange, fx.dayRateChange);
+        const previousPrice = item.bid / (1 + adjustedDayChange);
+        previous += previousPrice * qty;
+      }
+    });
+    
+    return previous;
+  }
 
   function convert(value) {
     const rate = currencyRates[currentCurrency]?.rate || 1;
     return value / rate;
+  }
+
+  function applyColumnVisibility() {
+    const rows = document.querySelectorAll("#price-table tr");
+    rows.forEach(row => {
+      const cells = row.cells;
+      if (!cells.length) return;
+
+      if (showValueHoldings) {
+        // Show Value & Holdings, hide Market Cap, Supply, 24h Δ
+        if (cells[colMarketCap]) cells[colMarketCap].classList.add("hidden-col");
+        if (cells[colSupply]) cells[colSupply].classList.add("hidden-col");
+        if (cells[colSupplyDelta]) cells[colSupplyDelta].classList.add("hidden-col");
+        if (cells[colValue]) cells[colValue].classList.remove("hidden-col");
+        if (cells[colHoldings]) cells[colHoldings].classList.remove("hidden-col");
+      } else {
+        // Show Market Cap, Supply, 24h Δ, hide Value & Holdings (default)
+        if (cells[colMarketCap]) cells[colMarketCap].classList.remove("hidden-col");
+        if (cells[colSupply]) cells[colSupply].classList.remove("hidden-col");
+        if (cells[colSupplyDelta]) cells[colSupplyDelta].classList.remove("hidden-col");
+        if (cells[colValue]) cells[colValue].classList.add("hidden-col");
+        if (cells[colHoldings]) cells[colHoldings].classList.add("hidden-col");
+      }
+    });
+  }
+  function toggleColumns() {
+    showValueHoldings = !showValueHoldings;
+    localStorage.setItem("inventoryMode", showValueHoldings); // Save preference
+    const btn = document.getElementById("toggle-columns-btn");
+    if (btn) {
+      btn.textContent = showValueHoldings
+        ? "MARKET"
+        : "INVENTORY";
+    }
+    applyColumnVisibility();
+    updateView();  // ← This forces the cards to update immediately
   }
 
   function adjustForFX(itemChange, fxChange) {
@@ -343,14 +505,27 @@
     }
   }
 
-  function getProcessedData() {
+    function getProcessedData() {
     let processed = tableData.filter(item =>
       item.item.toLowerCase().includes(currentSearchQuery)
     );
 
+    // Add inventory properties for sorting
+    processed = processed.map(item => ({
+      ...item,
+      inventoryQty: inventoryData[item.item] || 0,
+      inventoryValue: (item.bid || 0) * (inventoryData[item.item] || 0)
+    }));
+
     processed.sort((a, b) => {
       let valA = a[currentSortColumn];
       let valB = b[currentSortColumn];
+
+      // Handle inventory columns specially if needed
+      if (currentSortColumn === "inventoryQty" || currentSortColumn === "inventoryValue") {
+        valA = valA || 0;
+        valB = valB || 0;
+      }
 
       if (currentSortColumn === "item") {
         return currentSortDirection === "asc"
@@ -364,45 +539,53 @@
   }
 
   function renderTable(data) {
-    tbody.innerHTML = "";
-    const fragment = document.createDocumentFragment();
-    const { price, compact, percent ,signedNumber,number} = getFormatters();
+  tbody.innerHTML = "";
+  const fragment = document.createDocumentFragment();
+  const { price, compact, percent ,signedNumber,number} = getFormatters();
 
-    data.forEach(item => {
-      const row = document.createElement("tr");
-      const fx = currencyRates[currentCurrency] || { dayRateChange: 0, weekRateChange: 0 };
+  data.forEach(item => {
+    const row = document.createElement("tr");
+    const fx = currencyRates[currentCurrency] || { dayRateChange: 0, weekRateChange: 0 };
 
-      const dayChangeFX = adjustForFX(item.dayBidChange, fx.dayRateChange);
-      const weekChangeFX = adjustForFX(item.weekBidChange, fx.weekRateChange);
+    const dayChangeFX = adjustForFX(item.dayBidChange, fx.dayRateChange);
+    const weekChangeFX = adjustForFX(item.weekBidChange, fx.weekRateChange);
+    
+    // Use the pre-calculated inventory values from getProcessedData
+    const qty = item.inventoryQty || 0;
+    const inventoryValue = item.inventoryValue || 0;
 
-      row.innerHTML = `
-        <td><img src="assets/${item.item}.png" width="30" height="30" loading="lazy" alt="${item.item}" /></td>
-        <td>
-          <a href="https://steamcommunity.com/market/listings/590830/${item.item}"
-             target="_blank"
-             rel="noopener noreferrer"
-             style="color:white">
-            ${item.item}
-          </a>
-        </td>
-        <td>${compact(convert(item.bidMarketCap))}</td>
-        <td>${compact(convert(item.bid))}</td>
-        <td>${compact(convert(item.ask))}</td>
-        <td class="${getChangeClass(dayChangeFX)}">${percent(dayChangeFX)}</td>
-        <td class="${getChangeClass(weekChangeFX)}">${percent(weekChangeFX)}</td>
-        <td>${number(item.supply)}</td>
-        <td>${signedNumber(item.supplyDelta)}</td>
-        <td style="text-align:center; font-size: 1.2rem;">
-          ${item.inStore
-            ? `<a href="${item.storeUrl}/1" target="_blank" rel="noopener noreferrer" style="color:var(--text); text-decoration:none; cursor:pointer;">✔</a>`
-            : `<span style="color:var(--border); cursor:not-allowed;">✖</span>`}
-        </td>
-      `;
-      fragment.appendChild(row);
-    });
+    row.innerHTML = `
+      <td><img src="assets/${item.item}.png" width="30" height="30" loading="lazy" decoding="async" alt="${item.item}" /></td>
+      <td>
+        <a href="https://steamcommunity.com/market/listings/590830/${item.item}"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:white">
+          ${item.item}
+        </a>
+      </td>
+      <td>${compact(convert(item.bidMarketCap))}</td>
+      <td class="inventory-value">${compact(convert(inventoryValue))}</td>
+      <td>${compact(convert(item.bid))}</td>
+      <td>${compact(convert(item.ask))}</td>
+      <td class="${getChangeClass(dayChangeFX)}">${percent(dayChangeFX)}</td>
+      <td class="${getChangeClass(weekChangeFX)}">${percent(weekChangeFX)}</td>
+      <td>${number(item.supply)}</td>
+      <td>${signedNumber(item.supplyDelta)}</td>
+      <td><input type="number" min="0" step="1" value="${qty}" 
+           class="inventory-input" data-item="${item.item}" 
+           placeholder="0"></td>
+      <td style="text-align:center; font-size: 1.2rem;">
+        ${item.inStore
+          ? `<a href="${item.storeUrl}/1" target="_blank" rel="noopener noreferrer" style="color:var(--text); text-decoration:none; cursor:pointer;">✔</a>`
+          : `<span style="color:var(--border); cursor:not-allowed;">✖</span>`}
+      </td>
+    `;
+    fragment.appendChild(row);
+  });
 
-    tbody.appendChild(fragment);
-  }
+  tbody.appendChild(fragment);
+}
 
   function calculateMarketCap(data) {
     let current = 0;
@@ -461,35 +644,84 @@
     };
   }
 
-  function updateView() {
-    const processed = getProcessedData();
-
-    renderTable(processed);
-
-    // Total market cap
-    const { price, percent } = getFormatters();
+function updateView() {
+  const processed = getProcessedData();
+  
+  renderTable(processed);
+  applyColumnVisibility();
+  
+  const { price, percent } = getFormatters();
+  const fx = currencyRates[currentCurrency] || { dayRateChange: 0 };
+  
+  // Check if we're in inventory mode (showing Value/Holdings columns)
+  const isInventoryMode = showValueHoldings;
+  
+  if (isInventoryMode) {
+    // INVENTORY MODE - Show Inventory Values instead of Market Cap
+    
+    // Update total card for inventory mode
+    const totalInventoryValue = calculateTotalInventoryMarketCap();
+    const previousTotalInventory = calculatePreviousInventoryValue(tableData, false);
+    const totalChange = previousTotalInventory > 0 ? (totalInventoryValue - previousTotalInventory) / previousTotalInventory : 0;
+    
+    marketCapEl.textContent = price(convert(totalInventoryValue));
+    marketChangeEl.textContent = percent(totalChange) + " in the past 24 hours";
+    marketChangeEl.className = "card-change " + getChangeClass(totalChange);
+    totalCardEl.classList.remove("card-positive","card-negative","card-neutral");
+    totalCardEl.classList.add("card-" + getChangeClass(totalChange));
+    
+    // Update card labels for inventory mode
+    document.querySelector("#total-card .card-label").textContent = "Total Inventory Value";
+    
+    // Update filtered card for inventory mode
+    if (currentSearchQuery.trim() !== "") {
+      const filteredInventoryValue = calculateFilteredInventoryMarketCap(processed);
+      const previousFilteredInventory = calculatePreviousInventoryValue(processed, true);
+      const filteredChange = previousFilteredInventory > 0 ? (filteredInventoryValue - previousFilteredInventory) / previousFilteredInventory : 0;
+      
+      filteredMarketCapEl.textContent = price(convert(filteredInventoryValue));
+      filteredMarketChangeEl.textContent = percent(filteredChange) + " in the past 24 hours";
+      filteredMarketChangeEl.className = "card-change " + getChangeClass(filteredChange);
+      filteredCardEl.classList.remove("card-positive","card-negative","card-neutral");
+      filteredCardEl.classList.add("card-" + getChangeClass(filteredChange));
+      filteredCardEl.style.display = "block";
+      
+      // Update filtered card label for inventory mode
+      document.querySelector("#filtered-card .card-label").textContent = "Inventory Value of Filtered Items";
+    } else {
+      filteredCardEl.style.display = "none";
+    }
+  } else {
+    // MARKET MODE - Show Market Cap (original behavior)
+    
+    // Update total card for market mode
     const totalStats = calculateMarketCap(tableData);
     marketCapEl.textContent = price(convert(totalStats.current));
     marketChangeEl.textContent = percent(totalStats.change) + " in the past 24 hours";
     marketChangeEl.className = "card-change " + getChangeClass(totalStats.change);
-
     totalCardEl.classList.remove("card-positive","card-negative","card-neutral");
     totalCardEl.classList.add("card-" + getChangeClass(totalStats.change));
-
-    // Filtered market cap
+    
+    // Update card labels for market mode
+    document.querySelector("#total-card .card-label").textContent = "s&box Total Market Cap";
+    
+    // Update filtered card for market mode
     if (currentSearchQuery.trim() !== "") {
       const filteredStats = calculateMarketCap(processed);
       filteredMarketCapEl.textContent = price(convert(filteredStats.current));
       filteredMarketChangeEl.textContent = percent(filteredStats.change) + " in the past 24 hours";
       filteredMarketChangeEl.className = "card-change " + getChangeClass(filteredStats.change);
-
       filteredCardEl.classList.remove("card-positive","card-negative","card-neutral");
       filteredCardEl.classList.add("card-" + getChangeClass(filteredStats.change));
       filteredCardEl.style.display = "block";
+      
+      // Update filtered card label for market mode
+      document.querySelector("#filtered-card .card-label").textContent = "Market Cap of Filtered Items";
     } else {
       filteredCardEl.style.display = "none";
     }
   }
+}
 
   function handleHeaderClick(e) {
     const column = e.currentTarget.dataset.column;
@@ -528,10 +760,40 @@
     updateView();
   });
 
+    // Handle inventory input changes
+    tbody.addEventListener("input", (e) => {
+      if (e.target.classList.contains("inventory-input")) {
+        const itemName = e.target.dataset.item;
+        const value = parseInt(e.target.value) || 0;
+        inventoryData[itemName] = Math.max(0, value);
+        saveInventory();
+        updateView(); // Refresh to update the value column
+      }
+    });
+
+    // Prevent negative numbers and non-integers
+    tbody.addEventListener("keydown", (e) => {
+      if (e.target.classList.contains("inventory-input")) {
+        if (e.key === "-" || e.key === "." || e.key === "e") {
+          e.preventDefault();
+        }
+      }
+    });
+
 async function init() {
+  loadInventory();
+
   try {
     const response = await fetch("site_info.json", { cache: "no-store" });
     const rawData = await response.json();
+    const savedMode = localStorage.getItem("inventoryMode");
+    if (savedMode !== null) {
+      showValueHoldings = savedMode === "true";
+      const btn = document.getElementById("toggle-columns-btn");
+      if (btn) {
+        btn.textContent = showValueHoldings ? "MARKET" : "INVENTORY";
+      }
+    }
 
     currencyRates = { USD: { rate: 1 }, ...rawData.currencies };
 
@@ -586,7 +848,14 @@ async function init() {
     );
 
     updateView();
-
+    // Ensure initial card labels are correct
+    if (!showValueHoldings) {
+      document.querySelector("#total-card .card-label").textContent = "s&box Total Market Cap";
+      document.querySelector("#filtered-card .card-label").textContent = "Market Cap of Filtered Items";
+    }
+    
+    const toggleBtn = document.getElementById("toggle-columns-btn");
+    if (toggleBtn) toggleBtn.addEventListener("click", toggleColumns);
   } catch (error) {
     console.error("Failed to load data:", error);
   }
