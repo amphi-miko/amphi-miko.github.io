@@ -359,7 +359,7 @@
   const searchInput = document.getElementById("search-input");
 
   let tableData = [];
-  let currentSortColumn = "bidMarketCap";
+  let currentSortColumn;
   let currentSortDirection = "desc";
   let currentSearchQuery = "";
   let currentCurrency = "USD";
@@ -467,18 +467,29 @@
       }
     });
   }
-  function toggleColumns() {
-    showValueHoldings = !showValueHoldings;
-    localStorage.setItem("inventoryMode", showValueHoldings); // Save preference
-    const btn = document.getElementById("toggle-columns-btn");
-    if (btn) {
-      btn.textContent = showValueHoldings
-        ? "MARKET"
-        : "INVENTORY";
-    }
-    applyColumnVisibility();
-    updateView();  // ← This forces the cards to update immediately
+function toggleColumns() {
+  showValueHoldings = !showValueHoldings;
+  localStorage.setItem("inventoryMode", showValueHoldings);
+  const btn = document.getElementById("toggle-columns-btn");
+  if (btn) {
+    btn.textContent = showValueHoldings
+      ? "MARKET"
+      : "INVENTORY";
   }
+  
+  // Change sort column based on mode
+  currentSortColumn = showValueHoldings ? "inventoryValue" : "bidMarketCap";
+  currentSortDirection = "desc"; // Reset to descending for consistency
+  
+  // Update sort indicator UI
+  const activeHeader = document.querySelector(`th[data-column="${currentSortColumn}"]`);
+  if (activeHeader) {
+    updateSortIndicators(activeHeader);
+  }
+  
+  applyColumnVisibility();
+  updateView();
+}
 
   function adjustForFX(itemChange, fxChange) {
     if (itemChange == null) return 0;
@@ -801,6 +812,8 @@ async function init() {
       if (btn) {
         btn.textContent = showValueHoldings ? "MARKET" : "INVENTORY";
       }
+      // Set initial sort column based on mode
+      currentSortColumn = showValueHoldings ? "inventoryValue" : "bidMarketCap";
     }
 
     currencyRates = { USD: { rate: 1 }, ...rawData.currencies };
