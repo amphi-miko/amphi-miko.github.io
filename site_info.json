@@ -6,13 +6,13 @@
       "storePrice": 300,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/445303",
       "inStore": false,
-      "bid": 19356.0,
+      "bid": 19369.0,
       "ask": 34942.0,
-      "dayBidChange": 0.0033694468923332124,
+      "dayBidChange": 0.0034711428867474875,
       "daySupplyChange": 0.0,
-      "weekBidChange": -0.1282651774455053,
+      "weekBidChange": -0.03155,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:06.379938+00:00"
+      "lastUpdated": "2026-10-12T03:11:52.226834+00:00"
     },
     "Neck Tattoo": {
       "supply": 136.0,
@@ -20,13 +20,13 @@
       "storePrice": 450,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/696280",
       "inStore": false,
-      "bid": 20849.0,
+      "bid": 20865.0,
       "ask": 43646.0,
-      "dayBidChange": 0.005740472744814279,
+      "dayBidChange": 0.005736045502747518,
       "daySupplyChange": 0.0,
-      "weekBidChange": -0.061025040533237256,
+      "weekBidChange": 0.9358879198367044,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:09.415396+00:00"
+      "lastUpdated": "2026-10-12T03:11:55.131826+00:00"
     },
     "Santa 2024 Hat": {
       "supply": 3235.0,
@@ -34,13 +34,13 @@
       "storePrice": 350,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/328701",
       "inStore": false,
-      "bid": 1707.0,
-      "ask": 2202.0,
-      "dayBidChange": 0.0,
+      "bid": 1710.0,
+      "ask": 2199.0,
+      "dayBidChange": 0.0017574692442882249,
       "daySupplyChange": 0.0,
-      "weekBidChange": -0.0569060773480663,
+      "weekBidChange": -0.055248618784530384,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:12.341507+00:00"
+      "lastUpdated": "2026-10-12T03:11:58.121907+00:00"
     },
     "Santa 2024 Jacket": {
       "supply": 2075.0,
@@ -48,13 +48,13 @@
       "storePrice": 300,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/849814",
       "inStore": false,
-      "bid": 1590.0,
+      "bid": 1593.0,
       "ask": 2797.0,
-      "dayBidChange": 0.0006293266205160479,
+      "dayBidChange": 0.0025173064820641915,
       "daySupplyChange": 0.0,
-      "weekBidChange": -0.31905781584582443,
+      "weekBidChange": -0.3177730192719486,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:15.245640+00:00"
+      "lastUpdated": "2026-10-12T03:12:01.030605+00:00"
     },
     "Santa Trousers 2024": {
       "supply": 1968.0,
@@ -63,12 +63,12 @@
       "storeUrl": "https://store.steampowered.com/buyitem/590830/335294",
       "inStore": false,
       "bid": 1352.0,
-      "ask": 2397.0,
+      "ask": 2359.0,
       "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
       "weekBidChange": -0.155,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:18.219936+00:00"
+      "lastUpdated": "2026-10-12T03:12:04.021869+00:00"
     },
     "Valentines Bear Head 2025": {
       "supply": 2906.0,
@@ -76,13 +76,13 @@
       "storePrice": 750,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/427599",
       "inStore": false,
-      "bid": 1044.0,
+      "bid": 799.0,
       "ask": 1300.0,
-      "dayBidChange": -0.005714285714285714,
+      "dayBidChange": -0.23467432950191572,
       "daySupplyChange": 0.0,
-      "weekBidChange": -0.03512014787430684,
+      "weekBidChange": -0.26155268022181144,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:21.130398+00:00"
+      "lastUpdated": "2026-10-12T03:12:06.921430+00:00"
     },
     "Valentines Bear Top 2025": {
       "supply": 2276.0,
@@ -96,7 +96,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.22248803827751196,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:24.214431+00:00"
+      "lastUpdated": "2026-10-12T03:12:09.830430+00:00"
     },
     "Valentines Bear Trousers 2025": {
       "supply": 2173.0,
@@ -105,12 +105,12 @@
       "storeUrl": "https://store.steampowered.com/buyitem/590830/606024",
       "inStore": false,
       "bid": 602.0,
-      "ask": 671.0,
+      "ask": 657.0,
       "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
       "weekBidChange": 0.020338983050847456,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:27.117909+00:00"
+      "lastUpdated": "2026-10-12T03:12:13.024372+00:00"
     },
     "Easter Bonnet 2025": {
       "supply": 3514.0,
@@ -124,7 +124,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.21262458471760798,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:30.007189+00:00"
+      "lastUpdated": "2026-10-12T03:12:15.940659+00:00"
     },
     "Easter Dungarees 2025": {
       "supply": 2184.0,
@@ -132,13 +132,13 @@
       "storePrice": 500,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/41243",
       "inStore": false,
-      "bid": 559.0,
-      "ask": 1007.0,
-      "dayBidChange": 0.0,
+      "bid": 524.0,
+      "ask": 1006.0,
+      "dayBidChange": -0.0626118067978533,
       "daySupplyChange": 0.0,
-      "weekBidChange": -0.1991404011461318,
+      "weekBidChange": 0.18284424379232506,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:32.945309+00:00"
+      "lastUpdated": "2026-10-12T03:12:18.847906+00:00"
     },
     "Easter Slippers 2025": {
       "supply": 3195.0,
@@ -152,7 +152,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.22594142259414227,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:35.820523+00:00"
+      "lastUpdated": "2026-10-12T03:12:21.758728+00:00"
     },
     "Wizard Hat": {
       "supply": 7316.0,
@@ -160,13 +160,13 @@
       "storePrice": 500,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/532424",
       "inStore": false,
-      "bid": 559.0,
+      "bid": 471.0,
       "ask": 651.0,
-      "dayBidChange": 0.18683651804670912,
+      "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
-      "weekBidChange": -0.01929824561403509,
+      "weekBidChange": -0.1736842105263158,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:38.779246+00:00"
+      "lastUpdated": "2026-10-12T03:12:24.681453+00:00"
     },
     "Wizard Beard": {
       "supply": 7384.0,
@@ -180,7 +180,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.08979591836734693,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:41.667984+00:00"
+      "lastUpdated": "2026-10-12T03:12:27.684396+00:00"
     },
     "Wizard Gown": {
       "supply": 6189.0,
@@ -194,7 +194,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.007905138339920948,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:44.567816+00:00"
+      "lastUpdated": "2026-10-12T03:12:30.581291+00:00"
     },
     "Wizard Trousers": {
       "supply": 6035.0,
@@ -208,7 +208,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:47.480408+00:00"
+      "lastUpdated": "2026-10-12T03:12:33.617190+00:00"
     },
     "Shark Head": {
       "supply": 10878.0,
@@ -220,9 +220,9 @@
       "ask": 293.0,
       "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
-      "weekBidChange": 0.030303030303030304,
+      "weekBidChange": 0.009900990099009901,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:50.374265+00:00"
+      "lastUpdated": "2026-10-12T03:12:36.557805+00:00"
     },
     "Safety Glasses": {
       "supply": 8788.0,
@@ -236,7 +236,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.06666666666666667,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:53.264493+00:00"
+      "lastUpdated": "2026-10-12T03:12:39.496181+00:00"
     },
     "Propane Helmet": {
       "supply": 4611.0,
@@ -244,13 +244,13 @@
       "storePrice": 1000,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/32928",
       "inStore": false,
-      "bid": 475.0,
+      "bid": 473.0,
       "ask": 664.0,
-      "dayBidChange": 0.0,
+      "dayBidChange": -0.004210526315789474,
       "daySupplyChange": 0.0,
-      "weekBidChange": 0.03036876355748373,
+      "weekBidChange": 0.026030368763557483,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:56.149080+00:00"
+      "lastUpdated": "2026-10-12T03:12:42.472378+00:00"
     },
     "Varsity Jacket": {
       "supply": 4494.0,
@@ -264,7 +264,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.012903225806451613,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:48:59.048510+00:00"
+      "lastUpdated": "2026-10-12T03:12:45.385148+00:00"
     },
     "Pumpkin Head 2025": {
       "supply": 5326.0,
@@ -272,13 +272,13 @@
       "storePrice": 1000,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/170833",
       "inStore": false,
-      "bid": 707.0,
+      "bid": 708.0,
       "ask": 950.0,
-      "dayBidChange": 0.0028368794326241137,
+      "dayBidChange": 0.00425531914893617,
       "daySupplyChange": 0.0,
-      "weekBidChange": -0.2620041753653445,
+      "weekBidChange": -0.2609603340292276,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:01.949950+00:00"
+      "lastUpdated": "2026-10-12T03:12:48.398164+00:00"
     },
     "Halloween Hoodie 2025": {
       "supply": 4161.0,
@@ -292,7 +292,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.28252032520325204,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:04.841797+00:00"
+      "lastUpdated": "2026-10-12T03:12:51.359572+00:00"
     },
     "Halloween Jeans 2025": {
       "supply": 8117.0,
@@ -306,7 +306,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.33707865168539325,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:07.889988+00:00"
+      "lastUpdated": "2026-10-12T03:12:54.387240+00:00"
     },
     "Skull Helmet": {
       "supply": 3372.0,
@@ -320,7 +320,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.03500522466039707,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:10.822204+00:00"
+      "lastUpdated": "2026-10-12T03:12:57.273716+00:00"
     },
     "Banana Slippers": {
       "supply": 8281.0,
@@ -334,7 +334,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.09844559585492228,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:13.749948+00:00"
+      "lastUpdated": "2026-10-12T03:13:00.168261+00:00"
     },
     "Fisherman Cap": {
       "supply": 4637.0,
@@ -342,13 +342,13 @@
       "storePrice": 200,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/453903",
       "inStore": false,
-      "bid": 156.0,
+      "bid": 158.0,
       "ask": 283.0,
-      "dayBidChange": 0.0,
+      "dayBidChange": 0.01282051282051282,
       "daySupplyChange": 0.0,
-      "weekBidChange": -0.0658682634730539,
+      "weekBidChange": -0.05389221556886228,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:16.682846+00:00"
+      "lastUpdated": "2026-10-12T03:13:03.070652+00:00"
     },
     "Lifejacket": {
       "supply": 4719.0,
@@ -362,7 +362,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.08860759493670886,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:19.638268+00:00"
+      "lastUpdated": "2026-10-12T03:13:06.009913+00:00"
     },
     "Telecom Conspiracist Helmet": {
       "supply": 4774.0,
@@ -376,7 +376,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.03036876355748373,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:22.519798+00:00"
+      "lastUpdated": "2026-10-12T03:13:08.973635+00:00"
     },
     "Reindeer Head 2025": {
       "supply": 5004.0,
@@ -390,7 +390,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.025423728813559324,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:25.478655+00:00"
+      "lastUpdated": "2026-10-12T03:13:11.861882+00:00"
     },
     "Reindeer Top 2025": {
       "supply": 5187.0,
@@ -404,7 +404,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.19574468085106383,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:28.369598+00:00"
+      "lastUpdated": "2026-10-12T03:13:14.773828+00:00"
     },
     "Reindeer Trousers 2025": {
       "supply": 6158.0,
@@ -413,12 +413,12 @@
       "storeUrl": "https://store.steampowered.com/buyitem/590830/991651",
       "inStore": false,
       "bid": 184.0,
-      "ask": 257.0,
+      "ask": 256.0,
       "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:31.235763+00:00"
+      "lastUpdated": "2026-10-12T03:13:17.696037+00:00"
     },
     "Plague Doctor Mask": {
       "supply": 17227.0,
@@ -427,12 +427,12 @@
       "storeUrl": "https://store.steampowered.com/buyitem/590830/705168",
       "inStore": false,
       "bid": 50.0,
-      "ask": 60.0,
+      "ask": 59.0,
       "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
       "weekBidChange": 0.041666666666666664,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:34.118165+00:00"
+      "lastUpdated": "2026-10-12T03:13:20.589492+00:00"
     },
     "Faux hawk Hair": {
       "supply": 7040.0,
@@ -444,9 +444,9 @@
       "ask": 77.0,
       "dayBidChange": 0.3142857142857143,
       "daySupplyChange": 0.0,
-      "weekBidChange": 1.1904761904761905,
+      "weekBidChange": 0.5333333333333333,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:37.023318+00:00"
+      "lastUpdated": "2026-10-12T03:13:23.552187+00:00"
     },
     "Tactical Backpack": {
       "supply": 7370.0,
@@ -460,7 +460,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.007575757575757576,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:39.926833+00:00"
+      "lastUpdated": "2026-10-12T03:13:26.511655+00:00"
     },
     "Lunar Shoes 2026": {
       "supply": 5496.0,
@@ -474,7 +474,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.010309278350515464,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:42.821348+00:00"
+      "lastUpdated": "2026-10-12T03:13:29.428465+00:00"
     },
     "Lunar Trousers 2026": {
       "supply": 6412.0,
@@ -488,7 +488,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.10204081632653061,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:45.687395+00:00"
+      "lastUpdated": "2026-10-12T03:13:32.308576+00:00"
     },
     "Lunar Jacket 2026": {
       "supply": 5219.0,
@@ -502,7 +502,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:48.576469+00:00"
+      "lastUpdated": "2026-10-12T03:13:35.258623+00:00"
     },
     "Lunar Mask 2026": {
       "supply": 5966.0,
@@ -516,10 +516,10 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.33014354066985646,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:51.476966+00:00"
+      "lastUpdated": "2026-10-12T03:13:38.189868+00:00"
     },
     "Short Parted Hair": {
-      "supply": 2103.0,
+      "supply": 2104.0,
       "uniqueBuyers": 1133,
       "storePrice": 150,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/756278",
@@ -527,10 +527,10 @@
       "bid": 15.0,
       "ask": 30.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.00047551117451260106,
       "weekBidChange": 0.0,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:54.301344+00:00"
+      "weekSupplyChange": 0.00047551117451260106,
+      "lastUpdated": "2026-10-12T03:13:40.855950+00:00"
     },
     "OG Pants - Red": {
       "supply": 7247.0,
@@ -544,7 +544,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.40816326530612246,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:49:57.174007+00:00"
+      "lastUpdated": "2026-10-12T03:13:43.840165+00:00"
     },
     "Crossbody Bag Shirt": {
       "supply": 7222.0,
@@ -554,11 +554,11 @@
       "inStore": false,
       "bid": 17.0,
       "ask": 70.0,
-      "dayBidChange": 0.0625,
+      "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
       "weekBidChange": 0.3076923076923077,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:00.066705+00:00"
+      "lastUpdated": "2026-10-12T03:13:46.714393+00:00"
     },
     "Punk Helmet": {
       "supply": 21264.0,
@@ -568,11 +568,11 @@
       "inStore": false,
       "bid": 16.0,
       "ask": 24.0,
-      "dayBidChange": -0.15789473684210525,
+      "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
       "weekBidChange": -0.15789473684210525,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:02.926184+00:00"
+      "lastUpdated": "2026-10-12T03:13:49.626881+00:00"
     },
     "Brainy BRN-101": {
       "supply": 13823.0,
@@ -580,16 +580,16 @@
       "storePrice": 450,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/409746",
       "inStore": false,
-      "bid": 50.0,
-      "ask": 98.0,
-      "dayBidChange": -0.16666666666666666,
+      "bid": 51.0,
+      "ask": 101.0,
+      "dayBidChange": -0.15,
       "daySupplyChange": 0.0,
-      "weekBidChange": -0.16666666666666666,
+      "weekBidChange": -0.15,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:05.794066+00:00"
+      "lastUpdated": "2026-10-12T03:13:52.723050+00:00"
     },
     "Vintage Design Crop Top": {
-      "supply": 1672.0,
+      "supply": 1673.0,
       "uniqueBuyers": 1114,
       "storePrice": 200,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/645009",
@@ -597,13 +597,13 @@
       "bid": 15.0,
       "ask": 43.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.0005980861244019139,
       "weekBidChange": 0.0,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:08.518323+00:00"
+      "weekSupplyChange": 0.0005980861244019139,
+      "lastUpdated": "2026-10-12T03:13:55.258821+00:00"
     },
     "Leopard Print Heel Boots": {
-      "supply": 1625.0,
+      "supply": 1626.0,
       "uniqueBuyers": 901,
       "storePrice": 200,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/367011",
@@ -611,13 +611,13 @@
       "bid": 12.0,
       "ask": 19.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.0006153846153846154,
       "weekBidChange": 0.0,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:11.040902+00:00"
+      "weekSupplyChange": 0.0006153846153846154,
+      "lastUpdated": "2026-10-12T03:13:57.724712+00:00"
     },
     "Frilly Bra": {
-      "supply": 6394.0,
+      "supply": 6395.0,
       "uniqueBuyers": 2985,
       "storePrice": 100,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/9258",
@@ -625,13 +625,13 @@
       "bid": 12.0,
       "ask": 21.0,
       "dayBidChange": -0.25,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.00015639662183296842,
       "weekBidChange": 0.0,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:13.544286+00:00"
+      "weekSupplyChange": 0.00015639662183296842,
+      "lastUpdated": "2026-10-12T03:14:00.235975+00:00"
     },
     "Black Modern Watch": {
-      "supply": 6220.0,
+      "supply": 6221.0,
       "uniqueBuyers": 3674,
       "storePrice": 100,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/212908",
@@ -639,13 +639,13 @@
       "bid": 10.0,
       "ask": 19.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.00016079755587715066,
+      "daySupplyChange": 0.00032159511175430133,
       "weekBidChange": 0.0,
-      "weekSupplyChange": 0.00048254785266205565,
-      "lastUpdated": "2026-10-11T19:50:16.053781+00:00"
+      "weekSupplyChange": 0.00032159511175430133,
+      "lastUpdated": "2026-10-12T03:14:02.763834+00:00"
     },
     "Love Heart Boxers": {
-      "supply": 10897.0,
+      "supply": 10898.0,
       "uniqueBuyers": 4600,
       "storePrice": 100,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/620659",
@@ -653,13 +653,13 @@
       "bid": 15.0,
       "ask": 16.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 9.176837661741764e-05,
       "weekBidChange": 0.0,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:18.582896+00:00"
+      "weekSupplyChange": 9.176837661741764e-05,
+      "lastUpdated": "2026-10-12T03:14:05.379765+00:00"
     },
     "WW1 Helmet": {
-      "supply": 2122.0,
+      "supply": 2123.0,
       "uniqueBuyers": 1538,
       "storePrice": 400,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/385242",
@@ -667,13 +667,13 @@
       "bid": 34.0,
       "ask": 80.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.000471253534401508,
       "weekBidChange": 0.0625,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:21.074346+00:00"
+      "weekSupplyChange": 0.000471253534401508,
+      "lastUpdated": "2026-10-12T03:14:07.909893+00:00"
     },
     "Racer Helmet": {
-      "supply": 2114.0,
+      "supply": 2115.0,
       "uniqueBuyers": 1458,
       "storePrice": 450,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/287919",
@@ -681,13 +681,13 @@
       "bid": 35.0,
       "ask": 55.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.0004730368968779565,
       "weekBidChange": -0.2553191489361702,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:23.666487+00:00"
+      "weekSupplyChange": 0.0004730368968779565,
+      "lastUpdated": "2026-10-12T03:14:10.389660+00:00"
     },
     "Grand Ball Gown": {
-      "supply": 1270.0,
+      "supply": 1271.0,
       "uniqueBuyers": 697,
       "storePrice": 350,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/944417",
@@ -695,41 +695,41 @@
       "bid": 46.0,
       "ask": 74.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.0007874015748031496,
       "weekBidChange": 0.12195121951219512,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:26.185270+00:00"
+      "weekSupplyChange": 0.0007874015748031496,
+      "lastUpdated": "2026-10-12T03:14:12.880846+00:00"
     },
     "Cowboy Hat": {
-      "supply": 2779.0,
+      "supply": 2780.0,
       "uniqueBuyers": 2075,
       "storePrice": 350,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/851874",
       "inStore": true,
       "bid": 20.0,
       "ask": 61.0,
-      "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "dayBidChange": -0.047619047619047616,
+      "daySupplyChange": 0.0003598416696653472,
       "weekBidChange": 0.1111111111111111,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:28.759972+00:00"
+      "weekSupplyChange": 0.0003598416696653472,
+      "lastUpdated": "2026-10-12T03:14:15.371209+00:00"
     },
     "Police Hat": {
-      "supply": 1884.0,
+      "supply": 1885.0,
       "uniqueBuyers": 1252,
       "storePrice": 450,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/423924",
       "inStore": true,
       "bid": 13.0,
       "ask": 30.0,
-      "dayBidChange": 0.08333333333333333,
-      "daySupplyChange": 0.0,
+      "dayBidChange": 0.0,
+      "daySupplyChange": 0.0005307855626326964,
       "weekBidChange": -0.48,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:31.288078+00:00"
+      "weekSupplyChange": 0.0005307855626326964,
+      "lastUpdated": "2026-10-12T03:14:17.872620+00:00"
     },
     "Pirate": {
-      "supply": 2349.0,
+      "supply": 2350.0,
       "uniqueBuyers": 1735,
       "storePrice": 500,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/939961",
@@ -737,13 +737,13 @@
       "bid": 66.0,
       "ask": 100.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.0004257130693912303,
       "weekBidChange": 0.015384615384615385,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:33.941152+00:00"
+      "weekSupplyChange": 0.0004257130693912303,
+      "lastUpdated": "2026-10-12T03:14:20.376316+00:00"
     },
     "Fisherman": {
-      "supply": 1707.0,
+      "supply": 1708.0,
       "uniqueBuyers": 1296,
       "storePrice": 400,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/239503",
@@ -751,13 +751,13 @@
       "bid": 43.0,
       "ask": 115.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.0005858230814294083,
       "weekBidChange": 0.023809523809523808,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:36.529567+00:00"
+      "weekSupplyChange": 0.0005858230814294083,
+      "lastUpdated": "2026-10-12T03:14:22.876291+00:00"
     },
     "Chef Shirt": {
-      "supply": 2159.0,
+      "supply": 2160.0,
       "uniqueBuyers": 1462,
       "storePrice": 200,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/125889",
@@ -765,13 +765,13 @@
       "bid": 28.0,
       "ask": 52.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.0004631773969430292,
       "weekBidChange": 0.0,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:39.047595+00:00"
+      "weekSupplyChange": 0.0004631773969430292,
+      "lastUpdated": "2026-10-12T03:14:25.389926+00:00"
     },
     "Chef Hat": {
-      "supply": 2564.0,
+      "supply": 2565.0,
       "uniqueBuyers": 1604,
       "storePrice": 250,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/65001",
@@ -779,13 +779,13 @@
       "bid": 38.0,
       "ask": 80.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.000390015600624025,
       "weekBidChange": 0.08571428571428572,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:41.534872+00:00"
+      "weekSupplyChange": 0.000390015600624025,
+      "lastUpdated": "2026-10-12T03:14:27.912405+00:00"
     },
     "Bandana Mask": {
-      "supply": 4414.0,
+      "supply": 4415.0,
       "uniqueBuyers": 2953,
       "storePrice": 200,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/562324",
@@ -793,13 +793,13 @@
       "bid": 25.0,
       "ask": 43.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.00022655188038060717,
       "weekBidChange": 0.08695652173913043,
-      "weekSupplyChange": 0.00022660321776569228,
-      "lastUpdated": "2026-10-11T19:50:44.018484+00:00"
+      "weekSupplyChange": 0.00045320643553138455,
+      "lastUpdated": "2026-10-12T03:14:30.431228+00:00"
     },
     "Labcoat": {
-      "supply": 2574.0,
+      "supply": 2575.0,
       "uniqueBuyers": 2007,
       "storePrice": 400,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/57125",
@@ -807,13 +807,13 @@
       "bid": 34.0,
       "ask": 49.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.0003885003885003885,
       "weekBidChange": 0.0967741935483871,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:46.509985+00:00"
+      "weekSupplyChange": 0.0003885003885003885,
+      "lastUpdated": "2026-10-12T03:14:33.072219+00:00"
     },
     "Prison Jumpsuit": {
-      "supply": 3724.0,
+      "supply": 3725.0,
       "uniqueBuyers": 2323,
       "storePrice": 500,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/3686",
@@ -821,10 +821,10 @@
       "bid": 35.0,
       "ask": 99.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.0002685284640171858,
       "weekBidChange": 0.16666666666666666,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:49.039765+00:00"
+      "weekSupplyChange": 0.0002685284640171858,
+      "lastUpdated": "2026-10-12T03:14:35.578165+00:00"
     },
     "Hard Hat": {
       "supply": 35.0,
@@ -838,7 +838,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:51.902895+00:00"
+      "lastUpdated": "2026-10-12T03:14:38.562065+00:00"
     },
     "Aviator Helmet": {
       "supply": 6190.0,
@@ -852,7 +852,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:54.774111+00:00"
+      "lastUpdated": "2026-10-12T03:14:41.458436+00:00"
     },
     "Navy Check Raincoat with Cap": {
       "supply": 6589.0,
@@ -866,7 +866,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.04807692307692308,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:50:57.652682+00:00"
+      "lastUpdated": "2026-10-12T03:14:44.351715+00:00"
     },
     "Surgical Face Mask": {
       "supply": 8363.0,
@@ -880,7 +880,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.01694915254237288,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:00.535913+00:00"
+      "lastUpdated": "2026-10-12T03:14:47.239425+00:00"
     },
     "Siren Hands": {
       "supply": 7956.0,
@@ -890,11 +890,11 @@
       "inStore": false,
       "bid": 16.0,
       "ask": 55.0,
-      "dayBidChange": 0.23076923076923078,
+      "dayBidChange": 0.14285714285714285,
       "daySupplyChange": 0.0,
       "weekBidChange": -0.6521739130434783,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:03.399480+00:00"
+      "lastUpdated": "2026-10-12T03:14:50.237410+00:00"
     },
     "Gumball Machine": {
       "supply": 7387.0,
@@ -908,7 +908,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.18439716312056736,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:06.268477+00:00"
+      "lastUpdated": "2026-10-12T03:14:53.142877+00:00"
     },
     "Sports Bandage": {
       "supply": 11515.0,
@@ -922,7 +922,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.1,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:09.195058+00:00"
+      "lastUpdated": "2026-10-12T03:14:56.062054+00:00"
     },
     "Cardboard King": {
       "supply": 2407.0,
@@ -930,13 +930,13 @@
       "storePrice": 10000,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/171425",
       "inStore": false,
-      "bid": 4348.0,
+      "bid": 4351.0,
       "ask": 5750.0,
-      "dayBidChange": -0.13678777049831248,
+      "dayBidChange": -0.03802785761662613,
       "daySupplyChange": 0.0,
-      "weekBidChange": -0.0475355969331873,
+      "weekBidChange": -0.046878422782037237,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:12.088868+00:00"
+      "lastUpdated": "2026-10-12T03:14:58.979543+00:00"
     },
     "The Loving Look": {
       "supply": 14672.0,
@@ -950,10 +950,10 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.40476190476190477,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:14.997137+00:00"
+      "lastUpdated": "2026-10-12T03:15:01.997066+00:00"
     },
     "Gold Earrings": {
-      "supply": 6068.0,
+      "supply": 6069.0,
       "uniqueBuyers": 2159,
       "storePrice": 150,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/805607",
@@ -961,13 +961,13 @@
       "bid": 19.0,
       "ask": 24.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.00016479894528675015,
       "weekBidChange": 0.05555555555555555,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:17.637898+00:00"
+      "weekSupplyChange": 0.00016479894528675015,
+      "lastUpdated": "2026-10-12T03:15:04.578164+00:00"
     },
     "Bandana Hair": {
-      "supply": 2075.0,
+      "supply": 2076.0,
       "uniqueBuyers": 1296,
       "storePrice": 250,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/113780",
@@ -975,10 +975,10 @@
       "bid": 19.0,
       "ask": 42.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.00048192771084337347,
       "weekBidChange": 0.0,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:20.215798+00:00"
+      "weekSupplyChange": 0.00048192771084337347,
+      "lastUpdated": "2026-10-12T03:15:07.072635+00:00"
     },
     "Easter Bunny Nose 2026": {
       "supply": 27886.0,
@@ -986,13 +986,13 @@
       "storePrice": 500,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/291837",
       "inStore": false,
-      "bid": 16.0,
-      "ask": 18.0,
-      "dayBidChange": -0.058823529411764705,
+      "bid": 17.0,
+      "ask": 20.0,
+      "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
-      "weekBidChange": -0.1111111111111111,
+      "weekBidChange": -0.05555555555555555,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:23.096925+00:00"
+      "lastUpdated": "2026-10-12T03:15:09.964705+00:00"
     },
     "Easter Bunny Hat 2026": {
       "supply": 32202.0,
@@ -1001,12 +1001,12 @@
       "storeUrl": "https://store.steampowered.com/buyitem/590830/392296",
       "inStore": false,
       "bid": 27.0,
-      "ask": 35.0,
+      "ask": 36.0,
       "dayBidChange": -0.20588235294117646,
       "daySupplyChange": 0.0,
-      "weekBidChange": -0.12903225806451613,
+      "weekBidChange": -0.20588235294117646,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:25.969224+00:00"
+      "lastUpdated": "2026-10-12T03:15:12.950595+00:00"
     },
     "SWAG Chain": {
       "supply": 19346.0,
@@ -1014,13 +1014,13 @@
       "storePrice": 1500,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/470099",
       "inStore": false,
-      "bid": 177.0,
+      "bid": 176.0,
       "ask": 199.0,
-      "dayBidChange": 0.0,
+      "dayBidChange": -0.005649717514124294,
       "daySupplyChange": 0.0,
-      "weekBidChange": -0.1323529411764706,
+      "weekBidChange": -0.13725490196078433,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:28.878503+00:00"
+      "lastUpdated": "2026-10-12T03:15:15.888129+00:00"
     },
     "Bag": {
       "supply": 18975.0,
@@ -1028,13 +1028,13 @@
       "storePrice": 350,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/843901",
       "inStore": false,
-      "bid": 28.0,
+      "bid": 27.0,
       "ask": 42.0,
-      "dayBidChange": 0.0,
+      "dayBidChange": -0.03571428571428571,
       "daySupplyChange": 0.0,
-      "weekBidChange": -0.034482758620689655,
+      "weekBidChange": -0.06896551724137931,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:31.819562+00:00"
+      "lastUpdated": "2026-10-12T03:15:18.788310+00:00"
     },
     "Mob Boss Waistcoat & Shirt": {
       "supply": 12666.0,
@@ -1048,7 +1048,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:34.777290+00:00"
+      "lastUpdated": "2026-10-12T03:15:21.673046+00:00"
     },
     "Mob Boss Pinstripe Trousers": {
       "supply": 11942.0,
@@ -1062,7 +1062,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:37.686123+00:00"
+      "lastUpdated": "2026-10-12T03:15:24.562714+00:00"
     },
     "Mob Boss Shoes": {
       "supply": 15037.0,
@@ -1076,7 +1076,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.03125,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:40.597087+00:00"
+      "lastUpdated": "2026-10-12T03:15:27.512602+00:00"
     },
     "Lucky Bastard Helmet": {
       "supply": 10667.0,
@@ -1090,7 +1090,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.014084507042253521,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:43.453124+00:00"
+      "lastUpdated": "2026-10-12T03:15:30.475241+00:00"
     },
     "Pirate Hook": {
       "supply": 14371.0,
@@ -1104,7 +1104,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:46.388426+00:00"
+      "lastUpdated": "2026-10-12T03:15:33.421869+00:00"
     },
     "Crash Test Dummy": {
       "supply": 3168.0,
@@ -1113,12 +1113,12 @@
       "storeUrl": "https://store.steampowered.com/buyitem/590830/496279",
       "inStore": false,
       "bid": 392.0,
-      "ask": 396.0,
+      "ask": 443.0,
       "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
       "weekBidChange": -0.02,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:49.387584+00:00"
+      "lastUpdated": "2026-10-12T03:15:36.398485+00:00"
     },
     "Cat Balaclava": {
       "supply": 5451.0,
@@ -1132,7 +1132,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.04065040650406504,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:52.262736+00:00"
+      "lastUpdated": "2026-10-12T03:15:39.290754+00:00"
     },
     "Leather Coat": {
       "supply": 5302.0,
@@ -1146,7 +1146,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.03669724770642202,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:55.180339+00:00"
+      "lastUpdated": "2026-10-12T03:15:42.207767+00:00"
     },
     "Lumberjack Shirt": {
       "supply": 3722.0,
@@ -1160,7 +1160,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:51:58.058467+00:00"
+      "lastUpdated": "2026-10-12T03:15:45.103092+00:00"
     },
     "Paper 3D Glasses": {
       "supply": 13233.0,
@@ -1174,7 +1174,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.08695652173913043,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:00.990844+00:00"
+      "lastUpdated": "2026-10-12T03:15:48.007055+00:00"
     },
     "Sneakers Gravity Led Blue": {
       "supply": 3624.0,
@@ -1188,7 +1188,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.019736842105263157,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:03.935507+00:00"
+      "lastUpdated": "2026-10-12T03:15:50.908255+00:00"
     },
     "Sneakers Gravity": {
       "supply": 3700.0,
@@ -1202,7 +1202,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.043478260869565216,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:06.856824+00:00"
+      "lastUpdated": "2026-10-12T03:15:54.020653+00:00"
     },
     "Fresh Mask": {
       "supply": 4208.0,
@@ -1216,7 +1216,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.06086956521739131,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:09.735736+00:00"
+      "lastUpdated": "2026-10-12T03:15:56.966870+00:00"
     },
     "Fanny Pack": {
       "supply": 3693.0,
@@ -1230,7 +1230,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.13,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:12.610552+00:00"
+      "lastUpdated": "2026-10-12T03:15:59.999355+00:00"
     },
     "Balaclava Yellow Black": {
       "supply": 3200.0,
@@ -1244,7 +1244,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.18691588785046728,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:15.522815+00:00"
+      "lastUpdated": "2026-10-12T03:16:02.898418+00:00"
     },
     "Vacation Shirt": {
       "supply": 3421.0,
@@ -1258,7 +1258,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.2125,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:18.412817+00:00"
+      "lastUpdated": "2026-10-12T03:16:05.847775+00:00"
     },
     "Leather Coat (Brown)": {
       "supply": 3332.0,
@@ -1272,7 +1272,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:21.282742+00:00"
+      "lastUpdated": "2026-10-12T03:16:08.903637+00:00"
     },
     "The Hotdog Costume": {
       "supply": 1247.0,
@@ -1280,13 +1280,13 @@
       "storePrice": 5000,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/729969",
       "inStore": false,
-      "bid": 1239.0,
+      "bid": 1454.0,
       "ask": 2113.0,
-      "dayBidChange": 0.0,
+      "dayBidChange": 0.1735270379338176,
       "daySupplyChange": 0.0,
-      "weekBidChange": 0.004051863857374392,
+      "weekBidChange": 0.17637540453074432,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:24.158983+00:00"
+      "lastUpdated": "2026-10-12T03:16:11.891892+00:00"
     },
     "Fluffy Slippers": {
       "supply": 8437.0,
@@ -1300,7 +1300,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.041666666666666664,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:27.081542+00:00"
+      "lastUpdated": "2026-10-12T03:16:14.782562+00:00"
     },
     "Construction Glasses": {
       "supply": 3731.0,
@@ -1314,7 +1314,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:29.947776+00:00"
+      "lastUpdated": "2026-10-12T03:16:17.673855+00:00"
     },
     "Kimono Trousers": {
       "supply": 2764.0,
@@ -1328,7 +1328,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:32.832965+00:00"
+      "lastUpdated": "2026-10-12T03:16:20.586178+00:00"
     },
     "Kimono": {
       "supply": 2290.0,
@@ -1342,7 +1342,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.049723756906077346,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:35.735208+00:00"
+      "lastUpdated": "2026-10-12T03:16:23.511254+00:00"
     },
     "Cow Onesie": {
       "supply": 1614.0,
@@ -1354,9 +1354,9 @@
       "ask": 839.0,
       "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
-      "weekBidChange": 0.009375,
+      "weekBidChange": 0.0015503875968992248,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:38.620869+00:00"
+      "lastUpdated": "2026-10-12T03:16:26.436207+00:00"
     },
     "Googly Eye Glasses": {
       "supply": 2280.0,
@@ -1370,7 +1370,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.01,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:41.542669+00:00"
+      "lastUpdated": "2026-10-12T03:16:29.318887+00:00"
     },
     "The Hotdog Slippers": {
       "supply": 2424.0,
@@ -1384,7 +1384,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.17123287671232876,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:44.432790+00:00"
+      "lastUpdated": "2026-10-12T03:16:32.218630+00:00"
     },
     "Blue Pleated Skirt": {
       "supply": 1316.0,
@@ -1398,7 +1398,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.13793103448275862,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:47.305703+00:00"
+      "lastUpdated": "2026-10-12T03:16:35.160689+00:00"
     },
     "Sailor Shirt": {
       "supply": 1190.0,
@@ -1410,9 +1410,9 @@
       "ask": 232.0,
       "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
-      "weekBidChange": -0.10743801652892562,
+      "weekBidChange": -0.18490566037735848,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:50.190466+00:00"
+      "lastUpdated": "2026-10-12T03:16:38.076713+00:00"
     },
     "Academic Cap": {
       "supply": 1512.0,
@@ -1421,12 +1421,12 @@
       "storeUrl": "https://store.steampowered.com/buyitem/590830/138701",
       "inStore": false,
       "bid": 176.0,
-      "ask": 178.0,
+      "ask": 224.0,
       "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
       "weekBidChange": -0.3972602739726027,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:53.058097+00:00"
+      "lastUpdated": "2026-10-12T03:16:40.961317+00:00"
     },
     "Balloon Hat": {
       "supply": 1771.0,
@@ -1434,13 +1434,13 @@
       "storePrice": 300,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/800783",
       "inStore": false,
-      "bid": 168.0,
+      "bid": 169.0,
       "ask": 335.0,
-      "dayBidChange": -0.034482758620689655,
+      "dayBidChange": 0.005952380952380952,
       "daySupplyChange": 0.0,
-      "weekBidChange": -0.5213675213675214,
+      "weekBidChange": -0.5185185185185185,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:55.950641+00:00"
+      "lastUpdated": "2026-10-12T03:16:43.871563+00:00"
     },
     "Work Suit": {
       "supply": 1121.0,
@@ -1450,11 +1450,11 @@
       "inStore": false,
       "bid": 473.0,
       "ask": 844.0,
-      "dayBidChange": -0.004210526315789474,
+      "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
       "weekBidChange": -0.09904761904761905,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:52:58.831702+00:00"
+      "lastUpdated": "2026-10-12T03:16:46.762140+00:00"
     },
     "Tear Drop Earrings (Citrine)": {
       "supply": 1432.0,
@@ -1468,7 +1468,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:01.710229+00:00"
+      "lastUpdated": "2026-10-12T03:16:49.697063+00:00"
     },
     "Alien glasses": {
       "supply": 1419.0,
@@ -1482,7 +1482,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.41007194244604317,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:04.580121+00:00"
+      "lastUpdated": "2026-10-12T03:16:52.594622+00:00"
     },
     "Flower Crown": {
       "supply": 1204.0,
@@ -1492,11 +1492,11 @@
       "inStore": false,
       "bid": 208.0,
       "ask": 331.0,
-      "dayBidChange": -0.1111111111111111,
+      "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
       "weekBidChange": -0.2,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:07.461242+00:00"
+      "lastUpdated": "2026-10-12T03:16:55.548451+00:00"
     },
     "Construction Ear Muffs": {
       "supply": 1272.0,
@@ -1510,7 +1510,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.25,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:10.350603+00:00"
+      "lastUpdated": "2026-10-12T03:16:58.515671+00:00"
     },
     "Dino Cap": {
       "supply": 1161.0,
@@ -1524,7 +1524,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.008620689655172414,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:13.212787+00:00"
+      "lastUpdated": "2026-10-12T03:17:01.392071+00:00"
     },
     "Spoiled White Tank Top": {
       "supply": 1176.0,
@@ -1538,7 +1538,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.01764705882352941,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:16.108546+00:00"
+      "lastUpdated": "2026-10-12T03:17:04.281841+00:00"
     },
     "Fisherman Raincoat": {
       "supply": 1035.0,
@@ -1552,7 +1552,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.00477326968973747,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:18.992991+00:00"
+      "lastUpdated": "2026-10-12T03:17:07.283323+00:00"
     },
     "Checkered Commuters": {
       "supply": 1046.0,
@@ -1566,7 +1566,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.023809523809523808,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:21.892019+00:00"
+      "lastUpdated": "2026-10-12T03:17:10.185845+00:00"
     },
     "Captive Clicker Ring Silver": {
       "supply": 1811.0,
@@ -1580,7 +1580,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.04054054054054054,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:24.760277+00:00"
+      "lastUpdated": "2026-10-12T03:17:13.090503+00:00"
     },
     "Black Teashade Sunglasses": {
       "supply": 1090.0,
@@ -1594,7 +1594,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.014705882352941176,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:27.716902+00:00"
+      "lastUpdated": "2026-10-12T03:17:15.995110+00:00"
     },
     "Referee Shirt": {
       "supply": 1115.0,
@@ -1608,7 +1608,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.03614457831325301,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:30.593886+00:00"
+      "lastUpdated": "2026-10-12T03:17:18.982338+00:00"
     },
     "Punk Shorts": {
       "supply": 872.0,
@@ -1618,11 +1618,11 @@
       "inStore": false,
       "bid": 472.0,
       "ask": 690.0,
-      "dayBidChange": 0.0,
+      "dayBidChange": -0.0021141649048625794,
       "daySupplyChange": 0.0,
-      "weekBidChange": 0.107981220657277,
+      "weekBidChange": 0.06306306306306306,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:33.496900+00:00"
+      "lastUpdated": "2026-10-12T03:17:21.945949+00:00"
     },
     "Miner Helmet": {
       "supply": 1160.0,
@@ -1636,7 +1636,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.017964071856287425,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:36.413939+00:00"
+      "lastUpdated": "2026-10-12T03:17:24.914839+00:00"
     },
     "Dino Watch": {
       "supply": 1378.0,
@@ -1650,7 +1650,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.10256410256410256,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:39.314070+00:00"
+      "lastUpdated": "2026-10-12T03:17:27.911793+00:00"
     },
     "Swimming Trunks": {
       "supply": 1422.0,
@@ -1664,7 +1664,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:42.173100+00:00"
+      "lastUpdated": "2026-10-12T03:17:30.822452+00:00"
     },
     "Barbarian Helmet": {
       "supply": 957.0,
@@ -1673,12 +1673,12 @@
       "storeUrl": "https://store.steampowered.com/buyitem/590830/351875",
       "inStore": false,
       "bid": 454.0,
-      "ask": 636.0,
+      "ask": 600.0,
       "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
       "weekBidChange": 0.05092592592592592,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:45.049297+00:00"
+      "lastUpdated": "2026-10-12T03:17:33.736895+00:00"
     },
     "Dino Backpack": {
       "supply": 839.0,
@@ -1692,7 +1692,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.20812182741116753,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:47.922974+00:00"
+      "lastUpdated": "2026-10-12T03:17:36.638619+00:00"
     },
     "Frog Nappy": {
       "supply": 976.0,
@@ -1701,12 +1701,12 @@
       "storeUrl": "https://store.steampowered.com/buyitem/590830/722409",
       "inStore": false,
       "bid": 330.0,
-      "ask": 531.0,
+      "ask": 500.0,
       "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
       "weekBidChange": 0.012269938650306749,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:50.799448+00:00"
+      "lastUpdated": "2026-10-12T03:17:39.533801+00:00"
     },
     "Tie (Green)": {
       "supply": 1010.0,
@@ -1720,7 +1720,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.06164383561643835,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:53.688510+00:00"
+      "lastUpdated": "2026-10-12T03:17:42.430797+00:00"
     },
     "Tie (Red)": {
       "supply": 1044.0,
@@ -1734,7 +1734,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.0546875,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:56.552773+00:00"
+      "lastUpdated": "2026-10-12T03:17:45.317855+00:00"
     },
     "Tie (Black)": {
       "supply": 1079.0,
@@ -1748,7 +1748,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0045045045045045045,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:53:59.482843+00:00"
+      "lastUpdated": "2026-10-12T03:17:48.217345+00:00"
     },
     "Tie-Dye Jumper (Purple)": {
       "supply": 601.0,
@@ -1762,7 +1762,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.008278145695364239,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:02.359688+00:00"
+      "lastUpdated": "2026-10-12T03:17:51.164155+00:00"
     },
     "Shinguards Gloves Black": {
       "supply": 767.0,
@@ -1776,7 +1776,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.013793103448275862,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:05.231722+00:00"
+      "lastUpdated": "2026-10-12T03:17:54.100742+00:00"
     },
     "Tennis Visor": {
       "supply": 1057.0,
@@ -1790,7 +1790,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.06956521739130435,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:08.104143+00:00"
+      "lastUpdated": "2026-10-12T03:17:57.058180+00:00"
     },
     "Cardboard Tuxedo Costume": {
       "supply": 699.0,
@@ -1804,7 +1804,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.07475622968580715,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:10.973275+00:00"
+      "lastUpdated": "2026-10-12T03:17:59.977569+00:00"
     },
     "Gym Socks Grey": {
       "supply": 454.0,
@@ -1818,7 +1818,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.3355855855855856,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:13.848650+00:00"
+      "lastUpdated": "2026-10-12T03:18:02.915915+00:00"
     },
     "Spa Slippers": {
       "supply": 532.0,
@@ -1832,7 +1832,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.1855123674911661,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:16.710993+00:00"
+      "lastUpdated": "2026-10-12T03:18:05.828452+00:00"
     },
     "Head Towel": {
       "supply": 516.0,
@@ -1846,7 +1846,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0016638935108153079,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:19.616600+00:00"
+      "lastUpdated": "2026-10-12T03:18:08.722699+00:00"
     },
     "Bathrobe (White)": {
       "supply": 878.0,
@@ -1860,7 +1860,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.16252821670428894,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:22.476691+00:00"
+      "lastUpdated": "2026-10-12T03:18:11.638474+00:00"
     },
     "Cardboard Robot Costume": {
       "supply": 672.0,
@@ -1874,7 +1874,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.016564952048823016,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:25.347835+00:00"
+      "lastUpdated": "2026-10-12T03:18:14.564956+00:00"
     },
     "Mob Boss Fedora": {
       "supply": 536.0,
@@ -1888,7 +1888,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.027434842249657063,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:28.221063+00:00"
+      "lastUpdated": "2026-10-12T03:18:17.473811+00:00"
     },
     "Protective Bucket": {
       "supply": 590.0,
@@ -1902,7 +1902,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:31.136881+00:00"
+      "lastUpdated": "2026-10-12T03:18:20.369719+00:00"
     },
     "Mary Jane Shoes": {
       "supply": 692.0,
@@ -1916,7 +1916,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.305,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:34.046404+00:00"
+      "lastUpdated": "2026-10-12T03:18:23.444867+00:00"
     },
     "The Quacker Cap": {
       "supply": 831.0,
@@ -1930,7 +1930,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.008264462809917356,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:36.927536+00:00"
+      "lastUpdated": "2026-10-12T03:18:26.329797+00:00"
     },
     "Luchador": {
       "supply": 761.0,
@@ -1944,7 +1944,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.008278145695364239,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:39.839784+00:00"
+      "lastUpdated": "2026-10-12T03:18:29.237278+00:00"
     },
     "Number Cruncher Wristwatch": {
       "supply": 846.0,
@@ -1958,7 +1958,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.014388489208633094,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:42.709952+00:00"
+      "lastUpdated": "2026-10-12T03:18:32.145934+00:00"
     },
     "Pirate Hat": {
       "supply": 514.0,
@@ -1972,7 +1972,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:45.603018+00:00"
+      "lastUpdated": "2026-10-12T03:18:35.057379+00:00"
     },
     "Fried Onion Earrings": {
       "supply": 442.0,
@@ -1986,7 +1986,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.030136986301369864,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:48.461105+00:00"
+      "lastUpdated": "2026-10-12T03:18:37.950876+00:00"
     },
     "Donut Backpack": {
       "supply": 346.0,
@@ -1995,12 +1995,12 @@
       "storeUrl": "https://store.steampowered.com/buyitem/590830/756252",
       "inStore": false,
       "bid": 2127.0,
-      "ask": 19818.0,
+      "ask": 45581.0,
       "dayBidChange": 1.0009407337723424,
       "daySupplyChange": 0.0,
       "weekBidChange": 1.5141843971631206,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:51.340708+00:00"
+      "lastUpdated": "2026-10-12T03:18:40.838587+00:00"
     },
     "Plunger Hat": {
       "supply": 372.0,
@@ -2014,7 +2014,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.011235955056179775,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:54.211805+00:00"
+      "lastUpdated": "2026-10-12T03:18:43.738268+00:00"
     },
     "Golf Backpack": {
       "supply": 437.0,
@@ -2028,7 +2028,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.17375,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:57.071656+00:00"
+      "lastUpdated": "2026-10-12T03:18:46.645861+00:00"
     },
     "Pink Top": {
       "supply": 367.0,
@@ -2042,7 +2042,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.11063829787234042,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:54:59.960556+00:00"
+      "lastUpdated": "2026-10-12T03:18:49.665139+00:00"
     },
     "Hockey Helmet": {
       "supply": 346.0,
@@ -2056,7 +2056,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.13370165745856355,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:55:02.843631+00:00"
+      "lastUpdated": "2026-10-12T03:18:52.569557+00:00"
     },
     "Jester Hat": {
       "supply": 833.0,
@@ -2070,7 +2070,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.04375,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:55:05.726624+00:00"
+      "lastUpdated": "2026-10-12T03:18:55.600933+00:00"
     },
     "Pink Skirt": {
       "supply": 655.0,
@@ -2078,13 +2078,13 @@
       "storePrice": 500,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/885711",
       "inStore": false,
-      "bid": 1006.0,
+      "bid": 1024.0,
       "ask": 1410.0,
-      "dayBidChange": 0.11283185840707964,
+      "dayBidChange": 0.13274336283185842,
       "daySupplyChange": 0.0,
-      "weekBidChange": 0.3064935064935065,
+      "weekBidChange": 0.17972350230414746,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:55:08.597880+00:00"
+      "lastUpdated": "2026-10-12T03:18:58.516782+00:00"
     },
     "Leopard Paw Gloves": {
       "supply": 440.0,
@@ -2094,11 +2094,11 @@
       "inStore": false,
       "bid": 448.0,
       "ask": 998.0,
-      "dayBidChange": 0.015873015873015872,
+      "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
       "weekBidChange": 0.015873015873015872,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:55:11.468434+00:00"
+      "lastUpdated": "2026-10-12T03:19:01.578518+00:00"
     },
     "Con Badge": {
       "supply": 983.0,
@@ -2112,7 +2112,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.23819301848049282,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:55:14.336664+00:00"
+      "lastUpdated": "2026-10-12T03:19:04.499681+00:00"
     },
     "Bear Hat": {
       "supply": 612.0,
@@ -2126,7 +2126,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": -0.16872427983539096,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:55:17.216262+00:00"
+      "lastUpdated": "2026-10-12T03:19:07.435858+00:00"
     },
     "Mr. Banana Suit": {
       "supply": 774.0,
@@ -2140,7 +2140,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.14195867026055706,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:55:20.147667+00:00"
+      "lastUpdated": "2026-10-12T03:19:10.358310+00:00"
     },
     "Pearl Earrings (Gold)": {
       "supply": 768.0,
@@ -2154,7 +2154,7 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.07692307692307693,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:55:23.016408+00:00"
+      "lastUpdated": "2026-10-12T03:19:13.478524+00:00"
     },
     "Tropical Glasses": {
       "supply": 614.0,
@@ -2163,12 +2163,12 @@
       "storeUrl": "https://store.steampowered.com/buyitem/590830/725792",
       "inStore": false,
       "bid": 174.0,
-      "ask": 259.0,
+      "ask": 258.0,
       "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
-      "weekBidChange": 0.0,
-      "weekSupplyChange": 0.3674832962138085,
-      "lastUpdated": "2026-10-11T19:55:25.887834+00:00"
+      "weekBidChange": 2.1636363636363636,
+      "weekSupplyChange": 0.013201320132013201,
+      "lastUpdated": "2026-10-12T03:19:16.487973+00:00"
     },
     "Travel Pillow": {
       "supply": 1022.0,
@@ -2177,12 +2177,12 @@
       "storeUrl": "https://store.steampowered.com/buyitem/590830/545664",
       "inStore": false,
       "bid": 215.0,
-      "ask": 578.0,
+      "ask": 576.0,
       "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
-      "weekBidChange": 0.0,
-      "weekSupplyChange": 0.05578512396694215,
-      "lastUpdated": "2026-10-11T19:55:28.771291+00:00"
+      "weekBidChange": 1.4431818181818181,
+      "weekSupplyChange": 0.011881188118811881,
+      "lastUpdated": "2026-10-12T03:19:19.407074+00:00"
     },
     "Katana": {
       "supply": 846.0,
@@ -2194,9 +2194,9 @@
       "ask": 555.0,
       "dayBidChange": 0.005747126436781609,
       "daySupplyChange": 0.0,
-      "weekBidChange": 0.0,
-      "weekSupplyChange": 0.36451612903225805,
-      "lastUpdated": "2026-10-11T19:55:31.681605+00:00"
+      "weekBidChange": 1.2435897435897436,
+      "weekSupplyChange": 0.048327137546468404,
+      "lastUpdated": "2026-10-12T03:19:22.322571+00:00"
     },
     "SkinnyJeans": {
       "supply": 382.0,
@@ -2205,142 +2205,142 @@
       "storeUrl": "https://store.steampowered.com/buyitem/590830/156187",
       "inStore": false,
       "bid": 243.0,
-      "ask": 1336.0,
+      "ask": 1007.0,
       "dayBidChange": 0.0,
       "daySupplyChange": 0.0,
-      "weekBidChange": 0.0,
-      "weekSupplyChange": 0.24836601307189543,
-      "lastUpdated": "2026-10-11T19:55:34.625023+00:00"
+      "weekBidChange": 1.7613636363636365,
+      "weekSupplyChange": 0.07909604519774012,
+      "lastUpdated": "2026-10-12T03:19:25.231832+00:00"
     },
     "Brain Earrings": {
-      "supply": 137.0,
-      "uniqueBuyers": 95,
+      "supply": 140.0,
+      "uniqueBuyers": 98,
       "storePrice": 250,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/960687",
       "inStore": true,
-      "bid": 0.0,
-      "ask": 0.0,
+      "bid": 23.0,
+      "ask": 449.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.021897810218978103,
       "weekBidChange": 0.0,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:55:37.354748+00:00"
+      "weekSupplyChange": 0.021897810218978103,
+      "lastUpdated": "2026-10-12T03:19:28.055773+00:00"
     },
     "Coffin Backpack": {
-      "supply": 175.0,
-      "uniqueBuyers": 109,
+      "supply": 178.0,
+      "uniqueBuyers": 112,
       "storePrice": 550,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/735079",
       "inStore": true,
-      "bid": 0.0,
-      "ask": 0.0,
+      "bid": 66.0,
+      "ask": 1007.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.017142857142857144,
       "weekBidChange": 0.0,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:55:39.896986+00:00"
+      "weekSupplyChange": 0.017142857142857144,
+      "lastUpdated": "2026-10-12T03:19:30.551502+00:00"
     },
     "Inflatable Dino Costume": {
-      "supply": 192.0,
-      "uniqueBuyers": 130,
+      "supply": 196.0,
+      "uniqueBuyers": 134,
       "storePrice": 850,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/325708",
       "inStore": true,
-      "bid": 0.0,
-      "ask": 0.0,
+      "bid": 150.0,
+      "ask": 2015.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.020833333333333332,
       "weekBidChange": 0.0,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:55:42.446422+00:00"
+      "weekSupplyChange": 0.020833333333333332,
+      "lastUpdated": "2026-10-12T03:19:33.054967+00:00"
     },
     "Smile": {
-      "supply": 503.0,
-      "uniqueBuyers": 141,
+      "supply": 506.0,
+      "uniqueBuyers": 144,
       "storePrice": 500,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/780377",
       "inStore": true,
-      "bid": 0.0,
-      "ask": 0.0,
+      "bid": 111.0,
+      "ask": 898.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.005964214711729622,
       "weekBidChange": 0.0,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:55:44.945478+00:00"
+      "weekSupplyChange": 0.005964214711729622,
+      "lastUpdated": "2026-10-12T03:19:35.663045+00:00"
     },
     "Zombie Head": {
-      "supply": 165.0,
-      "uniqueBuyers": 119,
+      "supply": 168.0,
+      "uniqueBuyers": 122,
       "storePrice": 500,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/759511",
       "inStore": true,
-      "bid": 0.0,
-      "ask": 0.0,
+      "bid": 88.0,
+      "ask": 898.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.01818181818181818,
       "weekBidChange": 0.0,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:55:47.441384+00:00"
+      "weekSupplyChange": 0.01818181818181818,
+      "lastUpdated": "2026-10-12T03:19:38.170138+00:00"
     },
     "Rooster Mask": {
-      "supply": 217.0,
-      "uniqueBuyers": 141,
+      "supply": 222.0,
+      "uniqueBuyers": 146,
       "storePrice": 550,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/383350",
       "inStore": true,
-      "bid": 0.0,
-      "ask": 0.0,
+      "bid": 101.0,
+      "ask": 1343.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.02304147465437788,
       "weekBidChange": 0.0,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:55:49.979520+00:00"
+      "weekSupplyChange": 0.02304147465437788,
+      "lastUpdated": "2026-10-12T03:19:40.698143+00:00"
     },
     "Barbed Wire Bandages": {
-      "supply": 139.0,
-      "uniqueBuyers": 102,
+      "supply": 142.0,
+      "uniqueBuyers": 105,
       "storePrice": 350,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/777340",
       "inStore": true,
-      "bid": 0.0,
-      "ask": 0.0,
+      "bid": 34.0,
+      "ask": 1007.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.02158273381294964,
       "weekBidChange": 0.0,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:55:52.520717+00:00"
+      "weekSupplyChange": 0.02158273381294964,
+      "lastUpdated": "2026-10-12T03:19:43.163127+00:00"
     },
     "Zombie Hat": {
-      "supply": 141.0,
-      "uniqueBuyers": 101,
+      "supply": 144.0,
+      "uniqueBuyers": 104,
       "storePrice": 400,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/329382",
       "inStore": true,
-      "bid": 0.0,
-      "ask": 0.0,
+      "bid": 55.0,
+      "ask": 784.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.02127659574468085,
       "weekBidChange": 0.0,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:55:55.120466+00:00"
+      "weekSupplyChange": 0.02127659574468085,
+      "lastUpdated": "2026-10-12T03:19:45.632128+00:00"
     },
     "Eye Glasses": {
-      "supply": 143.0,
-      "uniqueBuyers": 103,
+      "supply": 146.0,
+      "uniqueBuyers": 106,
       "storePrice": 350,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/426282",
       "inStore": true,
-      "bid": 0.0,
-      "ask": 0.0,
+      "bid": 34.0,
+      "ask": 898.0,
       "dayBidChange": 0.0,
-      "daySupplyChange": 0.0,
+      "daySupplyChange": 0.02097902097902098,
       "weekBidChange": 0.0,
-      "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:55:57.709994+00:00"
+      "weekSupplyChange": 0.02097902097902098,
+      "lastUpdated": "2026-10-12T03:19:48.133367+00:00"
     },
     "Halloween 2026 Bucket Hat": {
-      "supply": 51.0,
-      "uniqueBuyers": 38,
+      "supply": 56.0,
+      "uniqueBuyers": 43,
       "storePrice": 450,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/940088",
       "inStore": true,
@@ -2350,11 +2350,11 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:56:00.216096+00:00"
+      "lastUpdated": "2026-10-12T03:19:50.613350+00:00"
     },
     "Halloween 2026 Onesie": {
-      "supply": 56.0,
-      "uniqueBuyers": 45,
+      "supply": 62.0,
+      "uniqueBuyers": 51,
       "storePrice": 800,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/583052",
       "inStore": true,
@@ -2364,11 +2364,11 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:56:02.730954+00:00"
+      "lastUpdated": "2026-10-12T03:19:53.107237+00:00"
     },
     "Halloween 2026 Slippers": {
-      "supply": 50.0,
-      "uniqueBuyers": 38,
+      "supply": 54.0,
+      "uniqueBuyers": 42,
       "storePrice": 350,
       "storeUrl": "https://store.steampowered.com/buyitem/590830/364183",
       "inStore": true,
@@ -2378,57 +2378,57 @@
       "daySupplyChange": 0.0,
       "weekBidChange": 0.0,
       "weekSupplyChange": 0.0,
-      "lastUpdated": "2026-10-11T19:56:05.438506+00:00"
+      "lastUpdated": "2026-10-12T03:19:55.653125+00:00"
     }
   },
   "currencies": {
     "EUR": {
-      "rate": 1.120574,
-      "dayRateChange": 0.0,
-      "weekRateChange": -0.0045942868107014855,
-      "lastUpdated": "2026-10-11T19:56:08.553905+00:00"
+      "rate": 1.120951,
+      "dayRateChange": 0.00033643472006317454,
+      "weekRateChange": 0.002578555150491713,
+      "lastUpdated": "2026-10-12T03:19:57.907368+00:00"
     },
     "GBP": {
-      "rate": 1.323381,
-      "dayRateChange": 0.0,
-      "weekRateChange": -0.000503003292179247,
-      "lastUpdated": "2026-10-11T19:56:08.553905+00:00"
+      "rate": 1.324188,
+      "dayRateChange": 0.0006098017124320224,
+      "weekRateChange": 0.0032183281058230147,
+      "lastUpdated": "2026-10-12T03:19:57.907368+00:00"
     },
     "AUD": {
-      "rate": 0.698763,
-      "dayRateChange": 0.0,
-      "weekRateChange": 0.004262737551326068,
-      "lastUpdated": "2026-10-11T19:56:08.553905+00:00"
+      "rate": 0.698226,
+      "dayRateChange": -0.0007685009080332097,
+      "weekRateChange": 0.0062140265220185535,
+      "lastUpdated": "2026-10-12T03:19:57.907368+00:00"
     },
     "CAD": {
-      "rate": 0.701508,
-      "dayRateChange": -6.984464555262899e-05,
-      "weekRateChange": -0.0002109295723259346,
-      "lastUpdated": "2026-10-11T19:56:08.553905+00:00"
+      "rate": 0.701341,
+      "dayRateChange": -0.0003078866008036325,
+      "weekRateChange": 0.0019701069486629547,
+      "lastUpdated": "2026-10-12T03:19:57.907368+00:00"
     },
     "CHF": {
-      "rate": 1.207001,
-      "dayRateChange": 0.0018110604165438179,
-      "weekRateChange": -2.4025914848890878e-05,
-      "lastUpdated": "2026-10-11T19:56:08.553905+00:00"
+      "rate": 1.204776,
+      "dayRateChange": -3.569000820871454e-05,
+      "weekRateChange": 0.0009038887153481449,
+      "lastUpdated": "2026-10-12T03:19:57.907368+00:00"
     },
     "CNY": {
-      "rate": 0.149633,
-      "dayRateChange": 0.0,
-      "weekRateChange": 0.003137465223075093,
-      "lastUpdated": "2026-10-11T19:56:08.553905+00:00"
+      "rate": 0.14945,
+      "dayRateChange": -0.0012229922543823136,
+      "weekRateChange": 0.0007633792253709955,
+      "lastUpdated": "2026-10-12T03:19:57.907368+00:00"
     },
     "JPY": {
-      "rate": 0.006319,
-      "dayRateChange": 0.0,
-      "weekRateChange": -0.002683080808080754,
-      "lastUpdated": "2026-10-11T19:56:08.553905+00:00"
+      "rate": 0.00632,
+      "dayRateChange": 0.00015825288811522912,
+      "weekRateChange": -0.0017374822302953286,
+      "lastUpdated": "2026-10-12T03:19:57.907368+00:00"
     },
     "INR": {
       "rate": 0.010333,
       "dayRateChange": -0.0004836525440123618,
       "weekRateChange": -0.0049114021571647695,
-      "lastUpdated": "2026-10-11T19:56:08.553905+00:00"
+      "lastUpdated": "2026-10-12T03:19:57.907368+00:00"
     }
   }
 }
